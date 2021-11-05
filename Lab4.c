@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-
+/*
 void SumOfNumbers()
 {
 	int sum = 0;
@@ -45,7 +45,7 @@ void Ex3()
 	}
 	printf("Result is: %d", even - odd);
 }
-
+*/
 void Ex4()
 {
 	int binary, index = 1, number = 0;
