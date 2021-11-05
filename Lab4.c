@@ -64,10 +64,11 @@ void Ex4()
 	printf("Result is: %d", number);
 }
 
-void main()
+int main()
 {
 	//SumOfNumbers();
 	//AscendingNumber();
 	//Ex3();
 	Ex4();
+	return 0;
 }
