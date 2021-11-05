@@ -50,19 +50,17 @@ void Ex4()
 {
 	int binary, index = 1, number = 0;
 	printf("Enter the binary number: ");
-	scanf("%d", &binary);
-	if (binary % 10 != 1 && binary % 10 != 0)
+	scanf("%d", &binary)
+	if (binary % 10 != 1 && binary % 10 != 0) binary / 10;
+	while (binary != 0 && binary != 1)
 	{
+		if (binary % 10 == 1) number += index;
+		index *= 2;
 		binary / 10;
-		while (binary != 0 && binary != 1)
-		{
-			if (binary % 10 == 1) number += index;
-			index *= 2;
-			binary / 10;
-			printf("%d", number);
-		}
-		number += index;
+		printf("%d", number);
+        number += index;
 	}
+	
 	printf("Result is: %d", number);
 }
 
