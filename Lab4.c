@@ -52,7 +52,7 @@ void Ex4()
 	printf("Enter the binary number: ");
 	scanf("%d", &binary);
 	if (binary % 10 != 1 && binary % 10 != 0) binary / 10;
-	while (binary == 0 && binary == 1)
+	while (binary == 0 || binary == 1)
 	{
 		if (binary % 10 == 1) number += index;
 		index *= 2;
