@@ -58,9 +58,7 @@ void Ex4()
 		index *= 2;
 		binary / 10;
 		printf("%d", number);
-        number += index;
 	}
-	
 	printf("Result is: %d", number);
 }
 
