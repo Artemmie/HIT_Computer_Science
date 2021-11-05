@@ -38,7 +38,7 @@ void Ex3()
 	int odd = 0, even = 0;
 	printf("Enter the number: ");
 	scanf("%d", &n);
-	for (n; n > 0; n /= 10)
+	for(n; n > 0; n /= 10)
 	{
 		if (n % 2 == 0) even += n % 10;
 		else odd += n % 10;
@@ -50,7 +50,7 @@ void Ex4()
 {
 	int binary, index = 1, number = 0;
 	printf("Enter the binary number: ");
-	scanf("%d", &binary)
+	scanf("%d", &binary);
 	if (binary % 10 != 1 && binary % 10 != 0) binary / 10;
 	while (binary != 0 && binary != 1)
 	{
