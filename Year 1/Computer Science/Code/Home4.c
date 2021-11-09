@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <limits.h>
+#include <math.h>
+
 void Ex1()
 {
     int num;
@@ -121,6 +123,23 @@ void Ex7()
     }
     printf("%d", tmp);
 }
+void Ex8()
+{
+    int n;
+    double a1, q, aN, s, tmp;
+    printf("Insert a1: ");
+    scanf("%lf",&a1);
+    printf("Insert q: ");
+    scanf("%lf",&q);
+    printf("Insert n: ");
+    scanf("%d", &n);
+    tmp = q;
+    if (n - 1 == 0) tmp = 1;
+    for (int i = 2; i <= n-1; i++) tmp *= q;
+    aN = a1 * tmp;
+    s = a1 * (tmp * q - 1) / (q - 1);
+    printf("A%d:%.1f, S:%.1f",n, aN, s);
+}
 int main()
 {
     //Ex1();
@@ -129,5 +148,6 @@ int main()
     //Ex4();
     //Ex5();
     //Ex6();
-    Ex7();
+    //Ex7();
+    Ex8();
 }
