@@ -109,12 +109,17 @@ void Ex6()
 }
 void Ex7()
 {
-    int num, binaryNum = 0;
+    int num, binaryNum = 0, tmp = 0;
     printf("Insert the number: ");
     scanf("%d", &num);
     while (num > 0)
     {
+        tmp *= 10;
+        if (num  % 2 == 0) tmp += 0;
+        else tmp += 1;
+        num /= 2;
     }
+    printf("%d", tmp);
 }
 int main()
 {
