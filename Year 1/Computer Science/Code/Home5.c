@@ -32,7 +32,7 @@ int main()
 	//Ex3();
 	//Ex4();
 	//Ex5();
-	Ex6();
+	//Ex6();
 	return 0;
 }
 
