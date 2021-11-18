@@ -85,6 +85,8 @@ void Ex5()
 void Ex6()
 {
     int num1, num2;
+    scanf("Enter first number: %d", num1)
+    scanf("Enter first number: %d", num2)
 }
 
 
