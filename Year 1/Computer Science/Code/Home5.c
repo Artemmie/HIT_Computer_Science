@@ -21,7 +21,7 @@ int MyToUpper(char);
 // EX 5 FUNCTIONS
 int TestChars(char, char, char);
 //---------------------
-// EX 5 FUNCTIONS
+// EX 6 FUNCTIONS
 int TestChars(char, char, char);
 //---------------------
 
@@ -32,7 +32,8 @@ int main()
 	//Ex3();
 	//Ex4();
 	//Ex5();
-	//Ex6();
+	Ex6();
+	
 	return 0;
 }
 
