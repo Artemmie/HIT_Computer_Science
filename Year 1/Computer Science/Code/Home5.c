@@ -84,7 +84,7 @@ void Ex5()
 }
 void Ex6()
 {
-    
+    int num1, num2;
 }
 
 
