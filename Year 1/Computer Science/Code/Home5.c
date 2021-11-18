@@ -22,6 +22,7 @@ int MyToUpper(char);
 int TestChars(char, char, char);
 //---------------------
 // EX 6 FUNCTIONS
+void Ex6();
 int MyGCD(int, int);
 //---------------------
 
