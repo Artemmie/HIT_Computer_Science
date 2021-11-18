@@ -82,6 +82,11 @@ void Ex5()
 	c = getchar();
 	printf("The number is : %d", TestChars(a,b,c));
 }
+void Ex6()
+{
+    
+}
+
 
 int Square(int num)
 {
