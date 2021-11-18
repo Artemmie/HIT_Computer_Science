@@ -1,0 +1,90 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+
+
+// EX 1 FUNCTIONS
+void Ex1();
+int EvenNumber(int);
+//---------------------
+// EX 2 FUNCTIONS
+void Ex2();
+int Fibbonaci(int);
+//---------------------
+// EX 3 FUNCTIONS
+void Ex3();
+int Counter(int);
+int Sum(int);
+int Sorted(int);
+//---------------------
+// EX 4 FUNCTIONS
+void Ex4();
+
+//---------------------
+// EX 5 FUNCTION
+void Ex5();
+
+int main()
+{
+    //Ex1();
+    //Ex2();
+    Ex3();
+    //Ex4();
+    //Ex5();
+    return 0;
+}
+
+void Ex1()
+{
+    int num;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("Even = 1 | Odd = 0 : %d\n", EvenNumber(num));
+}
+int EvenNumber(int num)
+{
+    if (num == 0) return 0;
+    return num % 2 == 0 ? 1 : EvenNumber(num / 10);
+}
+void Ex2()
+{
+    int num;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("%d\n", Fibbonaci(num));
+}
+int Fibbonaci(int num)
+{
+    if (num == 0) return 0;
+    if (num == 1) return 1;
+    return Fibbonaci(num - 1) + Fibbonaci(num - 2);
+}
+void Ex3()
+{
+    int num;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("Counter - %d\n", Counter(num));
+    printf("Sum - %d\n", Sum(num));
+    printf("Sorted - %d\n");
+}
+int Counter(int num)
+{
+    if (num == 0) return 0;
+    else return 1 + Counter(num / 10);
+}
+int Sum(int num)
+{
+    if (num == 0) return 0;
+    else return num % 10 + Sum(num / 10);
+}
+int Sorted(int num)
+{
+    if (num == 0) return 0;
+}
+void Ex4()
+{
+}
+void Ex5()
+{
+}
