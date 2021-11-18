@@ -3,22 +3,38 @@
 
 
 // EX 1 FUNCTIONS
-int Square(int num);
-int Cube(int num);
-int Power(int num, int pwr);
+int Square(int);
+int Cube(int);
+int Power(int, int);
 //---------------------
 // EX 2 FUNCTIONS
-int IsEven(int num);
-int IsOdd(int num);
+int IsEven(int);
+int IsOdd(int);
 //---------------------
 // EX 3 FUNCTIONS
-int DigitsAmount(int digit);
+long DigitsAmount(int);
 //---------------------
 // EX 4 FUNCTIONS
-int MyToLower(char ch);
-int MyToUpper(char ch);
+int MyToLower(char);
+int MyToUpper(char);
+//---------------------
+// EX 5 FUNCTIONS
+int TestChars(char, char, char);
+//---------------------
+// EX 5 FUNCTIONS
+int TestChars(char, char, char);
 //---------------------
 
+int main()
+{
+	//Ex1();
+	//Ex2();
+	//Ex3();
+	//Ex4();
+	//Ex5();
+	Ex6();
+	return 0;
+}
 
 void Ex1()
 {
@@ -45,15 +61,25 @@ void Ex3()
 	int digit;
 	printf("Enter the number:");
 	scanf("%d", &digit);
-	printf("Digits: %lu", DigitsAmount(digit));
+	printf("Digits: %ld", DigitsAmount(digit));
 }
 
 void Ex4()
 {
 	printf("Enter the character:");
 	char ch = getchar();
-	printf("", MyToLower(ch));
-	printf("", MyToUpper(ch));
+	MyToLower(ch) == -1 ? printf("To Lower is: %d\n", MyToLower(ch)) : printf("To Lower is: %c\n", (char)MyToLower(ch));
+	MyToUpper(ch) == -1 ? printf("To Upper is: %d", MyToUpper(ch)) : printf("To Upper is: %c", (char)MyToUpper(ch));
+}
+
+void Ex5()
+{
+	char a, b, c;
+	printf("Enter 3 numbers:");
+	a = getchar();
+	b = getchar();
+	c = getchar();
+	printf("The number is : %d", TestChars(a,b,c));
 }
 
 int Square(int num)
@@ -88,11 +114,25 @@ long DigitsAmount(int digit)
 	return digits;
 }
 
-int main()
+int MyToLower(char ch)
 {
-	//Ex1();
-	//Ex2();
-	//Ex3();
-	Ex4();
-	return 0;
+	return ((int)(ch) >= 65 && (int)(ch) <= 90) ? (int)(ch) + 32 : -1;
+}
+int MyToUpper(char ch)
+{
+	return ((int)(ch) >= 97 && (int)(ch) <= 122) ? (int)(ch) - 32 : -1;
+}
+
+int TestChars(char a, char b, char c)
+{
+	int num = 0;
+	if ((int)a < 48 || (int)a > 57) return 0;
+	num += (int)a - 48;
+	num *= 10;
+	if ((int)b < 48 || (int)b > 57) return 0;
+	num += (int)b - 48;
+	num *= 10;
+	if ((int)c < 48 || (int)c > 57) return 0;
+	num += (int)c - 48;
+	return num;
 }
