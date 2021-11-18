@@ -88,7 +88,7 @@ void Ex6()
     int num1, num2;
     scanf("Enter first number: %d", num1);
     scanf("Enter second number: %d", num2);
-    printf("%d%d", num1, num2);
+    printf("%d////%d", num1, num2);
 }
 
 
