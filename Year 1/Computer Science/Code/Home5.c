@@ -45,11 +45,12 @@ int BiggestDivider(int);
 //---------------------
 // EX 10 FUNCTIONS
 void Ex10();
-void SimplifiedFraction(int,int);
+void SimplifiedFraction(int, int);
 int GCD(int, int);
 //---------------------
 // EX 11 FUNCTIONS
 void Ex11();
+int LCM(int, int);
 //---------------------
 
 int main()
@@ -140,11 +141,11 @@ void Ex4()
 
 int MyToLower(char ch)
 {
-    return ((int)(ch) >= 65 && (int)(ch) <= 90) ? (int)(ch) + 32 : -1;
+    return ((int)(ch) >= 65 && (int)(ch) <= 90) ? (int)(ch)+32 : -1;
 }
 int MyToUpper(char ch)
 {
-    return ((int)(ch) >= 97 && (int)(ch) <= 122) ? (int)(ch) - 32 : -1;
+    return ((int)(ch) >= 97 && (int)(ch) <= 122) ? (int)(ch)-32 : -1;
 }
 
 void Ex5()
@@ -154,7 +155,7 @@ void Ex5()
     a = getchar();
     b = getchar();
     c = getchar();
-    printf("The number is : %d", TestChars(a,b,c));
+    printf("The number is : %d", TestChars(a, b, c));
 }
 
 int TestChars(char a, char b, char c)
@@ -178,17 +179,15 @@ void Ex6()
     scanf("%d", &num1);
     printf("Enter second number: ");
     scanf("%d", &num2);
-    printf("Answer is: %d", MyGCD(num1,num2));
+    printf("Answer is: %d", MyGCD(num1, num2));
 }
 
-int MyGCD(int num1, num2)
+int MyGCD(int num1, int num2)
 {
     int max = 0, tmp = 0;
     max = num1 >= num2 ? num1 : num2;
     for (int i = 1; i <= max / 2; i++)
-    {
-        if ((num1 % i == 0) && (num2 % i ==0)) tmp += i;
-    }
+        if ((num1 % i == 0) && (num2 % i == 0)) tmp += i;
     return tmp;
 }
 
@@ -197,7 +196,7 @@ void Ex7()
     int num;
     printf("Enter the number: ");
     scanf("%d", &num);
-    printf("The result is: %d",  Dividers(num));
+    printf("The result is: %d", Dividers(num));
 }
 
 int Dividers(int num)
@@ -210,12 +209,12 @@ void Ex8()
     int num;
     printf("Enter the number: ");
     scanf("%d", &num);
-    printf("The result is: %d",  SmallestDivider(num));
+    printf("The result is: %d", SmallestDivider(num));
 }
 
 int SmallestDivider(int num)
 {
-    for (int i = 2; i<= num/2; i++)
+    for (int i = 2; i <= num / 2; i++)
         if (num % i == 0) return i;
     return num;
 }
@@ -225,12 +224,12 @@ void Ex9()
     int num;
     printf("Enter the number: ");
     scanf("%d", &num);
-    printf("The result is: %d",  BiggestDivider(num));
+    printf("The result is: %d", BiggestDivider(num));
 }
 
 int BiggestDivider(int num)
 {
-    for (int i = num / 2; i > 2 ; i--)
+    for (int i = num / 2; i > 2; i--)
         if (num % i == 0) return i;
     return 1;
 }
@@ -247,10 +246,7 @@ void Ex10()
 void SimplifiedFraction(int numerator, int denominator)
 {
     if (denominator == 0)
-    {
-        printf("Can't divide by zero!");
-        return;
-    }
+        return printf("Can't divide by zero!");
     printf("%d/%d", numerator / GCD(numerator, denominator), denominator / GCD(numerator, denominator));
 }
 int GCD(int a, int b)
@@ -260,5 +256,18 @@ int GCD(int a, int b)
 
 void Ex11()
 {
-
+    int num1, num2;
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    printf("The result is: %d", LCM(num1, num2));
+}
+int LCM(int num1, int num2)
+{
+    int tmp;
+    tmp = num1 >= num2 ? num1 : num2;
+    for (int i = tmp; i <= num1 * num2; i++)
+        if (GCD(i, num1) == num1 && GCD(i, num2) == num2) return i;
+    return num1 * num2;
 }
