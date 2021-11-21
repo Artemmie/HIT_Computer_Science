@@ -106,7 +106,7 @@ void DigitsCounter(int num) {
     return DigitsCounter(num - 1);
 }
 int ReversedDigitsCounter(int num) {
-    if (i <= num) return 0;
+    if (i <= num) return 1;
     return ReversedDigitsCounter(num-1);
     printf("%d", num);
 }
