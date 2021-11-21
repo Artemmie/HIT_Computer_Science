@@ -93,7 +93,7 @@ int CheckNumbers(int num) {
 void Ex5() {
     int num;
     printf("Enter the number:");
-    scanf("%d", &num);
+    scanf_s("%d", &num);
     printf("%d", num);
     DigitsCounter(num);
     printf("Got here");
