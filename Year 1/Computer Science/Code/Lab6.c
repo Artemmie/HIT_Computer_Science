@@ -96,7 +96,7 @@ void Ex5() {
     scanf("%d", &num);
     DigitsCounter(num);
     printf("\n");
-    ReversedDigitsCounter(num);
+    //ReversedDigitsCounter(num);
     printf("\n");
     DigitsRange(num));
 }
