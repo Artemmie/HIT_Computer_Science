@@ -102,7 +102,7 @@ void Ex5() {
 }
 void DigitsCounter(int num) {
     if (num == 0) return;
-    else printf("%d ", num);
+    printf("%d ", num);
     return DigitsCounter(num - 1);
 }
 int ReversedDigitsCounter(int num) {
