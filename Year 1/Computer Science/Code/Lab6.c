@@ -106,9 +106,11 @@ void DigitsCounter(int num) {
     return DigitsCounter(num - 1);
 }
 int ReversedDigitsCounter(int num) {
-    static int i = 1;
-    if (i <= num) printf("%d ", i++);
-    return ReversedDigitsCounter(num);
+    if (i <= num)
+    {
+        printf("1")    
+    }
+    return ReversedDigitsCounter(num-1);
     printf("%d", num);
 }
 int DigitsRange(int num) {
