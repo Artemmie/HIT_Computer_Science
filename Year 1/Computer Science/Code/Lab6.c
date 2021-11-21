@@ -24,7 +24,7 @@ int Checknumbers(int);
 // EX 5 FUNCTION
 void Ex5();
 void DigitsCounter(int);
-void ReversedDigitsCounter(int);
+int ReversedDigitsCounter(int);
 int DigitsRange(int);
 //---------------------
 int main() {
