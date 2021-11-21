@@ -94,6 +94,7 @@ void Ex5() {
     int num;
     printf("Enter the number:");
     scanf("%d", &num);
+    printf("%d", num);
     DigitsCounter(num);
     printf("Got here");
     printf("\n");
