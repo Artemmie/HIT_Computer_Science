@@ -95,6 +95,7 @@ void Ex5() {
     printf("Enter the number:");
     scanf("%d", &num);
     DigitsCounter(num);
+    printf("Got here");
     printf("\n");
     //ReversedDigitsCounter(num);
     printf("\n");
