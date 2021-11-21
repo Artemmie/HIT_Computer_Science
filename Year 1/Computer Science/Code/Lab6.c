@@ -19,7 +19,7 @@ int Sorted(int);
 //---------------------
 // EX 4 FUNCTIONS
 void Ex4();
-int Checknumbers(int);
+int CheckNumbers(int);
 //---------------------
 // EX 5 FUNCTION
 void Ex5();
