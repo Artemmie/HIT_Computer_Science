@@ -114,5 +114,5 @@ int DigitsRange(int num) {
     if (num == 1) return 1;
     printf("%d", num);
     return DigitsRange(num-1);
-    printf("%d", num)
+    printf("%d", num);
 }
