@@ -24,8 +24,8 @@ int CheckNumbers(int);
 // EX 5 FUNCTION
 void Ex5();
 void DigitsCounter(int);
-int ReversedDigitsCounter(int);
-int DigitsRange(int);
+void ReversedDigitsCounter(int);
+void DigitsRange(int);
 //---------------------
 int main() {
     //Ex1();
@@ -94,27 +94,29 @@ void Ex5() {
     int num;
     printf("Enter the number:");
     scanf("%d", &num);
-    printf("%d", num);
     DigitsCounter(num);
-    printf("Got here");
     printf("\n");
-    //ReversedDigitsCounter(num);
+    ReversedDigitsCounter(num);
     printf("\n");
-    //DigitsRange(num));
+    DigitsRange(num);
 }
 void DigitsCounter(int num) {
     if (num == 0) return;
     printf("%d ", num);
-    return DigitsCounter(num - 1);
+    DigitsCounter(num - 1);
 }
-int ReversedDigitsCounter(int num) {
-    if (num == 0) return 0;
-    return ReversedDigitsCounter(num-1);
-    printf("%d", num);
+void ReversedDigitsCounter(int num) {
+    if (num == 0) return;
+    ReversedDigitsCounter(num-1);
+    printf("%d ", num);
 }
-int DigitsRange(int num) {
-    if (num == 1) return 1;
-    printf("%d", num);
-    return DigitsRange(num-1);
-    printf("%d", num);
+void DigitsRange(int num) {
+    if (num == 1)
+    {
+        printf("1 ");
+        return;
+    } 
+    printf("%d ", num);
+    DigitsRange(num-1);
+    printf("%d ", num);
 }
