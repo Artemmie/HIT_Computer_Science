@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
+#include <limits.h>
 
 
 // EX 1 FUNCTIONS
@@ -67,9 +68,9 @@ int main() {
     //Ex7();
     //Ex8();
     //Ex9();
-    //Ex10();
+    Ex10();
     //Ex11();
-    Ex12();
+    //Ex12();
     return 0;
 }
 
@@ -257,11 +258,12 @@ void Ex10()
 }
 int OddOrEven(int num)
 {
-    static int sum;
-    if (num == 0) return 0;
-    sum += num % 10;
-    OddOrEven(num / 10);
-    return sum % 2 == 0 ? 1 : 0;
+    //static int sum;
+    if (num == 0) return 1;
+    //sum += num % 10;
+    //OddOrEven(num / 10);
+    //return sum % 2 == 0 ? 1 : 0;
+    return ((num += OddOrEven(num / 10) % 10) % 2) ? 1 : 0;
 
 }
 void Ex11()
@@ -294,5 +296,5 @@ int Changeable(int num)
     if (num / 10 == 0) return 1;
     int s = (num % 10) % 2 + ((num / 10) % 10) % 2 != 1 ? 0 : 1;
     if (s == 0) return 0;
-    return Changeable(num / 10) == 0 ? 0: 1
+    return Changeable(num / 10) == 0 ? 0: 1;
 }
