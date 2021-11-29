@@ -24,6 +24,7 @@ void Ex2()
 int main()
 {
     int num;
+    scanf("Enter the number: ")
 	Ex1(num);
 	Ex2(num);
 }
