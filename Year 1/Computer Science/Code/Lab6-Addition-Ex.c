@@ -24,6 +24,6 @@ void Ex2()
 int main()
 {
     int num;
-	Ex1();
-	Ex2();
+	Ex1(num);
+	Ex2(num);
 }
