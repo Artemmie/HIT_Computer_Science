@@ -28,7 +28,7 @@ void InputArray(int* arr, int n)
 	for (int i = 0; i < n; i++)
 	{
 		printf("Enter %d's values:", i);
-		scanf("%d", &arr[i]);
+		arr[i] = rand();
 	}
 	PrintArray(arr, n);
 }
