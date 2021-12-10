@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define SIZE 5
 #include <stdio.h>
+#include <rand.h>
 // EX 1
 void Ex1();
 void InputArray(int*, int);
@@ -8,10 +9,14 @@ void PrintArray(int*, int);
 //---------------------------
 // EX 2
 void Ex2();
-void InputArray(int*, int);
-void PrintArray(int*, int);
+void arrCacl(int*, int, int*, int*, int*, double, int*);
 //---------------------------
 
+int main()
+{
+	//Ex1();
+	Ex2();
+}
 
 void Ex1()
 {
@@ -36,9 +41,4 @@ void Ex2()
 {
 	int arr[SIZE];
 	InputArray(arr, SIZE);
-}
-int main()
-{
-	//Ex1();
-	Ex2();
 }
