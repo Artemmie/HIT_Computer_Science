@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define SIZE 5
 #include <stdio.h>
-#include <rand.h>
+#include <stdlib.h>
 // EX 1
 void Ex1();
 void InputArray(int*, int);
