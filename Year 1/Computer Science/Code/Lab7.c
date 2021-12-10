@@ -11,6 +11,8 @@ void Ex2();
 void InputArray(int*, int);
 void PrintArray(int*, int);
 //---------------------------
+
+
 void Ex1()
 {
 	int arr[SIZE];
@@ -37,5 +39,6 @@ void Ex2()
 }
 int main()
 {
-	Ex1();
+	//Ex1();
+	Ex2();
 }
