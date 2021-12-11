@@ -12,11 +12,16 @@ void PrintArray(int*, int);
 void Ex2();
 void arrCalc(int*, int, int*, int*, int*, double*, int*);
 //---------------------------
-
+// EX 3
+void Ex3();
+int SortedArr(int*, int, int*);
+int SortedArrRecursion(int*, int, int*);
+//---------------------------
 int main()
 {
 	//Ex1();
-	Ex2();
+	//Ex2();
+    Ex3();
 }
 
 void Ex1()
@@ -26,7 +31,7 @@ void Ex1()
 }
 void InputArray(int* arr, int n)
 {
- srand(time(NULL));
+    srand(time(NULL));
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() % 100;
@@ -35,27 +40,55 @@ void InputArray(int* arr, int n)
 }
 void PrintArray(int* arr, int n)
 {
-	for (int i = 0; i < n; i++)
-   printf("%d\n", arr[i]);
+    for (int i = 0; i < n; i++)
+    printf("%d\n", arr[i]);
 }
 void Ex2()
 {
+    int isEven;
+    int max = INT_MIN;
+    int min = INT_MAX;
+    int sum = 0;
+    double avg = 0.0;
 	int arr[SIZE];
 	InputArray(arr, SIZE);
- arrCalc(arr, SIZE,NULL,NULL,NULL,NULL,NULL)
-;
+    arrCalc(arr, SIZE, &max, &min, &sum, &avg, &isEven);
+    printf("Min: %d | Max: %d | Sum: %d | Avg: %0.2f | isEven: %d\n", min, max, sum, avg, isEven);
 }
 void arrCalc(int *arr, int n, int *max , int *min, int *sum, double *avg, int *isEven)
 {
-    min = INT_MAX;
-    max = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        if (min > arr[i]) min = arr[i];
-        if (max < arr[i]) max = arr[i];
-        if (arr[i] % 2 == 0) isEven = 1;
-        sum += arr[i];  
+        if (*min > arr[i]) *min = arr[i];
+        if (*max < arr[i]) *max = arr[i];
+        if (arr[i] % 2 == 0) *isEven = 1;
+        *sum += arr[i];  
     }
-    avg = (*double)sum / n;
-    printf("Min: %d | Max: %d | Sum: %d | Avg: %d\n", min, max, sum, avg);
+    *avg = ((double)*sum / (double)n);
+
+}
+void Ex3()
+{
+    int flag = 2;
+    int arr[SIZE] = { 1, 3, 2, 5, 11 };
+	//InputArray(arr, SIZE);
+    int result = SortedArr(arr, SIZE, &flag);
+    printf("Sorted: %d | Very Sorted: %d", result, flag);
+    flag = -1;
+    int result = SortedArrRecursion(arr, SIZE, &flag);
+    printf("Sorted: %d | Very Sorted: %d", result, flag);
+}
+int SortedArr(int* arr, int n, int *flag)
+{
+    for (int i = 0; i < n - 1 ; i++)
+    {
+        if (arr[i] > arr[i + 1]) 
+        {
+            *flag = 0;
+            return 0;
+        }
+        else if (arr[i] == arr[i + 1]) *flag = 0;
+    }
+    if (*flag != 0) *flag = 1;
+    return 1;
 }
