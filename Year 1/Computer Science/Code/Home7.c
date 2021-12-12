@@ -20,4 +20,5 @@ void Ex1()
 SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
 {
     int tmp;
+    if (*num1ptr <= *num2ptr) && (*num2ptr <= *num3ptr)
 }
