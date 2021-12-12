@@ -123,4 +123,5 @@ int NeighborSum(int* arr, int n)
     {
         if (arr[i] == arr[i - 1] + arr[i + 1]) return 1;
     }
+    return 0;
 }
