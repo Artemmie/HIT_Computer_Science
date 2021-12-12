@@ -23,7 +23,7 @@ int NeighborSum(int*, int);
 //---------------------------
 // EX Ex5
 void Ex5();
-int ReverseArr(int*, int);
+voi ReverseArr(int*, int);
 //---------------------------
 
 int main() {
