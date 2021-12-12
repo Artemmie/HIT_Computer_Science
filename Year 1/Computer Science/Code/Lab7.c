@@ -141,9 +141,10 @@ void Ex5() {
 void ReverseArr(int* arr, int n) {
     int tmp;
     for (int i = 0; i < n/2; i++) {
-        printf("I: %d | n - i: %d | tmp: %d", arr[i], arr[n-i], tmp);
+        
         tmp = arr[i];
         arr[i] = arr[n-i];
         arr[n-i] = tmp;
+        printf("I: %d | n - i: %d | tmp: %d\n", arr[i], arr[n-i], tmp);
     }
 }
