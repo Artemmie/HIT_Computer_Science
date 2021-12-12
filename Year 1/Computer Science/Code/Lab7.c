@@ -136,7 +136,6 @@ void Ex5() {
     };
     //ReverseArr(arr, SIZE);
     ReverseArrRecursion(arr, SIZE);
-    printf("After:\n");
     PrintArray(arr, SIZE);
     
 }
