@@ -17,10 +17,17 @@ void Ex3();
 int SortedArr(int*, int, int*);
 int SortedArrRecursion(int*, int, int*);
 //---------------------------
+// EX 4
+void Ex4();
+int SortedArr(int*, int, int*);
+int SortedArrRecursion(int*, int, int*);
+//---------------------------
+
 int main() {
     //Ex1();
     //Ex2();
-    Ex3();
+    //Ex3();
+    Ex4();
 }
 
 void Ex1() {
