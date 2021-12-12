@@ -31,7 +31,7 @@ void Ex1()
 }
 void InputArray(int* arr, int n)
 {
-    srand(time(NULL));
+    srand(time_t(NULL));
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() % 100;
