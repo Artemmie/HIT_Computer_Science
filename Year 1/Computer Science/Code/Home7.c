@@ -18,7 +18,7 @@ void Ex1()
     SortPointers(&num1, &num2, &num3);
     printf("N1: %d, N2: %d, N3: %d", num1, num2, num3);
 }
-SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
+void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
 {
     int tmp = *num1ptr;
     if (*num1ptr <= *num2ptr)
