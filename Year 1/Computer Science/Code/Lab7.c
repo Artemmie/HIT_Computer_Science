@@ -119,7 +119,7 @@ void Ex4()
 }
 int NeighborSum(int* arr, int n)
 {
-    for (int i = 0; i < num; i++)
+    for (int i = 1; i < num; i+= 2)
     {
         
     }
