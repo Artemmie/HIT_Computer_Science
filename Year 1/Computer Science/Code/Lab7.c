@@ -154,5 +154,5 @@ void ReverseArrRecursion(int* arr, int n)
     //int tmp = arr[0];
     //arr[0] = arr[n-1];
     //arr[n-1] = tmp;
-    ReverseArrRecursion(arr, n - 2);
+    ReverseArrRecursion(arr, n - 1);
 }
