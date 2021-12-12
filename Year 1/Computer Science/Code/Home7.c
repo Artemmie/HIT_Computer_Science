@@ -5,7 +5,7 @@
 
 // EX 1
 void Ex1();
-void SortPointers(int*, int);
+void SortPointers(int*, int*, int*);
 //---------------------------
 
 void main()
