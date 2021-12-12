@@ -110,13 +110,13 @@ int SortedArrRecursion(int* arr, int num, int *flag) {
 }
 void Ex4()
 {
-      int arr[SIZE] = {
-        1,
-        2,
-        7,
-        5,
-        9,
-        6
+  int arr[SIZE] = {
+    1,
+    2,
+    7,
+    5,
+    9,
+    6
     };
     //InputArray(arr, SIZE);
     int result = NeighborSum(arr, SIZE);
