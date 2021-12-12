@@ -70,6 +70,7 @@ void arrCalc(int *arr, int n, int *max , int *min, int *sum, double *avg, int *i
 void Ex3()
 {
     int flag = 2;
+    int resut;
     int arr[SIZE] = { 1, 3, 2, 5, 11 };
 	//InputArray(arr, SIZE);
     int result = SortedArr(arr, SIZE, &flag);
