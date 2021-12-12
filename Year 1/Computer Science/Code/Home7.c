@@ -28,22 +28,7 @@ void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
     int tmp = *num1ptr;
     if (*num1ptr <= *num2ptr)
     {
-        if (*num2ptr <= *num3ptr)
-        {
-            *num1ptr = *num3ptr;
-            *num3ptr = tmp;
-        }
-        else
-        {
-            *num1ptr = *num2ptr;
-            *num2ptr = tmp;
-        }
-    }
-    else if (*num1ptr <= *num3ptr)
-    {
-        *num1ptr = *num3ptr;
-        *num3ptr = *num2ptr;
-        *num2ptr = tmp;
+        if (*num2ptr <= *num3ptr);
     }
 }
 void Ex2()
