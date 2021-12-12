@@ -63,8 +63,8 @@ void Ex3() {
     int flag = 2;
     int arr[SIZE] = {
         1,
-        3,
         2,
+        3,
         5,
         11
     };
@@ -86,16 +86,14 @@ int SortedArr(int* arr, int n, int *flag) {
     if (*flag != 0) *flag = 1;
     return 1;
 }
-int SortedArrRecursion(int* arr, int num, int *flag) 
-{
-    if (num == 0) 
-    {
+int SortedArrRecursion(int* arr, int num, int *flag) {
+    if (num == 0) {
         return 1;
     }
-    if arr[num - 1] < arr[num -2] {
+    if (arr[num - 1] < arr[num - 2]) {
         *flag = 0;
-        return 0
+        return 0;
     }
     if (arr[num - 1] == arr[num -2]) *flag = 0;
-    return SortedArrRecursion(arr, num - 1, flag)
+    return SortedArrRecursion(arr, num - 1, flag);
 }
