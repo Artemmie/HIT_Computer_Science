@@ -13,4 +13,7 @@ void main()
 {
     Ex1();
 }
-Ex1();
+void Ex1()
+{
+    int num1 = 6, num2 = 9, num3 = 1;
+}
