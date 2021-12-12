@@ -91,5 +91,6 @@ int SortedArrRecursion(int *arr, int num, int *flag) {
     if (SortedArrRecursion(arr, num - 1, &flag) > arr[num - 1]){
         *flag = 0;
         return 0;
+    return 1;
     }
 }
