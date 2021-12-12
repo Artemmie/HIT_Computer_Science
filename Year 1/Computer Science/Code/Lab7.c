@@ -105,7 +105,16 @@ int SortedArrRecursion(int* arr, int num, int *flag) {
 }
 void Ex4()
 {
-    
+      int arr[SIZE] = {
+        1,
+        3,
+        3,
+        5,
+        11
+    };
+    //InputArray(arr, SIZE);
+    int result = NeighborSumr(arr, SIZE);
+    printf("Sorted: %d | Very Sorted: %d\n", result, flag);
 }
 int NeighborSum(int* arr, int n)
 {
