@@ -92,3 +92,7 @@ int SortedArr(int* arr, int n, int *flag)
     if (*flag != 0) *flag = 1;
     return 1;
 }
+int SortedArrRecursion(arr, SIZE, *flag)
+{
+    
+}
