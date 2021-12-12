@@ -29,7 +29,7 @@ SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
         }
         else
         {
-            
+            *num1ptr = *num2ptr;
         }
     }
 }
