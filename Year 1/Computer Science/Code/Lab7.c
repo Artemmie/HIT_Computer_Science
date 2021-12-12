@@ -90,13 +90,12 @@ int SortedArrRecursion(int* arr, int num, int *flag)
 {
     if (num == 0) 
     {
-        *flag = 1;
         return 1;
     }
     if arr[num - 1] < arr[num -2] {
         *flag = 0;
         return 0
     }
-    if arr[num - 1] == arr[num -2] *flag = 0;
+    if (arr[num - 1] == arr[num -2]) *flag = 0;
     return SortedArrRecursion(arr, num - 1, flag)
 }
