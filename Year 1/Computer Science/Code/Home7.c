@@ -7,7 +7,7 @@
 void Ex1();
 void SortPointers(int*, int*, int*);
 //---------------------------
-// EX 1
+// EX 2
 void Ex1();
 void SortPointers(int*, int*, int*);
 //---------------------------
