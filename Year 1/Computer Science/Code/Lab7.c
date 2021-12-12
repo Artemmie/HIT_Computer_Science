@@ -21,6 +21,10 @@ int SortedArrRecursion(int*, int, int*);
 void Ex4();
 int NeighborSum(int*, int);
 //---------------------------
+// EX Ex5
+void Ex5();
+int ReverseArr(int*, int);
+//---------------------------
 
 int main() {
     //Ex1();
@@ -123,4 +127,11 @@ int NeighborSum(int* arr, int n)
     for (int i = 1; i < n; i++)
         if (arr[i - 1] + arr[i + 1] == arr[i]) return 1;
     return 0;
+}
+void Ex5()
+{
+    
+}
+int ReverseArr(int* arr int n){
+    
 }
