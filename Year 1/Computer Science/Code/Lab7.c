@@ -135,7 +135,6 @@ void Ex5() {
         9,
         6
     };
-    //InputArray(arr, SIZE);
     ReverseArr(arr, SIZE);
     PrintArray(arr, SIZE);
 }
