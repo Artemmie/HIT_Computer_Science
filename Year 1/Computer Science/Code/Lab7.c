@@ -133,6 +133,8 @@ void Ex5() {
         5,
         6
     };
+    printf("Before:\n")
+    PrintArray(arr, SIZE);
     ReverseArr(arr, SIZE);
     PrintArray(arr, SIZE);
 }
