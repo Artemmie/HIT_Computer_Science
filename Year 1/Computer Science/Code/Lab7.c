@@ -19,8 +19,8 @@ int SortedArrRecursion(int*, int, int*);
 //---------------------------
 int main() {
     //Ex1();
-    Ex2();
-    //Ex3();
+    //Ex2();
+    Ex3();
 }
 
 void Ex1() {
