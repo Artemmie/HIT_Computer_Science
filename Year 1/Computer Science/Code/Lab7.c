@@ -63,7 +63,7 @@ void Ex3() {
     int flag = 1;
     int arr[SIZE] = {
         1,
-        2,
+        3,
         3,
         5,
         11
