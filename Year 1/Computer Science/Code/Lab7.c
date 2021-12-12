@@ -136,6 +136,7 @@ int ReverseArr(int* arr int n){
     int tmp;
     for (int i = 0; i < n/2; i++)
     {
-        tmp = arr[i]
+        tmp = arr[i];
+        arr[i] = arr[n-i];
     }
 }
