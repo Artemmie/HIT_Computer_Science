@@ -133,5 +133,9 @@ void Ex5()
     
 }
 int ReverseArr(int* arr int n){
-    
+    int tmp;
+    for (int i = 0; i < n; i++)
+    {
+        
+    }
 }
