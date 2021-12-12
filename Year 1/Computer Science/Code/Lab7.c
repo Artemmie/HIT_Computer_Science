@@ -150,6 +150,8 @@ void ReverseArr(int* arr, int n) {
 }
 void ReverseArrRecursion(int* arr, int n)
 {
+    int tmp;
     if (n == 0) return;
+    arr[n]
     ReverseArrRecursion(arr, n-1);
 }
