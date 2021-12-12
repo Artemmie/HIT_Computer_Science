@@ -87,5 +87,5 @@ int SortedArr(int* arr, int n, int *flag) {
     return 1;
 }
 int SortedArrRecursion(int *arr, int num, int *flag) {
-    if 
+    if (num == 0) return 0;
 }
