@@ -11,5 +11,5 @@ void PrintArray(int*, int);
 
 void main()
 {
-    int num1, num2, num3;
+    Ex1();
 }
