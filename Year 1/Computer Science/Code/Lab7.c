@@ -136,7 +136,7 @@ void Ex5() {
     printf("Before:\n");
     PrintArray(arr, SIZE);
     ReverseArr(arr, SIZE);
-    printf("After:\n")
+    printf("After:\n");
     PrintArray(arr, SIZE);
 }
 void ReverseArr(int* arr, int n) {
