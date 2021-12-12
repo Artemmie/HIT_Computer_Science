@@ -114,7 +114,7 @@ void Ex4()
         6
     };
     //InputArray(arr, SIZE);
-    int result = NeighborSumr(arr, SIZE);
+    int result = NeighborSum(arr, SIZE);
     printf("Result: %d\n", result);
 }
 int NeighborSum(int* arr, int n)
