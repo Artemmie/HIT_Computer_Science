@@ -70,13 +70,12 @@ void arrCalc(int *arr, int n, int *max , int *min, int *sum, double *avg, int *i
 void Ex3()
 {
     int flag = 2;
-    int resut;
     int arr[SIZE] = { 1, 3, 2, 5, 11 };
 	//InputArray(arr, SIZE);
     int result = SortedArr(arr, SIZE, &flag);
     printf("Sorted: %d | Very Sorted: %d", result, flag);
     flag = -1;
-    int result = SortedArrRecursion(arr, SIZE, &flag);
+    result = SortedArrRecursion(arr, SIZE, &flag);
     printf("Sorted: %d | Very Sorted: %d", result, flag);
 }
 int SortedArr(int* arr, int n, int *flag)
