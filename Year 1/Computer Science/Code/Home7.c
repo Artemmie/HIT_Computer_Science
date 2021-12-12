@@ -11,6 +11,7 @@ void SortPointers(int*, int*, int*);
 void main()
 {
     Ex1();
+    Ex2();
 }
 void Ex1()
 {
