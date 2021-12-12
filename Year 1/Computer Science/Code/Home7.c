@@ -35,6 +35,6 @@ SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
     }
     else if (*num1ptr <= *num3ptr)
     {
-        
+        *num1ptr = *num3ptr;
     }
 }
