@@ -5,8 +5,7 @@
 
 // EX 1
 void Ex1();
-void InputArray(int*, int);
-void PrintArray(int*, int);
+void SortPointers(int*, int);
 //---------------------------
 
 void main()
@@ -16,4 +15,5 @@ void main()
 void Ex1()
 {
     int num1 = 6, num2 = 9, num3 = 1;
+    
 }
