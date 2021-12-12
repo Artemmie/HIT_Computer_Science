@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define SIZE 5
+#define SIZE 6
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -107,10 +107,11 @@ void Ex4()
 {
       int arr[SIZE] = {
         1,
-        3,
-        3,
+        2,
+        7,
         5,
-        11
+        9,
+        6
     };
     //InputArray(arr, SIZE);
     int result = NeighborSumr(arr, SIZE);
