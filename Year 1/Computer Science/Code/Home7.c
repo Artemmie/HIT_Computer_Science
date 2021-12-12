@@ -2,3 +2,14 @@
 #define SIZE 5
 #include <stdio.h>
 #include <limits.h>
+
+// EX 1
+void Ex1();
+void InputArray(int*, int);
+void PrintArray(int*, int);
+//---------------------------
+
+void main()
+{
+    
+}
