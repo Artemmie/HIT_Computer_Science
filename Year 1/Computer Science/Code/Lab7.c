@@ -108,44 +108,40 @@ int SortedArrRecursion(int* arr, int num, int *flag) {
     if (arr[num - 1] == arr[num -2]) *flag = 0;
     return SortedArrRecursion(arr, num - 1, flag);
 }
-void Ex4()
-{
-  int arr[SIZE] = {
-    1,
-    2,
-    7,
-    5,
-    9,
-    6
+void Ex4() {
+    int arr[SIZE] = {
+        1,
+        2,
+        7,
+        5,
+        9,
+        6
     };
     //InputArray(arr, SIZE);
     int result = NeighborSum(arr, SIZE);
     printf("Result: %d\n", result);
 }
-int NeighborSum(int* arr, int n)
-{
+int NeighborSum(int* arr, int n) {
     for (int i = 1; i < n; i++)
-        if (arr[i - 1] + arr[i + 1] == arr[i]) return 1;
+    if (arr[i - 1] + arr[i + 1] == arr[i]) return 1;
     return 0;
 }
-void Ex5()
-{
-  int arr[SIZE] = {
-    1,
-    2,
-    7,
-    5,
-    9,
-    6
+void Ex5() {
+    int arr[SIZE] = {
+        1,
+        2,
+        7,
+        5,
+        9,
+        6
     };
     //InputArray(arr, SIZE);
-    int result = NeighborSum(arr, SIZE);
+    ReverseArr(arr, SIZE);
     printf("Result: %d\n", result);
 }
-void ReverseArr(int* arr int n){
+void ReverseArr(int* arr int n) {
     int tmp;
-    for (int i = 0; i < n/2; i++)
-    {
+    for (int i = 0; i < n/2; i++) {
         tmp = arr[i];
         arr[i] = arr[n-i];
         arr[n-i] = tmp;
