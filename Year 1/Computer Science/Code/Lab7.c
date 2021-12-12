@@ -135,8 +135,10 @@ void Ex5() {
         6
     };
     ReverseArr(arr, SIZE);
+    ReverseArrRecursion(arr, SIZE);
     printf("After:\n");
     PrintArray(arr, SIZE);
+    
 }
 void ReverseArr(int* arr, int n) {
     int tmp;
@@ -150,4 +152,5 @@ void ReverseArr(int* arr, int n) {
 void ReverseArrRecursion(int* arr, int n)
 {
     if (n == 0) return;
+    
 }
