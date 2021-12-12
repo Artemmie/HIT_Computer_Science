@@ -19,8 +19,7 @@ int SortedArrRecursion(int*, int, int*);
 //---------------------------
 // EX 4
 void Ex4();
-int SortedArr(int*, int, int*);
-int SortedArrRecursion(int*, int, int*);
+int NeighborSum(int*, int);
 //---------------------------
 
 int main() {
