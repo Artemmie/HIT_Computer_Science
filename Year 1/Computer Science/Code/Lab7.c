@@ -115,7 +115,6 @@ void Ex4() {
         7,
         5,
         9,
-        6
     };
     //InputArray(arr, SIZE);
     int result = NeighborSum(arr, SIZE);
