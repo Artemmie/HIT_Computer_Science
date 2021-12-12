@@ -24,6 +24,7 @@ int NeighborSum(int*, int);
 // EX Ex5
 void Ex5();
 void ReverseArr(int*, int);
+void ReverseArrRecursion(int*, int);
 //---------------------------
 
 int main() {
