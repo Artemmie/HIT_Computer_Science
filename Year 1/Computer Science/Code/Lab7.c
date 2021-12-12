@@ -70,7 +70,7 @@ void Ex3() {
     };
     //InputArray(arr, SIZE);
     int result = SortedArr(arr, SIZE, &flag);
-    printf("Sorted: %d | Very Sorted: %d", result, flag);
+    printf("Sorted: %d | Very Sorted: %d\n", result, flag);
     flag = -1;
     result = SortedArrRecursion(arr, SIZE, &flag);
     printf("Sorted: %d | Very Sorted: %d", result, flag);
