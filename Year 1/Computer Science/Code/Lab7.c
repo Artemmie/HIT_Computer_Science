@@ -147,3 +147,7 @@ void ReverseArr(int* arr, int n) {
         
     }
 }
+void ReverseArrRecursion(int* arr, int n)
+{
+    
+}
