@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define SIZE 6
+#define SIZE 5
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -23,7 +23,7 @@ int NeighborSum(int*, int);
 //---------------------------
 // EX Ex5
 void Ex5();
-voi ReverseArr(int*, int);
+void ReverseArr(int*, int);
 //---------------------------
 
 int main() {
@@ -129,16 +129,15 @@ int NeighborSum(int* arr, int n) {
 void Ex5() {
     int arr[SIZE] = {
         1,
+        3,
         2,
-        7,
         5,
-        9,
         6
     };
     ReverseArr(arr, SIZE);
     PrintArray(arr, SIZE);
 }
-void ReverseArr(int* arr int n) {
+void ReverseArr(int* arr, int n) {
     int tmp;
     for (int i = 0; i < n/2; i++) {
         tmp = arr[i];
