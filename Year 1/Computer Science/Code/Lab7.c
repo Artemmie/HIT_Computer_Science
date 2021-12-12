@@ -132,7 +132,7 @@ void Ex5()
 {
     
 }
-voidReverseArr(int* arr int n){
+void ReverseArr(int* arr int n){
     int tmp;
     for (int i = 0; i < n/2; i++)
     {
