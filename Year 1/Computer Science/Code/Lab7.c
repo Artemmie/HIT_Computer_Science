@@ -130,7 +130,17 @@ int NeighborSum(int* arr, int n)
 }
 void Ex5()
 {
-    
+  int arr[SIZE] = {
+    1,
+    2,
+    7,
+    5,
+    9,
+    6
+    };
+    //InputArray(arr, SIZE);
+    int result = NeighborSum(arr, SIZE);
+    printf("Result: %d\n", result);
 }
 void ReverseArr(int* arr int n){
     int tmp;
