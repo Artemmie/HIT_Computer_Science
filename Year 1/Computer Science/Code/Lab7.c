@@ -40,7 +40,7 @@ void Ex1() {
     InputArray(arr, SIZE);
 }
 void InputArray(int* arr, int n) {
-    srand(time_t(NULL));
+    srand(time(NULL));
     for (int i = 0; i < n; i++) {
         arr[i] = rand() % 100;
     }
@@ -150,9 +150,9 @@ void ReverseArr(int* arr, int n) {
 }
 void ReverseArrRecursion(int* arr, int n)
 {
-    if (n == 0) return;
-    int tmp = arr[0];
-    arr[0] = arr[n-1];
-    arr[n-1] = tmp;
-    ReverseArrRecursion(arr, n - 2);
+    //if (n == 0) return;
+    //int tmp = arr[0];
+    //arr[0] = arr[n-1];
+    //arr[n-1] = tmp;
+    //ReverseArrRecursion(arr, n - 2);
 }
