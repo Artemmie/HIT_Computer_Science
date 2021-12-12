@@ -143,7 +143,7 @@ void ReverseArr(int* arr, int n) {
         tmp = arr[i];
         printf("I: %d | n - i: %d | tmp: %d\n", arr[i], arr[n-i], tmp);
         if (i == 0) arr[i] = arr[n-1];
-        arr[i] = arr[n-i];
+        arr[i] = arr[n-(i + 1)];
         arr[n-i] = tmp;
         
     }
