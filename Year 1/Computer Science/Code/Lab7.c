@@ -60,7 +60,7 @@ void arrCalc(int *arr, int n, int *max, int *min, int *sum, double *avg, int *is
 
 }
 void Ex3() {
-    int flag = 2;
+    int flag = 1;
     int arr[SIZE] = {
         1,
         2,
