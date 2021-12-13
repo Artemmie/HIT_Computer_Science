@@ -104,7 +104,7 @@ void Ex4()
 }
 int BiggestCombination(int *arr, int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n-1; i++)
     {
         
     }
