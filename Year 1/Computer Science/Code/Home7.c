@@ -55,6 +55,9 @@ double AverageAboveDig(int num, int digit, int *counter)
 {
     while (num != 0)
     {
-        
+        if (num % 10 < digit)
+        {
+            
+        }
     }
 }
