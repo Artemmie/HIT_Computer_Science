@@ -57,7 +57,6 @@ double AverageAboveDig(int num, int digit, int *counter)
     if (num % 10 < digit)
     {
         *counter += 1;
-        printf("Counter: %d\n", *counter);
         return AverageAboveDig(num / 10, digit, counter) + (double)(num % 10);
     }
     return AverageAboveDig(num / 10, digit, counter);
