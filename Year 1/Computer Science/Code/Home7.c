@@ -148,7 +148,7 @@ void Ex6()
 {
     int arr[8] = {3,6,5,9,5,7, 2, 1};
     int max_even = -1,
-    ptr2 = -1,
+    even = -1,
     key = 4;
     printf("Result: %d | ", KeyCheck(arr, &ptr1, &ptr2, SIZE, key));
     printf("1st value: %d | 2nd value: %d", ptr1, ptr2);
