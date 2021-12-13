@@ -40,7 +40,8 @@ void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
     if (num3ptr > num2ptr)
     {
         tmp = *num3ptr;
-        num3ptr = num2ptr;
+        *num3ptr = *num2ptr;
+        *num2ptr = tmp;
     }
 }
 void Ex2()
