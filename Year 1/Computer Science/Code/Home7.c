@@ -156,3 +156,7 @@ void Ex6() {
     printf("Result: %d | ", maxmax(arr, 8, &max_even, &even, &max_odd, &odd));
     printf("Even: %d | Odd: %d", even, odd);
 }
+int maxmax(arr, n, *max_even, *even, *max_odd, *odd)
+{
+    
+}
