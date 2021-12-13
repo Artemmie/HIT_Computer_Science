@@ -46,7 +46,7 @@ void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
 }
 void Ex2()
 {
-    int unsigned num = -154;
+    int num = -154;
     int digit = 7;
     int counter = 0;
     double unsigned result = AverageAboveDig(num, digit, &counter);
