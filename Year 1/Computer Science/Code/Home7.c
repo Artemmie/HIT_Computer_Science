@@ -100,6 +100,7 @@ int IntPow(int x, int y)
 void Ex4()
 {
     int arr[SIZE] = {3,8,10,-7,7};
+    printf("Result: %d", BiggestCombination(arr, SIZE));
 }
 int BiggestCombination(int *arr, int n)
 {
