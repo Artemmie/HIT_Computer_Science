@@ -49,7 +49,7 @@ void Ex2()
     int unsigned num = -154;
     int digit = 7;
     int counter = 0;
-    double result = AverageAboveDig(num, digit, &counter);
+    double unsigned result = AverageAboveDig(num, digit, &counter);
     printf("Average: %.2f | counter: %d", result, counter);
 }
 double AverageAboveDig(int num, int digit, int *counter)
