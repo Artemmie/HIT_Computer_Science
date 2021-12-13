@@ -25,6 +25,10 @@ int BiggestCombination(int*, int);
 void Ex5();
 int KeyCheck(int*, int*, int*, int, int);
 //---------------------------
+// EX 6
+void Ex5();
+int KeyCheck(int*, int*, int*, int, int);
+//---------------------------
 void main()
 {
     //Ex1();
