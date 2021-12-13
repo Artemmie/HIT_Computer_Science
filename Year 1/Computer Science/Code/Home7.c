@@ -163,12 +163,12 @@ int maxmax(arr, n, *max_even, *even, *max_odd, *odd)
         if (arr[i] % 2 == 0)
         {
             *even = 1;
-            if (max_even < arr[i]) max_even = arr[i];
+            if (max_even < arr[i]) *max_even = arr[i];
         }
         else
         {
             *odd = 1;
-            if(max_odd < arr[i]) max_odd = arr[i];
+            if(max_odd < arr[i]) *max_odd = arr[i];
         }
     }
 }
