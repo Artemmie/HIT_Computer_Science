@@ -58,4 +58,5 @@ double AverageAboveDig(num, digit, *counter)
         *counter++;
         return AverageAboveDig(num / 10, digit, counter) + (double)num % 10;
     }
+    return AverageAboveDig(num / 10, digit, counter)
 }
