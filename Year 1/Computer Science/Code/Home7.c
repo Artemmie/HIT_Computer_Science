@@ -32,6 +32,7 @@ void maxmax(int*, int, int*, int*, int*, int*);
 // EX 7
 void Ex7();
 void Polydrom(int*, int);
+void PolydromRec(int*, int);
 //---------------------------
 void main() {
     //Ex1();
