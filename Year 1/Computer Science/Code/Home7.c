@@ -168,7 +168,7 @@ int maxmax(arr, n, *max_even, *even, *max_odd, *odd)
         else
         {
             *odd = 1;
-            if(max_odd < arr[i])
+            if(max_odd < arr[i]) max_odd = arr[i];
         }
     }
 }
