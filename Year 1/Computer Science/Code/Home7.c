@@ -137,4 +137,5 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
             }
         }
     }
+    return 0;
 }
