@@ -131,7 +131,7 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
             if (i == j) continue;
             if (arr[i] + arr[j] < key)
             {
-                
+                *ptr1 = arr[i];
             }
         }
     }
