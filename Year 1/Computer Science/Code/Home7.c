@@ -83,5 +83,5 @@ int Infi(int x, int *c, int *n)
 {
     *c *= *n;
     *n -= 1;
-     
+     return *c * (pow(x,*n));
 }
