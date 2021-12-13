@@ -23,7 +23,7 @@ int BiggestCombination(int*, int);
 //---------------------------
 // EX 5
 void Ex5();
-int BiggestCombination(int*, int);
+int BiggestCombination(int*, int, int);
 //---------------------------
 void main()
 {
