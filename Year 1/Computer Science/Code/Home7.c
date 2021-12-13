@@ -26,7 +26,7 @@ void Ex5();
 int KeyCheck(int*, int*, int*, int, int);
 //---------------------------
 // EX 6
-void Ex5();
+void Ex6();
 int KeyCheck(int*, int*, int*, int, int);
 //---------------------------
 void main()
