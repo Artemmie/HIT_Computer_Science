@@ -48,8 +48,7 @@ void Ex2()
 {
     int num = 928743, digit = 4, counter;
     double result = AverageAboveDig(num, digit, &counter)
-    printf("Average: %.2f | counter: %d", result, counter );
-    printf("", counter);
+    printf("Average: %.2f | counter: %d", result, counter);
 }
 double AverageAboveDig(int num, int digit, int *counter)
 {
