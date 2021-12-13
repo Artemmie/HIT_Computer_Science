@@ -52,5 +52,5 @@ void Ex2()
 }
 double AverageAboveDig(num, digit, *counter)
 {
-    
+    if (num == 0) return 0.0
 }
