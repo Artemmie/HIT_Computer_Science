@@ -50,7 +50,7 @@ void Ex2()
     printf("Average: %.2f", AverageAboveDig(num, digit, &counter));
     printf("| counter: %d", counter);
 }
-double AverageAboveDig(num, digit, *counter)
+double AverageAboveDig(int num, int digit, int *counter)
 {
     if (num == 0) return 0.0;
     if (num % 10 < digit)
@@ -59,4 +59,5 @@ double AverageAboveDig(num, digit, *counter)
         return AverageAboveDig(num / 10, digit, counter) + (double)num % 10;
     }
     return AverageAboveDig(num / 10, digit, counter)
+    
 }
