@@ -81,5 +81,5 @@ void Ex3()
 }
 int Infi(int x, int *c, int *n)
 {
-    
+    c *= n;
 }
