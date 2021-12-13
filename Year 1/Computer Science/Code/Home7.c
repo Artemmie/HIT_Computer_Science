@@ -22,7 +22,7 @@ void Ex4();
 int BiggestCombination(int*, int);
 //---------------------------
 // EX 5
-void Ex4();
+void Ex5();
 int BiggestCombination(int*, int);
 //---------------------------
 void main()
