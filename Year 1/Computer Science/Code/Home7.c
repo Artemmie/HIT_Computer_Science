@@ -73,6 +73,6 @@ double AverageAboveDig(int num, int digit, int *counter)
 }
 void Ex3()
 {
-    int c,x,n;
+    int c = 0,x = 0,n;
     int result = Infi(n, &c, &x);
 }
