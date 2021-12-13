@@ -122,3 +122,7 @@ void Ex4()
     key = 4;
     printf("Result: %d", KeyCheck(arr, &ptr1, &ptr2, SIZE, key));
 }
+int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
+{
+    
+}
