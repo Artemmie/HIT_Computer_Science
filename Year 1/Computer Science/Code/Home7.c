@@ -58,7 +58,7 @@ double AverageAboveDig(int num, int digit, int *counter)
     if (num % 10 < digit)
     {
         *counter += 1;
-        return (AverageAboveDig(num / 10, digit, counter) + (double)((num % 10) / counter));
+        return (AverageAboveDig(num / 10, digit, counter) + (double)((num % 10) / *counter));
     }
     else return result = AverageAboveDig(num / 10, digit, counter);
 }
