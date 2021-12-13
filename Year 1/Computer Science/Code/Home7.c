@@ -90,6 +90,7 @@ int Infi(int x, int *c, int *n)
 int IntPow(int x, int y)
 {
     int index = x;
+    printf("x: %d | y: %d", x, y)
     for (int i = 0; i < y; i++) x *= index;
     return x;
 }
