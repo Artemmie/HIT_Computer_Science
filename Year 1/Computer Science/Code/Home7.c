@@ -35,7 +35,8 @@ void main()
     //Ex2();
     //Ex3();
     //Ex4();
-    //Ex5();
+    Ex5();
+    //Ex6();
 }
 void Ex1()
 {
@@ -131,9 +132,8 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
 {
     for (int i = 0; i <n; i ++)
     {
-        for (int j = 0; j < n; j ++)
+        for (int j = i + 1; j < n; j ++)
         {
-            if (i == j) continue;
             if (arr[i] + arr[j] < key)
             {
                 *ptr1 = arr[i];
@@ -143,4 +143,8 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
         }
     }
     return 0;
+}
+void Ex6()
+{
+    
 }
