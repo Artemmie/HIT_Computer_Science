@@ -2,6 +2,7 @@
 #define SIZE 5
 #include <stdio.h>
 #include <limits.h>
+#include <maths.h>
 
 // EX 1
 void Ex1();
