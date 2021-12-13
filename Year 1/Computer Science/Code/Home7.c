@@ -40,7 +40,8 @@ void main() {
     //Ex3();
     //Ex4();
     //Ex5();
-    Ex6();
+    //Ex6();
+    Ex7();
 }
 void Ex1() {
     int num1 = 6,
