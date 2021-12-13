@@ -65,5 +65,5 @@ double AverageAboveDig(int num, int digit, int *counter)
         }
         num /= 10;
     }
-    return fabs(result /= (double)*counter)s;
+    return fabs(result / (double)*counter);
 }
