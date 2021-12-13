@@ -120,5 +120,5 @@ void Ex4()
     int ptr1 = 0,
     ptr2 = 0,
     key = 4;
-    printf("Result: %d", KeyCheck(arr, SIZE));
+    printf("Result: %d", KeyCheck(arr, &ptr1, &ptr2, SIZE, key));
 }
