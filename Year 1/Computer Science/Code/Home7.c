@@ -88,5 +88,5 @@ int Infi(int x, int *c, int *n)
 }
 int IntPow(int x, int y)
 {
-    
+    for (int i = 0; i < n)
 }
