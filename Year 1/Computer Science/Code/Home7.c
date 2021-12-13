@@ -106,8 +106,6 @@ int BiggestCombination(int *arr, int n)
 {
     int sum = arr[0] + arr[1];
     for (int i = 1; i < n-1; i++)
-    {
         if (sum < arr[i] + arr[i + 1]) sum = arr[i] + arr[i + 1];
-    }
     return sum;
 }
