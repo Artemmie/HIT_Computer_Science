@@ -46,7 +46,5 @@ void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
 }
 void Ex2()
 {
-    int num, dig, counter;
-    printf("Enter the number: ");
-    scanf("%d", &num);
+    int num = 928743, digit = 4, counter;
 }
