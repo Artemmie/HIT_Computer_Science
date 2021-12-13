@@ -53,6 +53,7 @@ void Ex2()
 }
 double AverageAboveDig(int num, int digit, int *counter)
 {
+    double result;
     while (num != 0)
     {
         if (num % 10 < digit)
@@ -62,4 +63,5 @@ double AverageAboveDig(int num, int digit, int *counter)
         }
         num /= 10;
     }
+    return 
 }
