@@ -133,6 +133,7 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
             {
                 *ptr1 = arr[i];
                 *ptr2 = arr[j];
+                return 1;
             }
         }
     }
