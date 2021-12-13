@@ -33,7 +33,8 @@ void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
     }
     if (*num1ptr <= *num3ptr)
     {
-        
+        tmp = *num1ptr;
+        *num
     }
 }
 void Ex2()
