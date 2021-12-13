@@ -85,3 +85,4 @@ int Infi(int x, int *c, int *n)
     *n -= 1;
      return *c * (pow(x,*n));
 }
+int IntPow(int x, int y);
