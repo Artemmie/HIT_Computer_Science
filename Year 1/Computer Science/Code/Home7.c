@@ -128,7 +128,7 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
     {
         for (int j = 0; j < n; j ++)
         {
-            
+            if (i == j) continue;
         }
     }
 }
