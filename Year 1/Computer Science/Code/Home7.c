@@ -59,7 +59,7 @@ double AverageAboveDig(int num, int digit, int *counter)
         if (num % 10 < digit)
         {
             *counter += 1;
-            result += (double)(num % 10)
+            result += (double)(num % 10);
         }
         num /= 10;
     }
