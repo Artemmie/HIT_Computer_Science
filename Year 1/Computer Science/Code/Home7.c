@@ -114,7 +114,7 @@ int BiggestCombination(int *arr, int n)
         if (sum < arr[i] + arr[i + 1]) sum = arr[i] + arr[i + 1];
     return sum;
 }
-void Ex4()
+void Ex5()
 {
     int arr[SIZE] = {1,6,2,4,3};
     int ptr1 = -1,
