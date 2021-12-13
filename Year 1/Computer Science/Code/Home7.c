@@ -29,6 +29,10 @@ int KeyCheck(int*, int*, int*, int, int);
 void Ex6();
 void maxmax(int*, int, int*, int*, int*, int*);
 //---------------------------
+// EX 6
+void Ex6();
+void maxmax(int*, int, int*, int*, int*, int*);
+//---------------------------
 void main() {
     //Ex1();
     //Ex2();
