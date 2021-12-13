@@ -158,5 +158,8 @@ void Ex6() {
 }
 int maxmax(arr, n, *max_even, *even, *max_odd, *odd)
 {
-    
+    for (int i = 0; i < n; i++)
+    {
+        
+    }
 }
