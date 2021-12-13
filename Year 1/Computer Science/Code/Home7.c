@@ -160,6 +160,6 @@ int maxmax(arr, n, *max_even, *even, *max_odd, *odd)
 {
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] % 2) == 0
+        if (arr[i] % 2) == 0)
     }
 }
