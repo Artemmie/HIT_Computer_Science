@@ -146,7 +146,7 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
 }
 void Ex6()
 {
-    int arr[SIZE] = {1,6,2,4,3};
+    int arr[8] = {3,6,5,9,5,7, 2, 1};
     int ptr1 = -1,
     ptr2 = -1,
     key = 4;
