@@ -21,7 +21,7 @@ int IntPow(int,int);
 void Ex4();
 int BiggestCombination(int*, int);
 //---------------------------
-// EX 4
+// EX 5
 void Ex4();
 int BiggestCombination(int*, int);
 //---------------------------
