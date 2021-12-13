@@ -165,5 +165,9 @@ int maxmax(arr, n, *max_even, *even, *max_odd, *odd)
             *even = 1;
             if (max_even)
         }
+        else
+        {
+            
+        }
     }
 }
