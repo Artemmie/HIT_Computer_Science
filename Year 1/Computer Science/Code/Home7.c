@@ -90,6 +90,6 @@ int Infi(int x, int *c, int *n)
 int IntPow(int x, int y)
 {
     int index = x;
-    for (int i = 0; i < y; i++) x *= x;
+    for (int i = 0; i < y; i++) x *= index;
     return x;
 }
