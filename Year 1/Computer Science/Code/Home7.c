@@ -53,12 +53,8 @@ void Ex2()
 }
 double AverageAboveDig(int num, int digit, int *counter)
 {
-    double result;
-    if (num == 0.0) return 0.0;
-    if (num % 10 < digit)
+    while (num != 0)
     {
-        *counter += 1;
-        return (AverageAboveDig(num / 10, digit, counter) + (double)((num % 10) / *counter));
+        
     }
-    else return AverageAboveDig(num / 10, digit, counter);
 }
