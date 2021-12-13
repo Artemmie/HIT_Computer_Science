@@ -120,7 +120,8 @@ void Ex5()
     int ptr1 = -1,
     ptr2 = -1,
     key = 4;
-    printf("Result: %d", KeyCheck(arr, &ptr1, &ptr2, SIZE, key));
+    printf("Result: %d | ", KeyCheck(arr, &ptr1, &ptr2, SIZE, key));
+    printf
 }
 int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
 {
