@@ -99,7 +99,7 @@ int IntPow(int x, int y)
 }
 void Ex4()
 {
-    
+    int arr[SIZE]
 }
 int BiggestCombination(int *arr, int n)
 {
