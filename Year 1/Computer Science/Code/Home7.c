@@ -118,6 +118,7 @@ void Ex4()
 {
     int arr[SIZE] = {1,6,2,4,3};
     int ptr1 = 0,
-    int ptr2 = 0;
+    ptr2 = 0,
+    int 
     printf("Result: %d", KeyCheck(arr, SIZE));
 }
