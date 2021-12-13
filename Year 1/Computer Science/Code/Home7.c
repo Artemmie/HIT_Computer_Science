@@ -73,9 +73,9 @@ double AverageAboveDig(int num, int digit, int *counter)
 }
 void Ex3()
 {
-    int c = 0,
-    x = 0,
-    n = 0;
+    int c = 4,
+    x = 2,
+    n = 3;
     int result = Infi(x, &c, &n);
     printf("Result: %d | n: %d, c: %d,", result, n, c);
 }
@@ -83,5 +83,5 @@ int Infi(int x, int *c, int *n)
 {
     *c *= *n;
     *n -= 1;
-    
+     
 }
