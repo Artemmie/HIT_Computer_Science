@@ -17,7 +17,7 @@ void Ex3();
 int Infi(int, int*, int*);
 int IntPow(int,int);
 //---------------------------
-// EX 3
+// EX 4
 void Ex3();
 int Infi(int, int*, int*);
 int IntPow(int,int);
