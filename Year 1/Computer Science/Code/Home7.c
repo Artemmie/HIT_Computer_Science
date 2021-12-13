@@ -47,5 +47,5 @@ void SortPointers(int* num1ptr, int* num2ptr, int* num3ptr)
 void Ex2()
 {
     int num = 928743, digit = 4, counter;
-    printf("Average: %.2f", AverageAboveDig(num, digit, &counter))
+    printf("Average: %.2f", AverageAboveDig(num, digit, &counter));
 }
