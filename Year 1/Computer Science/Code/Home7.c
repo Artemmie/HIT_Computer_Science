@@ -117,5 +117,5 @@ int BiggestCombination(int *arr, int n)
 void Ex4()
 {
     int arr[SIZE] = {1,6,2,4,3};
-    printf("Result: %d", BiggestCombination(arr, SIZE));
+    printf("Result: %d", KeyCheck(arr, SIZE));
 }
