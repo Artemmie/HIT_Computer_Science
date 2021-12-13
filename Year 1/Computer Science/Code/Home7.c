@@ -79,7 +79,7 @@ void Ex3()
     x = 2,
     n = 3;
     int result = Infi(x, &c, &n);
-    printf("Result: %d | n: %d, c: %d,", result, n, c);
+    printf("Result: %d | n: %d | c: %d,", result, n, c);
 }
 int Infi(int x, int *c, int *n)
 {
