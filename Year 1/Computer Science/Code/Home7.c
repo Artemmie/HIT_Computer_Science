@@ -18,7 +18,7 @@ int Infi(int, int*, int*);
 int IntPow(int,int);
 //---------------------------
 // EX 4
-void Ex3();
+void Ex4();
 int Infi(int, int*, int*);
 int IntPow(int,int);
 //---------------------------
