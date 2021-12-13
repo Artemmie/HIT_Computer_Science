@@ -9,7 +9,7 @@ void SortPointers(int*, int*, int*);
 //---------------------------
 // EX 2
 void Ex2();
-void SortPointers(int*, int*, int*);
+double AverageAboveDig(int, int, int*);
 //---------------------------
 
 void main()
