@@ -14,7 +14,7 @@ double AverageAboveDig(int, int, int*);
 //---------------------------
 // EX 3
 void Ex3();
-double AverageAboveDig(int, int, int*);
+
 //---------------------------
 
 void main()
@@ -70,4 +70,8 @@ double AverageAboveDig(int num, int digit, int *counter)
         num /= 10;
     }
     return fabs(result / (double)*counter);
+}
+void Ex3()
+{
+    int c,x,n;
 }
