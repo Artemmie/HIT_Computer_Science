@@ -76,5 +76,6 @@ void Ex3()
     int c = 0,
     x = 0,
     n = 0;
-    int result = Infi(n, &c, &x);
+    int result = Infi(x, &c, &n);
+    printf("Result: %d,")
 }
