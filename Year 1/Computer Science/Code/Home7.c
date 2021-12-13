@@ -12,6 +12,10 @@ void SortPointers(int*, int*, int*);
 void Ex2();
 double AverageAboveDig(int, int, int*);
 //---------------------------
+// EX 3
+void Ex3();
+double AverageAboveDig(int, int, int*);
+//---------------------------
 
 void main()
 {
