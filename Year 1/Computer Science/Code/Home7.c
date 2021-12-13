@@ -35,8 +35,8 @@ void main()
     //Ex2();
     //Ex3();
     //Ex4();
-    //Ex5();
-    Ex6();
+    Ex5();
+    //Ex6();
 }
 void Ex1()
 {
@@ -146,5 +146,10 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
 }
 void Ex6()
 {
-    
+        int arr[SIZE] = {1,6,2,4,3};
+    int ptr1 = -1,
+    ptr2 = -1,
+    key = 4;
+    printf("Result: %d | ", KeyCheck(arr, &ptr1, &ptr2, SIZE, key));
+    printf("1st value: %d | 2nd value: %d", ptr1, ptr2);
 }
