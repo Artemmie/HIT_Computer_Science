@@ -124,7 +124,7 @@ void Ex5()
 }
 int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
 {
-    for (int i = 0; i <n, i ++)
+    for (int i = 0; i <n; i ++)
     {
         for (int j = 0; j < n; j ++)
         {
