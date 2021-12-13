@@ -34,6 +34,24 @@ void Ex7();
 int Polydrom(int*, int);
 int PolydromRec(int*, int);
 //---------------------------
+// EX 8
+void Ex8();
+int PrintArr(int*, int);
+int ReversePrint(int*, int);
+//---------------------------
+// EX 9
+void Ex9();
+double AverageRec(int*, int);
+//---------------------------
+// EX 10
+void Ex10();
+int DoubleSort(double*, int);
+//---------------------------
+// EX 11
+void Ex11();
+int Super(int*, int);
+int SuperRec(int*, int);
+//---------------------------
 void main() {
     //Ex1();
     //Ex2();
@@ -41,7 +59,12 @@ void main() {
     //Ex4();
     //Ex5();
     //Ex6();
-    Ex7();
+    //Ex7();
+    //Ex8();
+    //Ex9();
+    //Ex10();
+    Ex11();
+
 }
 void Ex1() {
     int num1 = 6,
@@ -75,7 +98,7 @@ void Ex2() {
     printf("Average: %.2f | counter: %d", result, counter);
 }
 double AverageAboveDig(int num, int digit, int *counter) {
-    double result;
+    double result = 0.0;
     while (num != 0) {
         if (num % 10 < digit) {
             *counter += 1;
@@ -177,4 +200,116 @@ void maxmax(int *arr,int n,int *max_even,int *even,int *max_odd,int *odd)
             if(*max_odd < arr[i]) *max_odd = arr[i];
         }
     }
+}
+void Ex7()
+{
+    int arr[SIZE] = {
+        1,
+        3,
+        2,
+        3,
+        1
+    };
+    printf("Result: %d\n", Polydrom(arr, SIZE));
+    printf("Result Recursion: %d\n", PolydromRec(arr, SIZE));
+}
+int Polydrom(int *arr, int n)
+{
+    for (int i = 0; i < n/2; i++)
+        if (arr[i] != arr[n-i-1]) return 0;
+    return 1;
+}
+int PolydromRec(int *arr, int n)
+{
+    if (n < 1) return 1;
+    if (arr[0] != arr[n-1]) return 0;
+    PolydromRec(arr + 1, n-2);
+}
+void Ex8()
+{
+   int arr[SIZE] = {
+        1,
+        2,
+        3,
+        4,
+        5
+    };
+    PrintArr(arr, SIZE);
+    printf("\n");
+    ReversePrint(arr, SIZE);
+}
+int PrintArr(int *arr, int n)
+{
+    if (n == 0) return;
+    printf("{%d}", arr[0]);
+    PrintArr(arr + 1, n - 1);
+}
+int ReversePrint(int *arr, int n)
+{
+    if (n == 0) return;
+    printf("{%d}", arr[n-1]);
+    ReversePrint(arr, n - 1);
+}
+void Ex9()
+{
+       int arr[SIZE] = {
+        1,
+        2,
+        3,
+        4,
+        5
+    };
+    printf("Answer is: %.2f",AverageRec(arr, SIZE));
+}
+double AverageRec(int *arr, int n)
+{
+    if (n == 1) return arr[n-1];
+    return (double)(AverageRec(arr, n - 1) * (n - 1) + arr[n - 1]) / n;
+}
+void Ex10()
+{
+        double arr[4] = {
+        1.7,
+        2.65,
+        3.5,
+        4.7
+    };
+    printf("Answer is: %d", DoubleSort(arr, 4));
+}
+int DoubleSort(double *arr, int n)
+{
+    if (n == 1) return 1;
+    if (arr[0] > arr[1]) return 0;
+    int num1 = ((int)(arr[0] * 100) % 100);
+    int num2 = ((int)(arr[1] * 100) % 100);
+    if (num1 < num2) return 0;
+    DoubleSort(arr + 1, n - 1 );
+}
+void Ex11()
+{
+        int arr[6] = {
+        1,
+        2,
+        5,
+        7,
+        20,
+        40
+    };
+    printf("Answer is: %d\n",Super(arr, SIZE));
+    printf("Answer is: %d\n",SuperRec(arr, SIZE));
+}
+int Super(int *arr, int n)
+{
+    int sum = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if (arr[i] < sum) return 0;
+        sum += arr[i];
+    }
+    return 1;
+}
+int SuperRec(int* arr, int n)
+{
+    if (n == 0) return 0;
+    return (SuperRec(arr, n - 1) + arr[n-1]) < arr[n] ? 1 : 0;
 }
