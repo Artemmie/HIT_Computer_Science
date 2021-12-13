@@ -124,5 +124,8 @@ void Ex4()
 }
 int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key)
 {
-    
+    for (int i = 0; i <n, i ++)
+    {
+        
+    }
 }
