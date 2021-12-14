@@ -44,7 +44,7 @@ void Ex2()
     int flag = 1;
     int size = 0;
     int *newArr = ArrayChange(arr, 5, flag, &size);
-    PrintArray(newArr, size);
+    PrintArray(newArr, 5);
     printf("\n%d", size);
 }
 int * ArrayChange(int *arr, int n, int isEven, int *size)
