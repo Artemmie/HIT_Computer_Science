@@ -29,7 +29,8 @@ int main()
     //Ex1();
     //Ex2();
     //Ex3();
-    Ex4();
+    //Ex4();
+    Ex5();
     return 0;
 }
 void Ex1()
