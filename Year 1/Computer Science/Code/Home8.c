@@ -3,7 +3,6 @@
 #include <stdlib.h>
 // EX 1
 void Ex1();
-int * BuildArray(int);
 void Lucas(int);
 //---------------------------
 int main()
