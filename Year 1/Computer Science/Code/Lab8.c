@@ -76,7 +76,7 @@ int Popularity(int *arr, int n, int *count)
         if (resultarr[i] > result)
         {
             result = i;
-            *count = i;
+            *count = resultarr[i];
         }
     }
     return result;
