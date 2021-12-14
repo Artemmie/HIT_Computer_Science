@@ -4,6 +4,7 @@
 // EX 1
 void Ex1();
 int * Lucas(int);
+void PrintArray(int*, int);
 //---------------------------
 int main()
 {
@@ -14,6 +15,7 @@ void Ex1()
 {
     int size = 9;
     int arr[] = Lucas(size);
+    PrintArray()
 }
 int * Lucas(int size);
 {
