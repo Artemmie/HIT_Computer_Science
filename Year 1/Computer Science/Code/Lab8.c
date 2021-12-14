@@ -125,7 +125,7 @@ int RangeArr(int *arr, int n, int a, int b)
     for (int i = a; i <= b; i++)
     {
         if (max < resultarr[i])
-        
+        {
         max = resultarr[i];
         }
         else if (max == resultarr[i])
