@@ -24,3 +24,7 @@ int * BuildArray(int size)
     }
     return arr;
 }
+void PrintArray(int* arr, int size)
+{
+    
+}
