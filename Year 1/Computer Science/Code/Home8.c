@@ -52,10 +52,10 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
     int *newArr = (int*)malloc((*size) * sizeof(int));
     for (int i = 0; i < n; i++)
     {
-        newArr = realloc(newArr, (*size) * sizeof(int));
+        // = realloc(newArr, (*size) * sizeof(int));
         if(isEven == 1 && arr[i] % 2 == 0) 
         {
-            //newArr = realloc(newArr, (*size) * sizeof(int));   
+            newArr = realloc(newArr, (*size) * sizeof(int));   
             newArr[*size] = arr[i];
             *size = *size + 1;
         }
