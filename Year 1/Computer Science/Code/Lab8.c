@@ -97,7 +97,7 @@ void Ex4()
 }
 int Symmetrical(int *arr, int n, int k)
 {
-    int *resultarr = calloc(k, sizeof(int));
+    int *resultarr = calloc(k + 1, sizeof(int));
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
     for (int i = 0; i < k; i++)
