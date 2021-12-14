@@ -26,5 +26,8 @@ int * BuildArray(int size)
 }
 void PrintArray(int* arr, int size)
 {
-    
+    for (int i = 0; i < size; i++)
+    {
+        
+    }
 }
