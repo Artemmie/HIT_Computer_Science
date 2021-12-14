@@ -90,7 +90,7 @@ int Popularity(int *arr, int n, int *count)
 void Ex4()
 {
     int arr[SIZE] = {1,2, 3, 2, 3, 3};
-    int k = 4;
+    int k = 34;
     int result = Popularity(arr, SIZE, &count);
     printf("Result: %d | Count: %d", result, count);
 }
