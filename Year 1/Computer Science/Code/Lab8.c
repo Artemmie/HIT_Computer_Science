@@ -120,3 +120,7 @@ void Ex5()
     int result = Range(arr, 8, a, b);
     printf("Result: %d", result);
 }
+int Range(int *arr, int n, int a, int b)
+{
+    
+}
