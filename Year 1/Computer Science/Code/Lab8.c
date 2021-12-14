@@ -117,6 +117,6 @@ void Ex5()
 {
     int arr[8] = {5,5, 1, 4, 4, 4, 7, 7};
     int a = 1, b = 8;
-    int result = Range(arr, 8, k);
+    int result = Range(arr, 8, a, b);
     printf("Result: %d", result);
 }
