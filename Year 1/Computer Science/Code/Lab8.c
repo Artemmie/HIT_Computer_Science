@@ -11,6 +11,10 @@ void PrintArray(int*, int);
 void Ex2();
 int * FibArr(int);
 //---------------------------
+// EX 3
+void Ex3();
+int * FibArr(int);
+//---------------------------
 void main()
 {
     //Ex1();
