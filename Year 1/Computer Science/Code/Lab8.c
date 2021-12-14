@@ -79,5 +79,5 @@ int result(int *arr, int n, int *count)
             *count = i;
         }
     }
-    
+    return result
 }
