@@ -80,6 +80,7 @@ int Popularity(int *arr, int n, int *count)
         if (resultarr[i] > result)
         {
             result = resultarr[i];
+            index = i;
             *count = resultarr[i];
         }
     }
