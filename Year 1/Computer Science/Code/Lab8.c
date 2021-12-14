@@ -8,3 +8,7 @@ void main()
 {
     Ex1();
 }
+void Ex1()
+{
+    
+}
