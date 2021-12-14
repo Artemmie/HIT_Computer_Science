@@ -92,7 +92,7 @@ void Ex4()
     int arr[SIZE] = {1,2, 3, 2, 3, 3};
     int k = 3;
     int result = Symmetrical(arr, SIZE, k);
-    printf("Result: %d | Count: %d", result, count);
+    printf("Result: %d | Count: %d", result);
 }
 void Symmetrical(int *arr, int n)
 {
