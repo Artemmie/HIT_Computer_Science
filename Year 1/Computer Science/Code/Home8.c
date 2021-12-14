@@ -49,7 +49,7 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
     int *newArr;
     for (int i = 0; i < n; i++)
     {
-        if (*size == 1) 
+        if (*size == 0) 
         {
             *size = *size + 1;
             *newArr = (int*)malloc((*size + 1) * sizeof(int));
