@@ -4,10 +4,14 @@
 // EX 1
 void Ex1();
 int * BuildArray(int);
-void PrintArray(int*, int);
+void Lucas(int*, int);
 //---------------------------
 int main()
 {
     Ex1();
     return 0;
+}
+void Ex1()
+{
+    
 }
