@@ -2,7 +2,7 @@
 #define SIZE 6
 #include <stdio.h>
 #include <stdlib.h>
-#incluce <limits.h>
+#include <limits.h>
 
 // EX 1
 void Ex1();
