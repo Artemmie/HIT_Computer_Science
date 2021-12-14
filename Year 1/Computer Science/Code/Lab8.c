@@ -67,7 +67,7 @@ void Ex3()
 }
 int result(int *arr, int n, int *count)
 {
-    int *resultarr
+    int *resultarr = calloc(size, sizeof(int));
     for (int i = 0; i < n; i++)
     {
         
