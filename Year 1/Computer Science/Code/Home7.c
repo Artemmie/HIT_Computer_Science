@@ -314,4 +314,5 @@ int SuperRec(int* arr, int n)
     if (SuperRec(arr, n - 1) == 0) return 0;
     if(arr[0] > arr[n-1]) return 0;
     arr[0] += arr[n-1];
+    return 1;
 }
