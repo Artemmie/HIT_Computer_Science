@@ -43,7 +43,6 @@ void Ex2()
     int arr[5] = {1,8,3,6,11};
     int flag = 1;
     int size = 0;
-    printf("Got here");
     int *newArr = ArrayChange(arr, 5, flag, &size);
     PrintArray(newArr, size);
 }
