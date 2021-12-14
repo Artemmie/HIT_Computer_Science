@@ -40,4 +40,5 @@ void PrintArray(int *arr, int n)
 void Ex2()
 {
     int arr[5] = {1,8,3,6,11};
+    int flag;
 }
