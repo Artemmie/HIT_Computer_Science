@@ -21,7 +21,7 @@ void Ex4();
 int  Symmetrical(int*, int, int);
 //---------------------------
 // EX 5
-void Ex4();
+void Ex5();
 int  Symmetrical(int*, int, int);
 //---------------------------
 int main()
