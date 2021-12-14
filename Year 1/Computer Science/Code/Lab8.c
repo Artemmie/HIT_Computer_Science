@@ -14,7 +14,8 @@ int * FibArr(int);
 void main()
 {
     //Ex1();
-    Ex2();
+    //Ex2();
+    Ex3();
 }
 void Ex1()
 {
