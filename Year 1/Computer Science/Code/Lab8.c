@@ -126,4 +126,5 @@ int Range(int *arr, int n, int a, int b)
         if (max < resultarr[i]) max = resultarr[i];
         if (min > resultarr[i]) min = resultarr[i];
     }
+    return max - min;
 }
