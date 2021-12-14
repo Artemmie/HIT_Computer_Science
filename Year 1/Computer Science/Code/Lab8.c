@@ -76,8 +76,7 @@ int Popularity(int *arr, int n, int *count)
     for (int i = 0; i < 10; i++)
     {
         if (resultarr[i] == 0) continue;
-        printf("i: %d, result: %d\n", resultarr[i], result);
-        if (resultarr[i] > result)
+        if (resultarr[i] > *count)
         {
             result = resultarr[i];
             index = i;
