@@ -23,7 +23,7 @@ int  Symmetrical(int*, int, int);
 //---------------------------
 // EX 5
 void Ex5();
-int  RangeArr(int*, int, int);
+int  RangeArr(int*, int, int, int);
 //---------------------------
 int main()
 {
