@@ -3,7 +3,7 @@
 #include <stdlib.h>
 // EX 1
 void Ex1();
-void Lucas(int);
+int * Lucas(int);
 //---------------------------
 int main()
 {
