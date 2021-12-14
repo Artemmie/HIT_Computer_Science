@@ -94,7 +94,7 @@ void Ex4()
     int result = Symmetrical(arr, SIZE, k);
     printf("Result: %d | Count: %d", result);
 }
-void Symmetrical(int *arr, int n)
+int Symmetrical(int *arr, int n)
 {
     int *resultarr = calloc(k, sizeof(int));
     for (int i = 0; i < n; i++)
