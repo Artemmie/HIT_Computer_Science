@@ -37,7 +37,7 @@ int PolydromRec(int*, int);
 // EX 8
 void Ex8();
 void PrintArr(int*, int);
-int ReversePrint(int*, int);
+void ReversePrint(int*, int);
 //---------------------------
 // EX 9
 void Ex9();
