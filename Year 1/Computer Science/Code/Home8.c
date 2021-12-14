@@ -24,4 +24,5 @@ int * Lucas(int size);
         else if (i == 1) arr[i] = 1;
         else arr[i] = arr[i - 1] + arr[i - 2];
     }
+    return arr;
 }
