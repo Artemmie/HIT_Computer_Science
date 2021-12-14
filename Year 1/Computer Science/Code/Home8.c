@@ -8,6 +8,10 @@ void PrintArray(int*, int);
 void Ex1();
 int * Lucas(int);
 //---------------------------
+// EX 2
+void Ex2();
+int * Lucas(int);
+//---------------------------
 int main()
 {
     Ex1();
