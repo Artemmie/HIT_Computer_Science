@@ -51,4 +51,5 @@ int * FibArr(int size)
         else if (i == 1 || i == 2) arr[i] = 1;
         else arr[i] = arr[i - 2] + arr[i - 1];
     }
+    return arr;
 }
