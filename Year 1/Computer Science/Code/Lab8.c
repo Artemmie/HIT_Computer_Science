@@ -43,8 +43,6 @@ void Ex2()
 int 
 int * FibArr(int size)
 {
-    if (size == 0)
-    {
-        
-    }
+
+    int *arr = (int*)malloc(size * (sizeof(int)));
 }
