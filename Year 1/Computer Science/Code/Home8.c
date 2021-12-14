@@ -42,6 +42,7 @@ void Ex2()
     int arr[5] = {1,8,3,6,11};
     int flag = 1, int size = 0;
     int *newArr = ArrayChange(arr, 5, flag, &size);
+    PrintArray(newArr, size);
 }
 int * ArrayChange(int *arr, int n, int isEven, int *size)
 {
