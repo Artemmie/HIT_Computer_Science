@@ -291,7 +291,7 @@ void Ex11()
         1,
         2,
         5,
-        7,
+        9,
         20,
         40
     };
@@ -311,8 +311,7 @@ int Super(int *arr, int n)
 int SuperRec(int* arr, int n)
 {
     if (n == 1) return 1;
-    if (SuperRec(arr, n - 1) == 0) return 0;;
+    if (SuperRec(arr, n - 1) == 0) return 0;
     if(arr[0] > arr[n-1]) return 0;
     arr[0] += arr[n-1];
-    return 1;
 }
