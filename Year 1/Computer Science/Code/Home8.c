@@ -28,3 +28,7 @@ int * Lucas(int size);
     }
     return arr;
 }
+void PrintArray(int *arr, int n)
+{
+    
+}
