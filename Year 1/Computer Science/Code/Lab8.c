@@ -22,7 +22,7 @@ int  Symmetrical(int*, int, int);
 //---------------------------
 // EX 5
 void Ex5();
-int  Symmetrical(int*, int, int);
+int  Range(int*, int, int);
 //---------------------------
 int main()
 {
@@ -112,4 +112,11 @@ int Symmetrical(int *arr, int n, int k)
     }
 
     return 1;
+}
+void Ex5()
+{
+    int arr[8] = {5,5, 1, 4, 4, 4, 7, 7};
+    int k = 3;
+    int result = Symmetrical(arr, SIZE, k);
+    printf("Result: %d", result);
 }
