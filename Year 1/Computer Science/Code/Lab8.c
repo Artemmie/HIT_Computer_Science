@@ -35,5 +35,5 @@ void PrintArray(int* arr, int size)
 }
 void Ex2()
 {
-    
+    int size = 9;
 }
