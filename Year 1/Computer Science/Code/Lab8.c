@@ -111,7 +111,7 @@ int Symmetrical(int *arr, int n, int k)
 }
 void Ex5()
 {
-    int arr[6] = {5,1, 6, 6, 9, 9};
+    int arr[8] = {5,5, 1, 4, 4, 4,7 ,7};
     int a = 1, b = 9;
     int result = RangeArr(arr, 6, a, b);
     printf("Result: %d", result);
