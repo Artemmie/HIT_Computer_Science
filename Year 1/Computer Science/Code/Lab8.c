@@ -125,7 +125,11 @@ int RangeArr(int *arr, int n, int a, int b)
     for (int i = a; i <= b; i++)
     {
         if (resultarr[i] == 0) continue;
-        if (max <= resultarr[i]) max = ;
+        if (max <= resultarr[i]) 
+        {
+            
+        }
+        max = ;
         if (min > resultarr[i]) min = i;
         printf("{%d}, max: %d, min %d\n", resultarr[i], max, min);
     }
