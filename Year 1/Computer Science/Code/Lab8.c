@@ -101,6 +101,10 @@ int Symmetrical(int *arr, int n, int k)
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
     for (int i = 0; i <= k; i++)
+    {
+        
+    }
+        printf("")
         if (resultarr[i] != i + 1) return 0;
     return 1;
 }
