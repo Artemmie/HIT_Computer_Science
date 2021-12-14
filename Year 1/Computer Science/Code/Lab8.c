@@ -20,5 +20,5 @@ int* BuildArray(int size)
     for (int i = 0; i < size; i++){
         arr[i] = i + 1;
     }
-    return arr()
+    return arr*
 }
