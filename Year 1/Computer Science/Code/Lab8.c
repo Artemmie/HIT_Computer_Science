@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define SIZE 5
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -59,5 +60,5 @@ int * FibArr(int size)
 }
 void Ex3()
 {
-    
+    int arr[]
 }
