@@ -96,5 +96,5 @@ void Ex4()
 }
 void Symmetrical(int *arr, int n)
 {
-    
+    int *resultarr = calloc(k, sizeof(int));
 }
