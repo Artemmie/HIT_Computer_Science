@@ -6,6 +6,11 @@ void Ex1();
 int * BuildArray(int);
 void PrintArray(int*, int);
 //---------------------------
+// EX 1
+void Ex1();
+int * BuildArray(int);
+void PrintArray(int*, int);
+//---------------------------
 void main()
 {
     //Ex1();
