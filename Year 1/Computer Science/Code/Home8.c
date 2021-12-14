@@ -8,5 +8,5 @@ void PrintArray(int*, int);
 //---------------------------
 int main()
 {
-    
+    return 0;
 }
