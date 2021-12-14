@@ -4,7 +4,7 @@
 // EX 1
 void Ex1();
 int * BuildArray(int);
-void Lucas(int*, int);
+void Lucas(int);
 //---------------------------
 int main()
 {
@@ -13,5 +13,5 @@ int main()
 }
 void Ex1()
 {
-    
+    Lucas
 }
