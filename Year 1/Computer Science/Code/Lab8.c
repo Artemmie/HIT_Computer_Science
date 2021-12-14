@@ -76,7 +76,7 @@ int result(int *arr, int n, int *count)
         if (resultarr[i] > result)
         {
             result = resultarr[i];
-            *count = i
+            *count = i;
         }
     }
     
