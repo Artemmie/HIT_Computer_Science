@@ -5,7 +5,6 @@ void PrintArray(int*, int);
 // EX 1
 void Ex1();
 int * Lucas(int);
-
 //---------------------------
 int main()
 {
