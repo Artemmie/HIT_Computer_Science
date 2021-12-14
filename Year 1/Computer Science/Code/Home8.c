@@ -48,6 +48,6 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
 {
     for (int i = 0; i < n; i++)
     {
-        
+        if (isEven == 1)
     }
 }
