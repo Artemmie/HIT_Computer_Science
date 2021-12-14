@@ -123,8 +123,8 @@ int RangeArr(int *arr, int n, int a, int b)
     for(int i = 0; i < n; i++) resultarr[arr[i]]++;
     for (int i = a; i <= b; i++)
     {
-        printf("{%d}", resultarr[i]);
         if (resultarr[i] == 0) continue;
+        printf("{%d}", resultarr[i]);
         if (max <= resultarr[i]) max = resultarr[i];
         if (min > resultarr[i]) min = resultarr[i];
     }
