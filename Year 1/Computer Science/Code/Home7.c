@@ -238,7 +238,7 @@ void Ex8()
     printf("\n");
     ReversePrint(arr, SIZE);
 }
-int PrintArr(int *arr, int n)
+void PrintArr(int *arr, int n)
 {
     if (n == 0) return;
     printf("{%d}", arr[0]);
