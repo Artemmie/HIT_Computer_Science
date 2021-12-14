@@ -118,7 +118,7 @@ void Ex5()
 }
 int Range(int *arr, int n, int a, int b)
 {
-    int max = INT_MIN, min = b + 1;
+    int max = INT_MIN, min = INT_MAX;
     int *resultarr = calloc(b - a + 1, sizeof(int));
     for(int i = 0; i < n; i++) resultarr[arr[i]]++;
     for (int i = a; i <= b; i++)
