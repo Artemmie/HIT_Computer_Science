@@ -6,8 +6,8 @@ void Ex1();
 int * BuildArray(int);
 void PrintArray(int*, int);
 //---------------------------
-// EX 1
-void Ex1();
+// EX 2
+void Ex2();
 int * BuildArray(int);
 void PrintArray(int*, int);
 //---------------------------
