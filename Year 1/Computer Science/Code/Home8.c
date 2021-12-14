@@ -15,6 +15,7 @@ int * ArrayChange(int*, int, int, int*);
 int main()
 {
     Ex1();
+    Ex2();
     return 0;
 }
 void Ex1()
