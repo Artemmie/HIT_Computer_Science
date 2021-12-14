@@ -12,5 +12,5 @@ int main()
 }
 void Ex1()
 {
-    Lucas
+    int arr[] = Lucas
 }
