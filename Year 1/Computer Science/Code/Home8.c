@@ -13,5 +13,5 @@ int main()
 void Ex1()
 {
     int size = 9;
-    int arr[] = Lucas()
+    int arr[] = Lucas(size);
 }
