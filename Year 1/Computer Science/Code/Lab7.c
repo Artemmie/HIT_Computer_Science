@@ -31,8 +31,8 @@ int main() {
     //Ex1();
     //Ex2();
     //Ex3();
-    //Ex4();
-    Ex5();
+    Ex4();
+    //Ex5();
 }
 
 void Ex1() {
@@ -113,17 +113,17 @@ void Ex4() {
     int arr[SIZE] = {
         1,
         2,
-        7,
+        1,
         5,
-        9,
+        4,
     };
     //InputArray(arr, SIZE);
     int result = NeighborSum(arr, SIZE);
     printf("Result: %d\n", result);
 }
 int NeighborSum(int* arr, int n) {
-    for (int i = 1; i < n; i++)
-    if (arr[i - 1] + arr[i + 1] == arr[i]) return 1;
+    if (n < 3) return 0;
+    for (int i = 1; i < n-1; i++) if (arr[i - 1] + arr[i + 1] == arr[i]) return 1;
     return 0;
 }
 void Ex5() {
