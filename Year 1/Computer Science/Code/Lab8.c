@@ -67,7 +67,7 @@ void Ex3()
 }
 int result(int *arr, int n, int *count)
 {
-    int *resultarr = calloc(n, sizeof(int));
+    int *resultarr = calloc(10, sizeof(int));
     int result;
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
