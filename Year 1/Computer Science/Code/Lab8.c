@@ -65,7 +65,7 @@ void Ex3()
     int result = Popularity(arr, SIZE, &count);
     printf("Result: %d | Count: %d", result, count);
 }
-int result(int *arr, int n, int *count)
+int Popularity(int *arr, int n, int *count)
 {
     int *resultarr = calloc(10, sizeof(int));
     int result = 0;
