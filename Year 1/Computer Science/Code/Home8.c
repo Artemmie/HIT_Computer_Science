@@ -17,5 +17,5 @@ void Ex1()
 }
 int * Lucas(int size);
 {
-    
+    int *arr = (int*)malloc(size * sizeof(int))
 }
