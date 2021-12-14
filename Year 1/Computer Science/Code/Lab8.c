@@ -10,5 +10,5 @@ void main()
 }
 void Ex1()
 {
-    
+    int size = 10;
 }
