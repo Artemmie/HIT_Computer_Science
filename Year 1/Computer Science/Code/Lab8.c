@@ -90,7 +90,7 @@ int Popularity(int *arr, int n, int *count)
 }
 void Ex4()
 {
-    int arr[SIZE] = {1,2, 3, 2, 3, 3};
+    int arr[SIZE] = {1,2, 3, 2, 2, 3};
     int k = 3;
     int result = Symmetrical(arr, SIZE, k);
     printf("Result: %d", result);
