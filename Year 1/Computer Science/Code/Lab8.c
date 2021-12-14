@@ -62,7 +62,7 @@ void Ex3()
 {
     int arr[SIZE] = {1,6, 3, 3, 6};
     int count = 0;
-    int result = Popularity(arr, SIZE, &count)
+    int result = Popularity(arr, SIZE, &count);
     printf("Result: %d | Count: %d", result, count);
 }
 int result(int *arr, int n, int *count)
