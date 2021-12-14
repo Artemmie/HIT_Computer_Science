@@ -100,9 +100,9 @@ int Symmetrical(int *arr, int n, int k)
     int *resultarr = calloc(k + 1, sizeof(int));
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
-    for (int i = 0; i <= k; i++)
+    for (int i = 1; i <= k; i++)
     {
-        printf("{%d}", resultarr[i]);
+        
         if (resultarr[i] != i) return 0;
     }
 
