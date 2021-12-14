@@ -16,3 +16,6 @@ void Ex1()
     int arr[] = Lucas(size);
 }
 int * Lucas(int size);
+{
+    
+}
