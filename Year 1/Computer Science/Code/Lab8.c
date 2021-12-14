@@ -100,7 +100,7 @@ int Symmetrical(int *arr, int n, int k)
     int *resultarr = calloc(k + 1, sizeof(int));
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
-    for (int i = 0; i < k; i++)
+    for (int i = 0; i <= k; i++)
         if (resultarr[i] != i + 1) return 0;
     return 1;
 }
