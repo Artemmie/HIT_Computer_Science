@@ -310,7 +310,7 @@ int Super(int *arr, int n)
 }
 int SuperRec(int* arr, int n)
 {
-    if (n == 2) return 1;
+    if (n == 1) return 1;
     SuperRec(arr, n - 1);
     if(arr[0] > arr[n-1]) return 0;
     arr[0] += arr[n-1];
