@@ -71,6 +71,9 @@ int result(int *arr, int n, int *count)
     int result;
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
-    for (i = 0; i < n)
+    for (i = 0; i < 10; i++)
+    {
+        
+    }
     
 }
