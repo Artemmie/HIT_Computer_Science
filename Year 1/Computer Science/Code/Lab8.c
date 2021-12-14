@@ -45,4 +45,9 @@ int * FibArr(int size)
 {
 
     int *arr = (int*)malloc(size * (sizeof(int)));
+    if (size > 3)
+    {
+        
+    }
+    for (int i = 0; i)
 }
