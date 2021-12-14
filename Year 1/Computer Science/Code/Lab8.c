@@ -77,7 +77,7 @@ int Popularity(int *arr, int n, int *count)
         printf("i: %d, result: %d\n", resultarr[i], result);
         if (resultarr[i] > result)
         {
-            result = i;
+            result = resultarri;
             *count = resultarr[i];
         }
     }
