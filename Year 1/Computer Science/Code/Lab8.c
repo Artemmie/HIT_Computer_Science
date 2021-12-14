@@ -127,7 +127,7 @@ int RangeArr(int *arr, int n, int a, int b)
         if (resultarr[i] == 0) continue;
         if (max <= resultarr[i]) 
         {
-            max = resultarr[i]
+            max = resultarr[i];
         }
         if (min > resultarr[i]) min = i;
         printf("{%d}, max: %d, min %d\n", resultarr[i], max, min);
