@@ -16,8 +16,8 @@ int * FibArr(int);
 void Ex3();
 int  Popularity(int*, int,  int*);
 //---------------------------
-// EX 3
-void Ex3();
+// EX 4
+void Ex4();
 int  Popularity(int*, int,  int*);
 //---------------------------
 int main()
