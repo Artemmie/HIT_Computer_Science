@@ -14,6 +14,7 @@ void Ex1()
 {
     int size = 10;
     int *arr = BuildArray(size);
+    PrintArray(arr, size);
 }
 int * BuildArray(int size)
 {
