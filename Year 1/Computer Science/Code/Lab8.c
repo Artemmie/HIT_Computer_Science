@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define SIZE 5
+#define SIZE 6
 #include <stdio.h>
 #include <stdlib.h>
 
