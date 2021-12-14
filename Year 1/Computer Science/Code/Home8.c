@@ -46,7 +46,7 @@ void Ex2()
 }
 int * ArrayChange(int *arr, int n, int isEven, int *size)
 {
-    int *newArr = (int*)malloc(*size * sizeof(int))l
+    int *newArr = (int*)malloc(*size * sizeof(int));
     for (int i = 0; i < n; i++)
     {
         if 
