@@ -84,5 +84,5 @@ int Popularity(int *arr, int n, int *count)
             *count = resultarr[i];
         }
     }
-    return result;
+    return indexresult;
 }
