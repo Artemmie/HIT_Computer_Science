@@ -17,7 +17,7 @@ void Ex1()
     int *arr = Lucas(size);
     PrintArray(arr, size);
 }
-int * Lucas(int size);
+int * Lucas(int size)
 {
     int *arr = (int*)malloc((size + 1) * sizeof(int));
     for (int i = 0; i <= size; i++)
