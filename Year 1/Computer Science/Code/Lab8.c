@@ -60,5 +60,5 @@ int * FibArr(int size)
 }
 void Ex3()
 {
-    int arr[]
+    int arr[SIZE];
 }
