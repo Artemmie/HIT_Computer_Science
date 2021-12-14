@@ -133,6 +133,7 @@ int RangeArr(int *arr, int n, int a, int b)
         if (min > resultarr[i])
         {
             min = resultarr[i];
+            min_index = i;
         }
         printf("{%d}, max: %d, min %d\n", resultarr[i], max, min);
     }
