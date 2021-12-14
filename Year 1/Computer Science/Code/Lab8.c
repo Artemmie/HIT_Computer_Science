@@ -103,7 +103,7 @@ int Symmetrical(int *arr, int n, int k)
     for (int i = 0; i <= k; i++)
     {
         printf("{%d}", resultarr[i]);
-        if (resultarr[i] != i + 1) return 0;
+        if (resultarr[i] != i) return 0;
     }
 
     return 1;
