@@ -102,7 +102,7 @@ int Symmetrical(int *arr, int n, int k)
         resultarr[arr[i]]++;
     for (int i = 0; i <= k; i++)
     {
-                printf("")
+        printf("%d")
         if (resultarr[i] != i + 1) return 0;
     }
 
