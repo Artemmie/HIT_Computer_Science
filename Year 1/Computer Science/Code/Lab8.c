@@ -99,5 +99,5 @@ void Symmetrical(int *arr, int n)
     int *resultarr = calloc(k, sizeof(int));
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
-    
+    for (int i = 0; i < k; i++)
 }
