@@ -244,7 +244,7 @@ void PrintArr(int *arr, int n)
     printf("{%d}", arr[0]);
     PrintArr(arr + 1, n - 1);
 }
-int ReversePrint(int *arr, int n)
+void ReversePrint(int *arr, int n)
 {
     if (n == 0) return;
     printf("{%d}", arr[n-1]);
