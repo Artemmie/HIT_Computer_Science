@@ -18,7 +18,7 @@ int  Popularity(int*, int,  int*);
 //---------------------------
 // EX 4
 void Ex4();
-int  Popularity(int*, int,  int*);
+int  Symmetrical(int*, int, int);
 //---------------------------
 int main()
 {
