@@ -60,7 +60,7 @@ int * FibArr(int size)
 }
 void Ex3()
 {
-    int arr[SIZE] = {1,6, 3, 3, 6};
+    int arr[SIZE] = {1,6, 3, 3, 6, 3};
     int count = 0;
     int result = Popularity(arr, SIZE, &count);
     printf("Result: %d | Count: %d", result, count);
