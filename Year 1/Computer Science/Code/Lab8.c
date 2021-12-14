@@ -122,5 +122,6 @@ void Ex5()
 }
 int Range(int *arr, int n, int a, int b)
 {
+    int *resultarr = calloc(b - a + 1, sizeof(int))
     
 }
