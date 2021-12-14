@@ -57,3 +57,7 @@ int * FibArr(int size)
     }
     return arr;
 }
+void Ex3()
+{
+    
+}
