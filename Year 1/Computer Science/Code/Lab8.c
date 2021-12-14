@@ -18,6 +18,6 @@ int* BuildArray(int size)
 {
     int arr* = (int*)malloc(size * (sizeof(int)));
     for (int i = 0; i < size; i++){
-        arr[i] = i + 1
+        arr[i] = i + 1;
     }
 }
