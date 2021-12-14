@@ -15,7 +15,6 @@ void Ex1()
 {
     int size = 9;
     int *arr = Lucas(size);
-    PrintArray(arr, size);
 }
 int * Lucas(int size)
 {
