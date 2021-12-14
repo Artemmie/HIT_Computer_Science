@@ -101,4 +101,5 @@ void Symmetrical(int *arr, int n)
         resultarr[arr[i]]++;
     for (int i = 0; i < k; i++)
         if (resultarr[i] != i + 1) return 0;
+    return 1;
 }
