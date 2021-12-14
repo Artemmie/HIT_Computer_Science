@@ -10,7 +10,7 @@ int * Lucas(int);
 //---------------------------
 // EX 2
 void Ex2();
-int * Lucas(int);
+int * Lucas(int*, int, int, int*);
 //---------------------------
 int main()
 {
