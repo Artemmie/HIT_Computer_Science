@@ -127,6 +127,7 @@ int RangeArr(int *arr, int n, int a, int b)
         if (max < resultarr[i])
         {
             max = resultarr[i];
+            index_max = 0
         }
         else if (max == resultarr[i])
         if (min > resultarr[i]) min = resultarr[i];
