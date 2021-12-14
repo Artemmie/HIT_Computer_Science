@@ -73,7 +73,7 @@ int result(int *arr, int n, int *count)
         resultarr[arr[i]]++;
     for (i = 0; i < 10; i++)
     {
-        
+        if (resultarr[i] > result)
     }
     
 }
