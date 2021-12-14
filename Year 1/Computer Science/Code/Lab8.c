@@ -67,5 +67,6 @@ void Ex3()
 }
 int result(int *arr, int n, int *count)
 {
-    
+    int result;
+    for 
 }
