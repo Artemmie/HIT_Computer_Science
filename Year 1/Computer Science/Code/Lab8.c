@@ -21,6 +21,7 @@ int main()
     //Ex1();
     //Ex2();
     Ex3();
+    return 0;
 }
 void Ex1()
 {
