@@ -69,7 +69,6 @@ void Ex3()
 int Popularity(int *arr, int n, int *count)
 {
     int *resultarr = calloc(10, sizeof(int));
-    int result = 0;
     int index = 0;
     for (int i = 0; i < n; i++)
         resultarr[arr[i]]++;
@@ -78,7 +77,6 @@ int Popularity(int *arr, int n, int *count)
         if (resultarr[i] == 0) continue;
         if (resultarr[i] > *count)
         {
-            result = resultarr[i];
             index = i;
             *count = resultarr[i];
         }
