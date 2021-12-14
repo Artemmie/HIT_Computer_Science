@@ -137,5 +137,5 @@ int RangeArr(int *arr, int n, int a, int b)
         }
         printf("{%d}, max: %d, min %d\n", resultarr[i], max, min);
     }
-    return max - min;
+    return max_index - min_index;
 }
