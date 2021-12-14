@@ -43,4 +43,7 @@ int * FibArr(int size)
 {
     int * arr = (int*)malloc(size * sizeof(int));
     for (int i = 0; i < size; i++)
+    {
+        
+    }
 }
