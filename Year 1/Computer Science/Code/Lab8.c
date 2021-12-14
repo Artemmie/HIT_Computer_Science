@@ -48,6 +48,7 @@ int * FibArr(int size)
     for (int i = 0; i < size; i++)
     {
         if (i == 0) arr[i] = 0;
-        if (i == 1 || i == 2) arr[i] = 1;
+        else if (i == 1 || i == 2) arr[i] = 1;
+        arr[i] = arr[i - 2]
     }
 }
