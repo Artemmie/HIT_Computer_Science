@@ -47,9 +47,9 @@ int EvenNumber(int num) {
 }
 void Ex2() {
     int num;
-    printf("Enter the number:");
-    scanf("%d", &num);
-    printf("%d\n", Fibbonaci(num));
+    //printf("Enter the number:");
+    //scanf("%d", &num);
+    printf("%d\n", Fibbonaci(9));
 }
 int Fibbonaci(int num) {
     if (num == 0) return 0;
