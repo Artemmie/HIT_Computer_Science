@@ -12,7 +12,7 @@ void main()
 void Ex1()
 {
     int size = 10;
-    int arr[] = BuildArray(size);
+    int arr* = BuildArray(size);
 }
 int* BuildArray(int size)
 {
