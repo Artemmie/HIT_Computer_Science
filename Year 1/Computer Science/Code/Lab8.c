@@ -113,7 +113,7 @@ void Ex5()
 {
     int arr[8] = {5,5, 1, 4, 4, 4,7 ,7};
     int a = 1, b = 9;
-    int result = RangeArr(arr, 6, a, b);
+    int result = RangeArr(arr, 8, a, b);
     printf("Result: %d", result);
 }
 int RangeArr(int *arr, int n, int a, int b)
