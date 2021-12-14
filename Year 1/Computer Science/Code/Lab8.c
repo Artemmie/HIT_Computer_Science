@@ -8,7 +8,7 @@ void PrintArray(int*, int);
 //---------------------------
 // EX 2
 void Ex2();
-int * BuildArray(int);
+int * FibArr(int)l
 //---------------------------
 void main()
 {
