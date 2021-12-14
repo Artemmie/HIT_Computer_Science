@@ -28,7 +28,7 @@ void DigitsRange(int);
 //---------------------
 int main() {
     //Ex1();
-    //Ex2();
+    Ex2();
     //Ex3();
     //Ex4();
     //Ex5();
