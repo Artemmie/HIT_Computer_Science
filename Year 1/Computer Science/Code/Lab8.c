@@ -3,6 +3,7 @@
 
 // EX 1
 void Ex1();
+int* BuildArray(int);
 //---------------------------
 void main()
 {
