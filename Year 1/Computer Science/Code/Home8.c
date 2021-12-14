@@ -1,7 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+//COMMON
 void PrintArray(int*, int);
+//---------------------------
 // EX 1
 void Ex1();
 int * Lucas(int);
