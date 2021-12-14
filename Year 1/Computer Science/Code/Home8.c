@@ -65,6 +65,7 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
         else if (isEven == 0 && arr[i] % 2 != 0) 
         {
             newArr[*size] = arr[i];
+            newArr = realloc(newArr, (*size) * sizeof(int));
             *size = *size + 1;
         }
         
