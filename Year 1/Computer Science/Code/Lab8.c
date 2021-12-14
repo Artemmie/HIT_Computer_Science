@@ -40,8 +40,6 @@ void Ex2()
     int *arr = FibArr(size);
     PrintArray(arr, size);
 }
-
-int 
 int * FibArr(int size)
 {
 
