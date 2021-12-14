@@ -116,7 +116,7 @@ int Symmetrical(int *arr, int n, int k)
 void Ex5()
 {
     int arr[8] = {5,5, 1, 4, 4, 4, 7, 7};
-    int k = 3;
+    int a = 1, b = 8;
     int result = Symmetrical(arr, SIZE, k);
     printf("Result: %d", result);
 }
