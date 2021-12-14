@@ -16,5 +16,5 @@ void Ex1()
 }
 int* BuildArray(int size)
 {
-    
+    int arr* = (int*)malloc(size * (sizeof(int)))
 }
