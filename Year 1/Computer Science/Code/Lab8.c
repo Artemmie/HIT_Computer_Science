@@ -8,7 +8,7 @@ void PrintArray(int*, int);
 //---------------------------
 void main()
 {
-    Ex1();
+    //Ex1();
 }
 void Ex1()
 {
