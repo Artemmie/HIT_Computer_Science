@@ -51,6 +51,7 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
     {
         *size = *size + 1;
         if (*size == 1) *newArr = (int*)malloc(*size * sizeof(int));
+        else *newArr = realloc(size, sizeof(int))
         if(isEven == 0)
     }
 }
