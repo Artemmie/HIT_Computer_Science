@@ -54,9 +54,12 @@ int longest_seq(int n)
     {
         printf("Enter value for day number %d (in millimetres): ", i);
         scanf("%d", &mm);
+        if (mm == 0)
+        {
+            
+        }
         if (mm > 0) 
         {
-            if (seq == 0) index = i;
             seq++;
             if (seq >= 1 && max_seq < seq) max_seq = seq;
         }
