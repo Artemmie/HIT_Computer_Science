@@ -63,6 +63,8 @@ int min_digit_rec(int num)
 {
 	// Your code:
     if (num % 10 == 0) return num;
-    result = min_digit_rec(num / 10);
+    int result = min_digit_rec(num / 10);
+    if (result < num % 10) return result;
+    return num % 10;
 }
 // --------------------------- //
