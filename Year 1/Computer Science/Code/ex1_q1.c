@@ -53,6 +53,7 @@ int min_digit(int num)
     int min = num;
     while (num != 0)
     {
+        if (min == 0) break;
         if (min > num % 10) min = num % 10;
         num /= 10;
     }
