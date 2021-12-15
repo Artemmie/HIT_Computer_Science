@@ -52,6 +52,7 @@ unsigned long student_id()
 double sum_seq(int n, double x)
 {
 	// Your code:
+	int factorial;
     for (int i = 1; i <= n; i++)
     {
         
