@@ -51,6 +51,10 @@ int min_digit(int num)
 {
 	// Your code:
     int min = 10;
+    while (num != 0)
+    {
+        
+    }
 }
 
 int min_digit_rec(int num)
