@@ -96,3 +96,7 @@ void Ex4()
     ArrayMultip(arr, 5);
     PrintArray(arr, 5);
 }
+void ArrayMultip(int *arr, int)
+{
+    
+}
