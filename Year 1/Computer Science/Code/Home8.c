@@ -73,4 +73,5 @@ void Ex3()
 {
     int arrA[3] = {1,2,1};
     int arrB[3] = {3,3,3};
+    int *result = Vectors(arrA, 3, arrB, 3);
 }
