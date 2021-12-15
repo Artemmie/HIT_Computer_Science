@@ -43,12 +43,17 @@ unsigned long student_id()
     // for example if your id is 595207432
     // return 595207432
     // your code:
-
+    return 326856432;
 }
 
 int longest_seq(int n)
 {
 // Your code:
-
+    int mm;
+    for (int i = 1; i <= n; i++)
+    {
+        printf("Enter value for day number %d (in millimetres): ", i);
+        scanf("%d", &mm);
+    }
 }
 // --------------------------- //
