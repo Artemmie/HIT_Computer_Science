@@ -94,4 +94,5 @@ void Ex4()
 {
     int arr[5] = {1,2,2,4,1};
     ArrayMultip(arr, 5);
+    PrintArray(arr, 5);
 }
