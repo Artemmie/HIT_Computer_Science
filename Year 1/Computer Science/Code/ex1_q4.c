@@ -51,11 +51,13 @@ int sum_proper_divisors(int num)
 	// Your code:
 	int sum = 0;
     for (int i = 2; i <= sqrt(num); i++) 
+    {
         if (num % i == 0)
         {
             if (i == (num / i)) sum += i;
             else sum += (i + num / i);
         }
+    }s
 }
 
 void amicable_numbers(int num)
