@@ -156,16 +156,7 @@ int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key) {
     return 0;
 }
 void Ex6() {
-    int arr[8] = {
-        3,
-        6,
-        5,
-        9,
-        5,
-        7,
-        2,
-        1
-    };
+    int arr[8] = {3,6,5,9,5,7,2,1};
     int max_even = 0,
     even = 0,
     max_odd = 0,
@@ -191,13 +182,7 @@ void maxmax(int *arr,int n,int *max_even,int *even,int *max_odd,int *odd)
 }
 void Ex7()
 {
-    int arr[SIZE] = {
-        1,
-        3,
-        2,
-        3,
-        1
-    };
+    int arr[SIZE] = {1,3,2,3,1};
     printf("Result: %d\n", Polydrom(arr, SIZE));
     printf("Result Recursion: %d\n", PolydromRec(arr, SIZE));
 }
@@ -215,13 +200,7 @@ int PolydromRec(int *arr, int n)
 }
 void Ex8()
 {
-   int arr[SIZE] = {
-        1,
-        2,
-        3,
-        4,
-        5
-    };
+   int arr[SIZE] = {1,2,3,4,5};
     PrintArr(arr, SIZE);
     printf("\n");
     ReversePrint(arr, SIZE);
@@ -240,13 +219,7 @@ void ReversePrint(int *arr, int n)
 }
 void Ex9()
 {
-       int arr[SIZE] = {
-        1,
-        2,
-        3,
-        4,
-        5
-    };
+    int arr[SIZE] = {1,2,3,4,5};
     printf("Answer is: %.2f",AverageRec(arr, SIZE));
 }
 double AverageRec(int *arr, int n)
@@ -256,12 +229,7 @@ double AverageRec(int *arr, int n)
 }
 void Ex10()
 {
-        double arr[4] = {
-        1.7,
-        2.65,
-        3.5,
-        4.7
-    };
+    double arr[4] = {1.7,2.65,3.5,4.7};
     printf("Answer is: %d", DoubleSort(arr, 4));
 }
 int DoubleSort(double *arr, int n)
@@ -275,14 +243,7 @@ int DoubleSort(double *arr, int n)
 }
 void Ex11()
 {
-        int arr[6] = {
-        1,
-        2,
-        5,
-        9,
-        20,
-        40
-    };
+    int arr[6] = {1,2,5,9,20,40};
     printf("Answer is: %d\n",Super(arr, SIZE));
     printf("Answer is: %d\n",SuperRec(arr, SIZE));
 }
