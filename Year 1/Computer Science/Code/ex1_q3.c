@@ -53,8 +53,8 @@ unsigned long student_id()
 double sum_seq(int n, double x)
 {
 	// Your code:
-	int divisor = 1;
-	int divider = 1;
+	double divisor = 1;
+	double divider = 1;
 	double result;
     for (int i = 1; i <= n; i++)
     {
