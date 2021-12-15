@@ -60,7 +60,7 @@ double sum_seq(int n, double x)
     {
         divisor * = i;
         divider = pow(x, (double)(2 * i));
-        if (i % 2 == 0) result += divider / divisor
+        if (i % 2 == 0) result += divider / divisor;
     }
 }
 // --------------------------- //
