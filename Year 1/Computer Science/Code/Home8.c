@@ -99,6 +99,7 @@ void Ex4()
 void ArrayMultip(int *arr, int size)
 {
     int *tmpArr = (int*)malloc(size * sizeof(int))
+    for (int i = 0; i < size; i++)
     {
         
     }
