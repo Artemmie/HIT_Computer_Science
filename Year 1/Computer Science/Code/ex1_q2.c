@@ -57,6 +57,7 @@ int longest_seq(int n)
         if (mm == 0)
         {
             seq = 0;
+            flag = 1;
             continue;
         }
         seq++;
