@@ -76,7 +76,7 @@ void Ex3()
     int arrB[3] = {3,3,3};
     int *result = Vectors(arrA, arrB, 3);
     PrintArray(result, 3);
-    printf("\n%d", result[3]);
+    printf("\n%d", result[4]);
 }
 int * Vectors(int *arrA, int *arrB, int size)
 {
