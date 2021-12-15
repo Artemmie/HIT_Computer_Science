@@ -50,7 +50,7 @@ unsigned long student_id()
 int min_digit(int num)
 {
 	// Your code:
-    int min;
+    int min = 10;
 }
 
 int min_digit_rec(int num)
