@@ -56,7 +56,7 @@ int longest_seq(int n)
         scanf("%d", &mm);
         if (mm > 0)
         {
-            
+            if (seq == 0) index = i;
         }
     }
 }
