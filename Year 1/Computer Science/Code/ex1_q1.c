@@ -62,7 +62,7 @@ int min_digit(int num)
 int min_digit_rec(int num)
 {
 	// Your code:
-    if (num % 10 == 0) return 0;
+    if (num % 10 == 0) return num;
     
 }
 // --------------------------- //
