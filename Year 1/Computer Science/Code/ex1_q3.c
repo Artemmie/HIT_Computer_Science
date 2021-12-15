@@ -58,9 +58,9 @@ double sum_seq(int n, double x)
 	double result;
     for (int i = 1; i <= n; i++)
     {
-        factorial * = i;
+        divisor * = i;
         divider = pow(x, (double)(2 * i));
-        if (i % 2 == 0)
+        if (i % 2 == 0) result += 
     }
 }
 // --------------------------- //
