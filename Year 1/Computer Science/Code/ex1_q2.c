@@ -57,15 +57,16 @@ int longest_seq(int n)
         if (mm > 0) seq++;
         if (mm == 0)
         {
-            if (seq > 1){
-                
-            }
-            if (max_seq < seq)
+            if (seq > 1)
+            {
+                            if (max_seq < seq)
             {
                 max_seq = seq;
                 index = i - max_seq;
             }
             seq = 0;
+                
+            }
         }
     }
 }
