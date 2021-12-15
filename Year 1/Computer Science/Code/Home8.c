@@ -77,3 +77,6 @@ void Ex3()
     PrintArray(result, 3);
 }
 int * Vectors(int *arrA, int *arrB, int size)
+{
+    
+}
