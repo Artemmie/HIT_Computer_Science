@@ -49,11 +49,12 @@ unsigned long student_id()
 int longest_seq(int n)
 {
 // Your code:
-    int mm, index, seq;
+    int mm, index = 0, seq;
     for (int i = 1; i <= n; i++)
     {
         printf("Enter value for day number %d (in millimetres): ", i);
         scanf("%d", &mm);
+        
     }
 }
 // --------------------------- //
