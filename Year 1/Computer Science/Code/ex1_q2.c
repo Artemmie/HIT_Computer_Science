@@ -65,6 +65,7 @@ int longest_seq(int n)
             {
                 max_seq = seq;
             }
+            seq = 0;
         }
     }
 }
