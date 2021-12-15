@@ -67,7 +67,7 @@ void amicable_numbers(int num)
 	int sum;
     for (int i = 1; i < num; i++)
     {
-        if sum_proper_divisors(i)
+        sum = sum_proper_divisors(i)
     }
 }
 
