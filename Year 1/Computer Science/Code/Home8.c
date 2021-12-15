@@ -18,7 +18,7 @@ int * Vectors(int*, int*, int);
 //---------------------------
 // EX 4
 void Ex4();
-int * Vectors(int*, int*, int);
+int * Vectors(int*, int);
 //---------------------------
 int main()
 {
