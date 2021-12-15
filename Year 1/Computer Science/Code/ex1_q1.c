@@ -50,12 +50,13 @@ unsigned long student_id()
 int min_digit(int num)
 {
 	// Your code:
-    int min = num;
+    int min = 10;
     while (num != 0)
     {
-        if (min == 0) break;
         if (min > num % 10) min = num % 10;
+        if (min == 0) break;
         num /= 10;
+        printf("Run\n");
     }
     return min;
 }
