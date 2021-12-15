@@ -78,5 +78,5 @@ void Ex3()
 }
 int * Vectors(int *arrA, int *arrB, int size)
 {
-    
+    int *result = (int*)malloc(size * sizeof(int))
 }
