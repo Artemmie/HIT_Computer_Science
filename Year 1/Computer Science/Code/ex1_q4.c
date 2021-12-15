@@ -53,7 +53,7 @@ int sum_proper_divisors(int num)
     for (int i = 2; i <= sqrt(num); i++) 
         if (num % i == 0)
         {
-            
+            if (i == (num / i)) sum += i;
         }
 }
 
