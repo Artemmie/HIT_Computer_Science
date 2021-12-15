@@ -57,7 +57,8 @@ int sum_proper_divisors(int num)
             if (i == (num / i)) sum += i;
             else sum += (i + num / i);
         }
-    }s
+    }
+    return (sum + 1)
 }
 
 void amicable_numbers(int num)
