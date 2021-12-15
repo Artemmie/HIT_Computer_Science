@@ -126,13 +126,7 @@ int IntPow(int x, int y) {
     return x;
 }
 void Ex4() {
-    int arr[SIZE] = {
-        3,
-        8,
-        10,
-        -7,
-        7
-    };
+    int arr[SIZE] = {3,8,10,-7,7};
     printf("Result: %d", BiggestCombination(arr, SIZE));
 }
 int BiggestCombination(int *arr, int n) {
@@ -142,13 +136,7 @@ int BiggestCombination(int *arr, int n) {
     return sum;
 }
 void Ex5() {
-    int arr[SIZE] = {
-        1,
-        6,
-        2,
-        4,
-        3
-    };
+    int arr[SIZE] = {1,6,2,4,3};
     int ptr1 = -1,
     ptr2 = -1,
     key = 4;
@@ -157,7 +145,7 @@ void Ex5() {
 }
 int KeyCheck(int *arr, int *ptr1, int *ptr2, int n, int key) {
     for (int i = 0; i < n; i ++) {
-        for (int j = i + 1; j < n; j ++) {
+        for (int j = i + 1; j < n-1; j ++) {
             if (arr[i] + arr[j] < key) {
                 *ptr1 = arr[i];
                 *ptr2 = arr[j];
