@@ -49,7 +49,10 @@ unsigned long student_id()
 int sum_proper_divisors(int num)
 {
 	// Your code:
-
+    for (int i = 1; i < num / 2; i++)
+    {
+        
+    }
 }
 
 void amicable_numbers(int num)
