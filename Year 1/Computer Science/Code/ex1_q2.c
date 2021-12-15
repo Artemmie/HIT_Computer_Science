@@ -61,10 +61,6 @@ int longest_seq(int n)
             continue;
         }
         seq++;
-        if (flag)
-        {
-            index = i
-        }
     }
     return index;
 }
