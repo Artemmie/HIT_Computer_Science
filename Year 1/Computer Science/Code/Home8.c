@@ -69,3 +69,7 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
     }
     return newArr;
 }
+void Ex3()
+{
+    
+}
