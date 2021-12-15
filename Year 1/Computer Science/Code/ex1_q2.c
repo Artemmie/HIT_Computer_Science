@@ -60,7 +60,7 @@ int longest_seq(int n)
             continue;
         }
         seq++;
-        
+        if (seq == 1) flag = 1;
     }
     return index;
 }
