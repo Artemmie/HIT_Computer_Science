@@ -59,6 +59,10 @@ int longest_seq(int n)
             if (seq == 0) index = i;
             seq++;
         }
+        if (mm == 0)
+        {
+            
+        }
     }
 }
 // --------------------------- //
