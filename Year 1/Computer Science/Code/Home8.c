@@ -62,7 +62,6 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
             newArr[*size] = arr[i];
             *size = *size + 1;
         }
-        
     }
     return newArr;
 }
