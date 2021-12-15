@@ -61,7 +61,11 @@ int longest_seq(int n)
             continue;
         }
         seq++;
-        if (max_seq < seq) max_seq = seq;
+        if (max_seq < seq)
+        {
+            
+        }
+        max_seq = seq;
     }
     return index;
 }
