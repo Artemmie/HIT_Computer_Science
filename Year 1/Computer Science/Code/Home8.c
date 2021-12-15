@@ -90,3 +90,7 @@ int * Vectors(int *arrA, int *arrB, int size)
     result[2] = arrA[0] * arrB[1] - arrA[1] * arrB[0];
     return result;
 }
+void Ex4()
+{
+    
+}
