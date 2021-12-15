@@ -12,8 +12,8 @@ int * Lucas(int);
 void Ex2();
 int * ArrayChange(int*, int, int, int*);
 //---------------------------
-// EX 2
-void Ex2();
+// EX 3
+void Ex3();
 int * ArrayChange(int*, int, int, int*);
 //---------------------------
 int main()
