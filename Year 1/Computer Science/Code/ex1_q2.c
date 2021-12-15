@@ -59,12 +59,7 @@ int longest_seq(int n)
             seq = 0;
             continue;
         }
-        if (mm > 0) 
-        {
-            seq++;
-            if (seq >= 1 && max_seq < seq) max_seq = seq;
-        }
-        if (seq >= 1 && max_seq < seq) max_seq = seq;
+        seq++;
     }
     return index;
 }
