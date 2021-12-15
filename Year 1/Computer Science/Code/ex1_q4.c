@@ -68,13 +68,8 @@ void amicable_numbers(int num)
     for (int i = 2; i < num; i++)
     {
         sum = sum_proper_divisors(i);
-        if (sum_proper_divisors(sum) == i) 
-        {
-            
-            printf("Sum - %d, i - %d, proper_divisor for i - %d, proper_divisor for sum - %d | (%d,%d)\n", sum, i, sum_proper_divisors(i), sum_proper_divisors(sum), i, sum);
-        }
-        
-        
+        if (sum_proper_divisors(sum) == i && i < sum) 
+            printf("(%d,%d)\n",i, sum);
     }
 }
 
