@@ -14,7 +14,7 @@ int * ArrayChange(int*, int, int, int*);
 //---------------------------
 // EX 3
 void Ex3();
-int * Vectors(int*, int, int, int*);
+int * Vectors(int*, int, int*, int);
 //---------------------------
 int main()
 {
