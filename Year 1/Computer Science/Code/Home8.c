@@ -19,7 +19,8 @@ int * Vectors(int*, int*, int);
 int main()
 {
      //Ex1();
-    Ex2();
+    //Ex2();
+    Ex3();
     return 0;
 }
 void Ex1()
