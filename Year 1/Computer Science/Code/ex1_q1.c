@@ -54,6 +54,7 @@ int min_digit(int num)
     while (num != 0)
     {
         if (min > num % 10) min = num % 10;
+        num /= 10;
     }
     return min;
 }
