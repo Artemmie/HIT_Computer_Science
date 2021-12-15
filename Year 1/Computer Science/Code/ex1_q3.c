@@ -55,10 +55,12 @@ double sum_seq(int n, double x)
 	// Your code:
 	int divisor = 1;
 	int divider = 1;
+	double result;
     for (int i = 1; i <= n; i++)
     {
         factorial * = i;
         divider = pow(x, (double)(2 * i));
+        if (i % 2 == 0)
     }
 }
 // --------------------------- //
