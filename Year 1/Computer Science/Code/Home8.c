@@ -80,8 +80,8 @@ void Ex3()
 int * Vectors(int *arrA, int *arrB, int size)
 {
     int *result = (int*)malloc(size * sizeof(int));
-    result[0] = (arrA[1] * arrB[2] - arrA[2] * arrB[1];
-    result[1] = (arrA[2] * arrB[0] - arrA[0] * arrB[2];
-    result[2] = (arrA[0] * arrB[1] - arrA[1] * arrB[0];
+    result[0] = arrA[1] * arrB[2] - arrA[2] * arrB[1];
+    result[1] = arrA[2] * arrB[0] - arrA[0] * arrB[2];
+    result[2] = arrA[0] * arrB[1] - arrA[1] * arrB[0];
     return arr;
 }
