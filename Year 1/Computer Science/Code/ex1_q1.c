@@ -56,7 +56,6 @@ int min_digit(int num)
         if (min > num % 10) min = num % 10;
         if (min == 0) break;
         num /= 10;
-        printf("Run\n");
     }
     return min;
 }
