@@ -54,6 +54,7 @@ int sum_proper_divisors(int num)
         if (num % i == 0)
         {
             if (i == (num / i)) sum += i;
+            else sum += (i + num / i)
         }
 }
 
