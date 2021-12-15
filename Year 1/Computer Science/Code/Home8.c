@@ -72,4 +72,5 @@ int * ArrayChange(int *arr, int n, int isEven, int *size)
 void Ex3()
 {
     int arrA[3] = {1,2,1};
+    int arrB[3] = {3,3,3};
 }
