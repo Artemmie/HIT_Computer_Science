@@ -61,7 +61,7 @@ int longest_seq(int n)
         }
         if (mm == 0)
         {
-            
+            index = 0;
         }
     }
 }
