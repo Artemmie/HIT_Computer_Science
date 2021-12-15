@@ -50,7 +50,7 @@ int sum_proper_divisors(int num)
 {
 	// Your code:
 	int sum = 0;
-    for (int i = 1; i < num / 2; i++) 
+    for (int i = 1; i < 9; i++) 
         if (num % i == 0) sum += i;
 }
 
