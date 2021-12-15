@@ -5,7 +5,7 @@
 // --------------------------- //
 // include package section:
 #include <stdio.h>
-#include <maths.h>
+#include <math.h>
 // --------------------------- //
 
 
