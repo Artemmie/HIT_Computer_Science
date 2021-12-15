@@ -55,7 +55,7 @@ double sum_seq(int n, double x)
 	int factorial = 1;
     for (int i = 1; i <= n; i++)
     {
-        factorial * = 1;
+        factorial * = i;
     }
 }
 // --------------------------- //
