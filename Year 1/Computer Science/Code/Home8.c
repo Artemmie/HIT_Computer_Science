@@ -92,5 +92,5 @@ int * Vectors(int *arrA, int *arrB, int size)
 }
 void Ex4()
 {
-    
+    int arr = {1,2,2,4,1};
 }
