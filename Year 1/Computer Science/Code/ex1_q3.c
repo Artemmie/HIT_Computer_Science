@@ -52,7 +52,7 @@ unsigned long student_id()
 double sum_seq(int n, double x)
 {
 	// Your code:
-	double divisor = x *x;
+	double divisor = x * x;
 	double divider = 1;
 	double result = 1;
 	double powX = x * x;
