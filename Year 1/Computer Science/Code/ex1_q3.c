@@ -61,7 +61,6 @@ double sum_seq(int n, double x)
         divider *= powX; 
         if (i % 2 == 0) result += divider / divisor;
         else result -= divider / divisor;
-        
     }
     return result;
 }
