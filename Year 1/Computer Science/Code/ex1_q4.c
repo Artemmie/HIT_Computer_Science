@@ -49,15 +49,11 @@ unsigned long student_id()
 int sum_proper_divisors(int num)
 {
 	// Your code:
-	   int sum = 1;
+	int sum = 1;
     for (int i = 2; i < num / 2; i++) 
     {
         if (i > num / i) return sum;
-        if (num % i == 0)
-        {
-            if ((num / i) == i) sum += i;
-            else sum += (i + num / i);
-        }
+		if (num % i == 0) sum += (num / i == i) ? i : (i + num / i);
     }
     return sum;
 }
@@ -65,12 +61,11 @@ int sum_proper_divisors(int num)
 void amicable_numbers(int num)
 {
 	// Your code:
-	   int sum;
+	int sum;
     for (int i = 2; i < num; i++)
     {
         sum = sum_proper_divisors(i);
-        if (sum_proper_divisors(sum) == i && i < sum) 
-            printf("(%d,%d)\n",i, sum);
+        if (sum_proper_divisors(sum) == i && i < sum) printf("(%d,%d)\n",i, sum);
     }
 }
 

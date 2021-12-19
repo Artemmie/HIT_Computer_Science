@@ -62,7 +62,6 @@ double sum_seq(int n, double x)
         divisor *= i;
         if (i % 2 == 0) result += divider / divisor;
         else result -= divider / divisor;
-        printf("%f\n", result);
     }
     return result;
 }
