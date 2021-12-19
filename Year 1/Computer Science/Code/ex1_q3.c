@@ -58,7 +58,7 @@ double sum_seq(int n, double x)
 	double powX = x * x;
     for (int i = 1; i <= n; i++)
     {
-        divisor * = ;
+        divisor = x * x;
         divider *= powX; 
         if (i % 2 == 0) result += divider / divisor;
         else result -= divider / divisor;
