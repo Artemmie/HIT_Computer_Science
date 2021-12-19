@@ -49,22 +49,23 @@ unsigned long student_id()
 int sum_proper_divisors(int num)
 {
 	// Your code:
-	int sum = 0;
-    for (int i = 2; i <= num / 2; i++) 
+	   int sum = 1;
+    for (int i = 2; i < num / 2; i++) 
     {
+        if (i > num / i) return sum;
         if (num % i == 0)
         {
-            if (i == (num / i)) sum += i;
+            if ((num / i) == i) sum += i;
             else sum += (i + num / i);
         }
     }
-    return (sum + 1);
+    return sum;
 }
 
 void amicable_numbers(int num)
 {
 	// Your code:
-	int sum;
+	   int sum;
     for (int i = 2; i < num; i++)
     {
         sum = sum_proper_divisors(i);
