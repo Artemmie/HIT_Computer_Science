@@ -5,7 +5,6 @@
 // --------------------------- //
 // include package section:
 #include <stdio.h>
-#include <math.h>
 // --------------------------- //
 
 
@@ -51,7 +50,7 @@ int sum_proper_divisors(int num)
 {
 	// Your code:
 	int sum = 0;
-    for (int i = 2; i <= sqrt(num); i++) 
+    for (int i = 2; i <= num / 2; i++) 
     {
         if (num % i == 0)
         {
