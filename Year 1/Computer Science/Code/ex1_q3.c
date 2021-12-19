@@ -55,7 +55,7 @@ double sum_seq(int n, double x)
 	double divisor = 1;
 	double divider = 1;
 	double result = 1;
-	double powX = 2;
+	double powX = x * x;
     for (int i = 1; i <= n; i++)
     {
         divisor * = i;
