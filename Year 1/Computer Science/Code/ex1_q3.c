@@ -52,15 +52,17 @@ unsigned long student_id()
 double sum_seq(int n, double x)
 {
 	// Your code:
-	double divisor = 1
+	double divisor = 1;
 	double divider = 1;
 	double result = 1;
 	double powX = x * x;
     for (int i = 1; i <= n; i++)
     {
         divider *= powX; 
+        divisor *= i;
         if (i % 2 == 0) result += divider / divisor;
         else result -= divider / divisor;
+        printf("%f\n", result);
     }
     return result;
 }
