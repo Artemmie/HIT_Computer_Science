@@ -20,12 +20,17 @@ int* Vectors(int*, int*, int);
 void Ex4();
 void ArrayMultip(int*, int);
 //---------------------------
+// EX 5
+void Ex5();
+int*  MissingVariables(int*, int, int*);
+//---------------------------
 int main()
 {
     //Ex1();
-   //Ex2();
-   //Ex3();
-    Ex4();
+    //Ex2();
+    //Ex3();
+    //Ex4();
+    Ex5();
     return 0;
 }
 void Ex1()
@@ -101,17 +106,34 @@ void ArrayMultip(int* arr, int size)
     int* tmpArr = (int*)malloc(size * sizeof(int));
     for (int i = 0; i < size; i++)
     {
-        tmpArr[i] = arr[i];
-        for (int j = 0; j < size; i++)
+        tmpArr[i] = 1;
+        for (int j = 0; j < size; j++)
         {
             if (i == j) continue;
-            tmpArr[i] *= j;
+            tmpArr[i] *= arr[j];
         }
     }
     for (int i = 0; i < size; i++)
-    {
         arr[i] = tmpArr[i];
-    }
-    free(*tmpArr);
-    *tmpArr = NULL;
+    free(tmpArr);
+    tmpArr = NULL;
+}
+void Ex5()
+{
+    int arr[6] = { 0,1,1,0,3,5 };
+    int size = 0;
+    int *newArr = MissingVariables(arr, 6, &size);
+    PrintArray(newArr, size);
+}
+int* MissingVariables(int* arr, int n, int* size)
+{
+    int* tmp = (int*)calloc(n + 1, sizeof(int));
+    int* newArr = (int*)malloc((n + 1) * sizeof(int));
+    for (int i = 0; i < n; i++) tmp[arr[i]]++;
+    for (int i = 0, * size = 0; i < n + 1; i++)
+        if (!tmp[i]) newArr[(*size)++] = i;
+    newArr = (int*)realloc(newArr, (*size) * sizeof(int));
+
+    free(tmp);
+    return newArr;
 }
