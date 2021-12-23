@@ -11,3 +11,7 @@ int main()
     Ex1();
     return -1;
 }
+void Ex1()
+{
+    
+}
