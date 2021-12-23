@@ -216,7 +216,7 @@ void Ex9()
     int result = BiggestMissingDig(arr, 9);
     printf("Result is: %d", result);
 }
-int RotateArray(int* arr, int n)
+void RotateArray(int* arr, int n)
 {
     
 }
