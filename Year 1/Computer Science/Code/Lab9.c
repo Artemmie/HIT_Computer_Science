@@ -14,4 +14,5 @@ int main()
 void Ex1()
 {
     char string[] = "abcd";
+    DuplicateString(string);
 }
