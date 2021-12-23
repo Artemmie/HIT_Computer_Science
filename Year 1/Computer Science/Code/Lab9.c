@@ -3,7 +3,7 @@
 
 // EX 1
 void Ex1();
-int* DuplicateString(int);
+int* DuplicateString(char);
 //---------------------------
 
 int main()
