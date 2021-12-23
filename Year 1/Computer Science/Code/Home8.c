@@ -148,7 +148,7 @@ void Ex6()
     int result = BigVar(arr, 6);
     PrintArray("Result is: %d", result);
 }
-int  BigVar(int arr, int n)
+int  BigVar(int* arr, int n)
 {
     
 }
