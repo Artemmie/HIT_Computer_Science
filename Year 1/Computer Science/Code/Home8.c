@@ -192,7 +192,7 @@ int BiggestSum(int* arr, int n)
 }
 void Ex8()
 {
-    int arr[9] = { 1,4,2,2,3,2,3,2,7 };
+    int arr[9] = { 1,4,2,2,3,2,9,2,7 };
     int result = BiggestMissingDig(arr, 9);
     printf("Result is: %d", result);
 }
