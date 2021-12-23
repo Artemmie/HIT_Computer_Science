@@ -26,7 +26,7 @@ int*  MissingVariables(int*, int, int*);
 //---------------------------
 // EX 6
 void Ex6();
-int*  BigVar(int*, int);
+int  BigVar(int*, int);
 //---------------------------
 int main()
 {
@@ -142,4 +142,11 @@ int* MissingVariables(int* arr, int n, int* size)
     free(tmp);
     return newArr;
 }
-v
+void Ex6()
+{
+    int arr[6] = { 0,1,1,0,3,5 };
+    int size = 0;
+    int *newArr = MissingVariables(arr, 6, &size);
+    PrintArray(newArr, size);
+}
+int  BigVar(int arr, int n);
