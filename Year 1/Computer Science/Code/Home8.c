@@ -150,5 +150,5 @@ void Ex6()
 }
 int  BigVar(int* arr, int n)
 {
-    
+    int* newArr = (int*)calloc((n+1), sizeof(int));
 }
