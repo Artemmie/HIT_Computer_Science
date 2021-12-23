@@ -28,6 +28,10 @@ int*  MissingVariables(int*, int, int*);
 void Ex6();
 int  BigVar(int*, int);
 //---------------------------
+// EX 7
+void Ex7();
+int  BigVar(int*, int);
+//---------------------------
 int main()
 {
     //Ex1();
@@ -35,7 +39,8 @@ int main()
     //Ex3();
     //Ex4();
     //Ex5();
-    Ex6();
+    //Ex6();
+    Ex7();
     return 0;
 }
 void Ex1()
