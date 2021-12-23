@@ -21,4 +21,5 @@ char* DuplicateString(char string[])
 {
     int *newString = (char*)malloc(((strlen(string) + 1) * 2) * sizeof(char));
     strcpy(newString, string);
+    strcpy(newString, string);
 }
