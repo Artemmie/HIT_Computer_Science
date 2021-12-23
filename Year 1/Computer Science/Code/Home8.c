@@ -176,7 +176,7 @@ int BiggestSum(int* arr, int n)
         newArr[arr[i]]++;
     for (int i = 0; i <= n; i++)
     {
-        printf("i - %d, newArr[i] - %d\n - ", i, newArr[i]);
+        printf("i - %d, newArr[i] - %d\n - result - %d ", i, newArr[i]);
         if (newArr[i] * i > maxVal) maxVal = i;
     }
 
