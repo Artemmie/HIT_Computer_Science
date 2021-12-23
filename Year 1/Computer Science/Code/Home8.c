@@ -175,6 +175,6 @@ int BiggestSum(int* arr, int n)
     for (int i = 0; i < n; i++)
         newArr[arr[i]]++;
     for (int i = 0; i <= n; i++)
-        if (newArr[i] * i > maxVal) maxVal = ni;
+        if (newArr[i] * i > maxVal) maxVal = i;
     return maxVal;
 }
