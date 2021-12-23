@@ -238,5 +238,5 @@ void Ex10()
 {
     int arr[9] = { 1,4,6,2,8,3,9,5,7 };
     int *result = BiggestValues(int*, int);
-    PrintArray(arr, 9);
+    PrintArray(result, 9);
 }
