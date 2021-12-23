@@ -38,7 +38,7 @@ int  BiggestMissingDig(int*, int);
 //---------------------------
 // EX 9
 void Ex9();
-void  RotateArray(int*, int, int);
+void RotateArray(int*, int, int);
 //---------------------------
 // EX 10
 void Ex10();
