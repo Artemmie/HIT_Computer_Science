@@ -247,6 +247,6 @@ int* BiggestValues(int* arr, int n)
         newArr[i] = -1;
     for (int i = 0; i < n; i++)
     {
-        for (int )
+        for (int j = i; j )
     }
 }
