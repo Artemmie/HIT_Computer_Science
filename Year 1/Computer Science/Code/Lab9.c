@@ -3,7 +3,7 @@
 
 // EX 1
 void Ex1();
-int* Lucas(int);
+int* DuplicateArr(int);
 //---------------------------
 
 int main()
