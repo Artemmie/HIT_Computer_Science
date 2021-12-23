@@ -234,7 +234,7 @@ void RotateArray(int* arr, int n, int count)
         arr[0] = lastVar;
     }
 }
-void Ex9()
+void Ex10()
 {
     int arr[9] = { 1,4,6,2,8,3,9,5,7 };
     int amount = 4;
