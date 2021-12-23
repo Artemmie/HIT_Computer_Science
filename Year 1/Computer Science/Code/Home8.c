@@ -24,6 +24,10 @@ void ArrayMultip(int*, int);
 void Ex5();
 int*  MissingVariables(int*, int, int*);
 //---------------------------
+// EX 6
+void Ex6();
+int*  BigVar(int*, int);
+//---------------------------
 int main()
 {
     //Ex1();
@@ -137,3 +141,4 @@ int* MissingVariables(int* arr, int n, int* size)
     free(tmp);
     return newArr;
 }
+v
