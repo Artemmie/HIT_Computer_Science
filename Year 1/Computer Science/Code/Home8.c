@@ -172,6 +172,10 @@ int BiggestSums(int* arr, int n)
 {
     int *newArr = (int*)calloc((n+1), sizeof(int));
     int maxVal = 0;
-    for (int i =0; i < n; i++)
+    for (int i = 0; i < n; i++)
         newArr[arr[i]]++;
+    for (int i = 0; < n+1; i++)
+    {
+        
+    }
 }
