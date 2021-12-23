@@ -242,5 +242,5 @@ void Ex10()
 }
 int* BiggestValues(int* arr, int n)
 {
-    
+    int *newArr = (int*)malloc(n * sizeof(int));
 }
