@@ -3,7 +3,7 @@
 
 // EX 1
 void Ex1();
-int* DuplicateArr(int);
+int* DuplicateString(int);
 //---------------------------
 
 int main()
