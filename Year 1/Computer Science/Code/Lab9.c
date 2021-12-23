@@ -19,5 +19,5 @@ void Ex1()
 }
 char* DuplicateString(char string[])
 {
-    int *newString = (char*)malloc((strlen(string) + 1) * 2)
+    int *newString = (char*)malloc(((strlen(string) + 1) * 2) * sizeof(char));
 }
