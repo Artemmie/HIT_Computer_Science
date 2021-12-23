@@ -168,7 +168,7 @@ void Ex7()
     int result = BiggestSums(arr, 9);
     printf("Result is: %d", result);
 }
-int BiggestSums(int* arr, int n)
+int BiggestSum(int* arr, int n)
 {
     int *newArr = (int*)calloc((n+1), sizeof(int));
     int maxVal = 0;
