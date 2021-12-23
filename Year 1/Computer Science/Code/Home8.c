@@ -164,7 +164,7 @@ int  BigVar(int* arr, int n)
 }
 void Ex7()
 {
-    int arr[9] = { 1,4,2,2,3,3,3,2,7 };
+    int arr[9] = { 1,4,2,2,3,7,3,2,7 };
     int result = BiggestSum(arr, 9);
     printf("Result is: %d", result);
 }
