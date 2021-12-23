@@ -72,6 +72,7 @@ int* Lucas(int size)
 void PrintArray(int* arr, int n)
 {
     for (int i = 0; i < n; i++) printf("{%d}", arr[i]);
+    printf("\n")
 }
 void Ex2()
 {
