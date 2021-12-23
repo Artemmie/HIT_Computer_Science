@@ -55,6 +55,7 @@ int main()
     //Ex7();
     //Ex8();
     //Ex9();
+    Ex10();
     return 0;
 }
 void Ex1()
