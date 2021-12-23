@@ -38,7 +38,7 @@ int  BiggestMissingDig(int*, int);
 //---------------------------
 // EX 9
 void Ex9();
-int  BiggestMissingDig(int*, int);
+int  BiggestMissingDig(int*, int, int);
 //---------------------------
 int main()
 {
