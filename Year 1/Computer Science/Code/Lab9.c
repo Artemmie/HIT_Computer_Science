@@ -3,7 +3,7 @@
 
 // EX 1
 void Ex1();
-char* DuplicateString(char);
+char* DuplicateString(char*);
 //---------------------------
 
 int main()
@@ -14,8 +14,7 @@ int main()
 void Ex1()
 {
     char string[] = "abcd";
-    char newString = DuplicateString(string);
-    puts(newString);
+    puts(DuplicateString(string));
 }
 char* DuplicateString(char string[])
 {
