@@ -251,7 +251,7 @@ int* BiggestValues(int* arr, int n)
             if (arr[i] < arr[j]) 
             {
                 newArr[i] = arr[j];
-                continue;
+                break;
             }
     }
     return newArr;
