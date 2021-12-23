@@ -17,4 +17,7 @@ void Ex1()
     char *newString = DuplicateString(string);
     puts(newString);
 }
-char* DuplicateString
+char* DuplicateString(char string[])
+{
+    
+}
