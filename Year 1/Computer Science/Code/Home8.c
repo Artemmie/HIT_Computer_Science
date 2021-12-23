@@ -147,6 +147,6 @@ void Ex6()
     int arr[6] = { 0,1,1,0,3,5 };
     int size = 0;
     int value = MissingVariables(arr, 6, &size);
-    PrintArray(newArr, size);
+    PrintArray("Result is: %d", result);
 }
 int  BigVar(int arr, int n);
