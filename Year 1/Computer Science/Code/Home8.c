@@ -34,7 +34,7 @@ int  BiggestSum(int*, int);
 //---------------------------
 // EX 8
 void Ex8();
-int  BiggestSum(int*, int);
+int  BiggestMissingDig(int*, int);
 //---------------------------
 int main()
 {
