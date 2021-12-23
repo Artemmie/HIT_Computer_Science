@@ -185,5 +185,5 @@ int BiggestSum(int* arr, int n)
         printf("max val - %d\n", maxVal);
     }
 
-    return i;
+    return maxInd;
 }
