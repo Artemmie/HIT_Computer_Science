@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 //COMMON
 void PrintArray(int*, int);
 //---------------------------
@@ -172,5 +171,5 @@ void Ex7()
 int BiggestSums(int* arr, int n)
 {
     int *newArr = (int*)calloc((n+1), sizeof(int));
-    int maxVal = INT_MAX;
+    int maxVal = 0;
 }
