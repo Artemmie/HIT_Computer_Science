@@ -154,6 +154,6 @@ int  BigVar(int* arr, int n)
     for(int i = 0; i < n; i++)
         newArr[arr[i]]++;
     for (int i = 0; i <=n; i++)
-        if (newArr[i] > n/2)
+        if (newArr[i] > n/2) return 1;
     return -1;
 }
