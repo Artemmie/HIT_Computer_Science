@@ -203,4 +203,5 @@ int BiggestMissingDig(int* arr, int n)
         newArr[arr[i]]++;
     for (int i = n; i >= 0; i--)
         if (newArr[i] == 0) return i;
+    return -1;
 }
