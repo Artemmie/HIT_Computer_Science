@@ -214,7 +214,7 @@ int BiggestMissingDig(int* arr, int n)
 void Ex9()
 {
     int arr[9] = { 1,4,6,2,8,3,9,5,7 };
-    int amount = 9;
+    int amount = 0;
     PrintArray(arr, 9);
     RotateArray(arr, 9, amount);
     PrintArray(arr, 9);
