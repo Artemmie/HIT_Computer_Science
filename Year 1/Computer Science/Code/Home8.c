@@ -201,4 +201,5 @@ int BiggestMissingDig(int* arr, int n)
     int *newArr = (int*)calloc(n + 1, sizeof(int));
     for (int i = 0; i < n; i++)
         newArr[arr[i]]++;
+    for (int i = n; i <= n)
 }
