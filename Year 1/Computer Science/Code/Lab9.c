@@ -15,6 +15,6 @@ void Ex1()
 {
     char string[] = "abcd";
     char *newString = DuplicateString(string);
-    puts(string);
+    puts(newString);
 }
 char* DuplicateString
