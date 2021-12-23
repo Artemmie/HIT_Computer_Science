@@ -217,7 +217,7 @@ void Ex9()
     RotateArray(arr, 9, 3);
     printf("Result is: %d", result);
 }
-void RotateArray(int* arr, int n)
+void RotateArray(int* arr, int n, int count)
 {
     
 }
