@@ -210,3 +210,5 @@ int BiggestMissingDig(int* arr, int n)
         if (newArr[i] == 0) return i;
     return 0;
 }
+
+int RotateArray(int* arr, int n)
