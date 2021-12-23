@@ -240,4 +240,7 @@ void Ex10()
     int *result = BiggestValues(arr, 9);
     PrintArray(result, 9);
 }
-int* BiggestValues(int*, int);
+int* BiggestValues(int* arr, int n)
+{
+    
+}
