@@ -210,5 +210,10 @@ int BiggestMissingDig(int* arr, int n)
         if (newArr[i] == 0) return i;
     return 0;
 }
-
+void Ex8()
+{
+    int arr[9] = { 1,4,6,2,8,3,9,5,7 };
+    int result = BiggestMissingDig(arr, 9);
+    printf("Result is: %d", result);
+}
 int RotateArray(int* arr, int n)
