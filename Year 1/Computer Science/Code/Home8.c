@@ -196,7 +196,7 @@ void Ex8()
     int result = BiggestMissingDig(arr, 9);
     printf("Result is: %d", result);
 }
-int  BiggestMissingDig(int* arr, int n)
+int BiggestMissingDig(int* arr, int n)
 {
     
 }
