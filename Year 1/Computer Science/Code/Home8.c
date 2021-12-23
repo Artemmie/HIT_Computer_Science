@@ -198,5 +198,5 @@ void Ex8()
 }
 int BiggestMissingDig(int* arr, int n)
 {
-    
+    int *newArr = (int*)calloc(n + 1, sizeof(int));
 }
