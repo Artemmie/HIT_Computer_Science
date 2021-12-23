@@ -8,5 +8,6 @@ int* Lucas(int);
 
 int main()
 {
+    Ex1();
     return -1;
 }
