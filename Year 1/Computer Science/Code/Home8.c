@@ -164,7 +164,7 @@ int  BigVar(int* arr, int n)
 }
 void Ex7()
 {
-    int arr[6] = { 1,1,1,1,3,5 };
-    int result = BigVar(arr, 6);
+    int arr[9] = { 1,4,2,2,3,3,2,2,7 };
+    int result = BigVar(arr, 9);
     printf("Result is: %d", result);
 }
