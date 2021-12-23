@@ -8,5 +8,5 @@ int* Lucas(int);
 
 int main()
 {
-    
+    return -1;
 }
