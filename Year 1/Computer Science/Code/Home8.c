@@ -162,3 +162,9 @@ int  BigVar(int* arr, int n)
         if (newArr[i] > n/2) return 1;
     return -1;
 }
+void Ex7()
+{
+    int arr[6] = { 1,1,1,1,3,5 };
+    int result = BigVar(arr, 6);
+    printf("Result is: %d", result);
+}
