@@ -171,4 +171,5 @@ void Ex7()
 int BiggestSums(int* arr, int n)
 {
     int *newArr = (int*)calloc((n+1), sizeof(int));
+    int maxVal = INT_MAX;
 }
