@@ -217,3 +217,6 @@ void Ex9()
     printf("Result is: %d", result);
 }
 int RotateArray(int* arr, int n)
+{
+    
+}
