@@ -32,6 +32,10 @@ int  BigVar(int*, int);
 void Ex7();
 int  BiggestSum(int*, int);
 //---------------------------
+// EX 8
+void Ex8();
+int  BiggestSum(int*, int);
+//---------------------------
 int main()
 {
     //Ex1();
