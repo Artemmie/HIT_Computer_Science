@@ -42,7 +42,7 @@ void RotateArray(int*, int, int);
 //---------------------------
 // EX 10
 void Ex10();
-void RotateArray(int*, int, int);
+void BiggestValues(int*, int);
 //---------------------------
 int main()
 {
