@@ -42,7 +42,7 @@ void  RotateArray(int*, int, int);
 //---------------------------
 // EX 10
 void Ex10();
-void  RotateArray(int*, int, int);
+void RotateArray(int*, int, int);
 //---------------------------
 int main()
 {
@@ -237,7 +237,6 @@ void RotateArray(int* arr, int n, int count)
 void Ex10()
 {
     int arr[9] = { 1,4,6,2,8,3,9,5,7 };
-    int amount = 4;
     PrintArray(arr, 9);
     RotateArray(arr, 9, amount);
     PrintArray(arr, 9);
