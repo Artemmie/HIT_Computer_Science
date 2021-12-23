@@ -221,6 +221,6 @@ void RotateArray(int* arr, int n, int count)
 {
     for (int i = 0; i < count; i++)
     {
-        
+        int lastVar = arr[n-1];
     }
 }
