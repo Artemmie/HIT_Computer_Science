@@ -190,3 +190,7 @@ int BiggestSum(int* arr, int n)
     }
     return maxInd;
 }
+int  BiggestMissingDig(int* arr, int n)
+{
+    
+}
