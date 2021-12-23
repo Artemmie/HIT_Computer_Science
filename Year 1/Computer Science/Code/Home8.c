@@ -41,7 +41,7 @@ void Ex9();
 void  RotateArray(int*, int, int);
 //---------------------------
 // EX 10
-void Ex9();
+void Ex10();
 void  RotateArray(int*, int, int);
 //---------------------------
 int main()
