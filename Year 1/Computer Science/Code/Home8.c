@@ -237,6 +237,6 @@ void RotateArray(int* arr, int n, int count)
 void Ex10()
 {
     int arr[9] = { 1,4,6,2,8,3,9,5,7 };
-    BiggestValues(int*, int);
+    int *result = BiggestValues(int*, int);
     PrintArray(arr, 9);
 }
