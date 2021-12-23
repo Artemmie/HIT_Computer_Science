@@ -14,9 +14,10 @@ int main()
 void Ex1()
 {
     char string[] = "abcd";
-    puts(DuplicateString(string));
+    char newString = DuplicateString(string);
+    puts(newString);
 }
-char* DuplicateString(char string[])
+char* DuplicateString(char *string)
 {
     char *newString = (char*)malloc(((strlen(string) + 1) * 2) * sizeof(char));
     strcpy(newString, string);
