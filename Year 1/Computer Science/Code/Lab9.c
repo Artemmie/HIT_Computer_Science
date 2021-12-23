@@ -21,6 +21,6 @@ char* DuplicateString(char *string)
 {
     char *newString = (char*)malloc(((strlen(string) + 1) * 2) * sizeof(char));
     strcpy(newString, string);
-    strcpy(newString, string);
+    strcat(newString, string);
     return newString;
 }
