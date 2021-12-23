@@ -144,7 +144,7 @@ int* MissingVariables(int* arr, int n, int* size)
 }
 void Ex6()
 {
-    int arr[6] = { 0,1,1,0,3,5 };
+    int arr[6] = { 1,1,1,1,3,5 };
     int result = BigVar(arr, 6);
     printf("Result is: %d", result);
 }
