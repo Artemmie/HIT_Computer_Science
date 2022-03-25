@@ -57,7 +57,7 @@ unsigned long student_id()
     // for example if your id is 595207432
     // return 595207432;
     // your code:
-
+	return 326856432;
 }
 // --------------------------- //
 
@@ -66,7 +66,6 @@ int * scanArray(int *n)
 {
 	int i;
 	int *arr;
-	
 	printf("Enter array size: ");
 	scanf("%d", n);
 
@@ -102,5 +101,19 @@ void printArray(int *arr, int n)
 int arrangeArray(int **arr, int n)
 {
 	// your code:
+	int result, rest;
+	for (int i = 0; i < n; i++)
+		if ((*arr)[i] > (*arr)[i + 1]) 
+		{
+			result = i + 1;
+			break;
+		}
+	rest = n - result;
+	(*arr) = realloc(*arr, 2 * n * sizeof(int));
+	memcpy((*arr) + n, (*arr), n * sizeof(int));
+	memcpy((*arr), (*arr) + result, rest * sizeof(int));
+	memcpy((*arr) + rest, (*arr) + n, result * sizeof(int));
+	(*arr) = realloc(*arr, n * sizeof(int));
+	return result;
 }
 // --------------------------- //
