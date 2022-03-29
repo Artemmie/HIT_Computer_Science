@@ -137,6 +137,7 @@ void calculatePolygonScope(polygon* poly)
 {
 	// your code:
     poly->scope = 0;
+	if (poly->n == 1) return;
     for (int i = 0; i < poly->n; i++)
     {
         if (poly->n == 2)

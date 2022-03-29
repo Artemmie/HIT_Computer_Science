@@ -102,12 +102,8 @@ int arrangeArray(int **arr, int n)
 {
 	// your code:
 	int result, rest;
-	for (int i = 0; i < n; i++)
-		if ((*arr)[i] > (*arr)[i + 1]) 
-		{
-			result = i + 1;
-			break;
-		}
+	for (result = 1; result < n; result++)
+		if ((*arr)[result - 1] > (*arr)[result]) break;
 	rest = n - result;
 	(*arr) = realloc(*arr, 2 * n * sizeof(int));
 	memcpy((*arr) + n, (*arr), n * sizeof(int));
