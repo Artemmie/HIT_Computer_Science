@@ -33,6 +33,7 @@ fraction ** matrixAverageNeighbor(int A[][COLS], int rows, int cols);
 fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols);
 void printMatrix(fraction** B, int rows, int cols);
 void freeMatrix(fraction** B, int rows);
+int findGCD(int numerator);
 /** DECLARE HERE ONE FUNCTION ACCORDING TO YOUR NEEDS **/
 // --------------------------------------- //
 // Main section:
@@ -56,10 +57,10 @@ int main()
 
 	// write output:
 	printf("Output:\n");
-	printMatrix(B, ROWS, COLS);
+	//printMatrix(B, ROWS, COLS);
 
 	// free matrix:
-	freeMatrix(B, ROWS);
+	//freeMatrix(B, ROWS);
 
 	return 0;
 }
@@ -75,7 +76,7 @@ unsigned long student_id()
 	// for example if your id is 595207432
 	// return 595207432;
 	// your code:
-
+    return 326856432;
 }
 // --------------------------- //
 
@@ -84,11 +85,15 @@ unsigned long student_id()
 /// This code required one extra important function.
 /// Think hard about what it should be.
 /// </summary>
-/// <params>You decide</params>
-/// <returns>You decide</returns>
-
-	// your code:
-
+/// <params>int numerator - numerator of the number</params>
+/// <returns>GCD of two int numbers</returns>
+// your code:
+int findGCD(int numerator)
+{
+    for (int i = numerator; i >= 1; i--)
+        if (numerator % i == 0 && 100 % i == 0) return i;
+    return 0;
+}
 // --------------------------- //
 
 /// <summary>
@@ -100,6 +105,8 @@ unsigned long student_id()
 fraction** createMatrix(int rows, int cols)
 {
 	// your code:
+    fraction** B;
+    return B;
 }
 // --------------------------- //
 
@@ -115,6 +122,11 @@ fraction** createMatrix(int rows, int cols)
 fraction** matrixAverageNeighbor(int A[][COLS], int rows, int cols)
 {
 	// your code:
+    fraction ** B = malloc(rows * cols * sizeof(fraction));
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            B[i][j] = neighborFractionAverage(A, i, j, rows, cols);
+    return B;
 }
 // --------------------------- //
 
@@ -131,6 +143,56 @@ fraction** matrixAverageNeighbor(int A[][COLS], int rows, int cols)
 fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols)
 {
 	// your code:
+    fraction val;
+    double sum = 0.0;
+    int count = 0;
+    if (i - 1 > 0)
+    {
+        if (j - 1 > 0)
+        {
+            sum += (double)A[i-1][j-1];
+            count++;
+        }
+        if (j + 1 < cols)
+        {
+            sum += (double)A[i-1][j+1];
+            count++;
+        }
+        sum += (double)A[i-1][j];
+        count++;
+    }
+    if (i + 1 < rows)
+    {
+        if (j - 1 > 0)
+        {
+            sum += (double)A[i+1][j-1];
+            count++;
+        }
+        if (j + 1 < cols)
+        {
+            sum += (double)A[i+1][j+1];
+            count++;
+        }
+        sum += (double)A[i+1][j];
+        count++;
+    }
+    if (j - 1 > 0)
+    {
+        sum += (double)A[i][j-1];
+        count++;
+    }
+    if (j + 1 < cols)
+    {
+        sum += (double)A[i][j+1];
+        count++;
+    }
+    sum = sum / count;
+    int fraction = (sum - (int)sum) * 10;
+    int gcd = findGCD(fraction);
+    val.num = (int)sum;
+    val.numerator = fraction / gcd;
+    val.denominator = 10 / gcd;
+    return val;
 }
 // --------------------------- //
 
