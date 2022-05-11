@@ -66,10 +66,10 @@ int main()
 	// write output:
 	printf("Output:\n");
 	printArray(arr, n);
-	printList(lst);
+//	printList(lst);
 
 	// free dynamic:
-	freeDynamic(&lst, &arr);
+//	freeDynamic(&lst, &arr);
 
 	return 0;
 }
@@ -85,7 +85,7 @@ unsigned long student_id()
 	// for example if your id is 595207432
 	// return 595207432;
 	// your code:
-
+	return 326856432;
 }
 // --------------------------- //
 
@@ -103,6 +103,22 @@ unsigned long student_id()
 int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols)
 {
 	// your code:
+	int d, count = 0;
+	(*arr) = malloc(rows * cols * sizeof(four));
+	for (int i = 0; i < rows; i++)
+	{
+		
+		for (int j = 0; j < cols; j++)
+		{
+			d = j - i;
+			if (A[i][j] - j == d) 
+			{
+				(*arr)[count++] = createFour(i,j,d,A[i][j]);
+			}				
+		}
+	}
+	(*arr) = realloc((*arr), count * sizeof(four));
+	return count;
 }
 // --------------------------- //
 
@@ -118,6 +134,13 @@ int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols
 four createFour(int i, int j, int d, int value)
 {
 	// your code:
+	four result;
+	result.i = i;
+	result.j = j;
+	result.d = d;
+	result.value = value;
+	return result;
+
 }
 // --------------------------- //
 
@@ -144,6 +167,8 @@ list* createElement(four data)
 void printArray(four* arr, int n)
 {
 	// your code:
+	for (int i = 0; i < n; i++)
+		printf("%d", arr[i].value);
 }
 // --------------------------- //
 
