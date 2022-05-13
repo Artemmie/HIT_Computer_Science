@@ -125,7 +125,7 @@ fraction** matrixAverageNeighbor(int A[][COLS], int rows, int cols)
     fraction ** B = malloc(rows * cols * sizeof(fraction));
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            B[i][j] = neighborFractionAverage(A, i, j, rows, cols);
+            (B)[i][j] = neighborFractionAverage(A, i, j, rows, cols);
     return B;
 }
 // --------------------------- //
