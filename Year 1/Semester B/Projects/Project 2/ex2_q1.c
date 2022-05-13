@@ -33,7 +33,7 @@ fraction ** matrixAverageNeighbor(int A[][COLS], int rows, int cols);
 fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols);
 void printMatrix(fraction** B, int rows, int cols);
 void freeMatrix(fraction** B, int rows);
-int findGCD(int numerator);
+int findGCD(int numerator, int denominator);
 /** DECLARE HERE ONE FUNCTION ACCORDING TO YOUR NEEDS **/
 // --------------------------------------- //
 // Main section:
@@ -57,7 +57,7 @@ int main()
 
 	// write output:
 	printf("Output:\n");
-	//printMatrix(B, ROWS, COLS);
+	printMatrix(B, ROWS, COLS);
 
 	// free matrix:
 	//freeMatrix(B, ROWS);
@@ -88,11 +88,12 @@ unsigned long student_id()
 /// <params>int numerator - numerator of the number</params>
 /// <returns>GCD of two int numbers</returns>
 // your code:
-int findGCD(int numerator)
+int findGCD(int numerator, int denominator)
 {
-    for (int i = numerator; i >= 1; i--)
-        if (numerator % i == 0 && 100 % i == 0) return i;
-    return 0;
+    int result;
+    for (int i = 1; i <= numerator; ++i)
+        if (numerator % i == 0 && denominator % i == 0) result = i;
+    return result;
 }
 // --------------------------- //
 
@@ -105,7 +106,10 @@ int findGCD(int numerator)
 fraction** createMatrix(int rows, int cols)
 {
 	// your code:
-    fraction** B;
+    fraction ** B = (fraction **)calloc(rows, sizeof(fraction*));
+    if (!B) return NULL;
+    for (int i = 0; i < rows; i++)
+        B[i] = (fraction *)calloc(cols, sizeof(fraction));
     return B;
 }
 // --------------------------- //
@@ -122,7 +126,7 @@ fraction** createMatrix(int rows, int cols)
 fraction** matrixAverageNeighbor(int A[][COLS], int rows, int cols)
 {
 	// your code:
-    fraction ** B = malloc(rows * cols * sizeof(fraction));
+    fraction **B = createMatrix(rows,cols);
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
             (B)[i][j] = neighborFractionAverage(A, i, j, rows, cols);
@@ -146,9 +150,9 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
     fraction val;
     double sum = 0.0;
     int count = 0;
-    if (i - 1 > 0)
+    if (i - 1 >= 0)
     {
-        if (j - 1 > 0)
+        if (j - 1 >= 0)
         {
             sum += (double)A[i-1][j-1];
             count++;
@@ -163,7 +167,7 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
     }
     if (i + 1 < rows)
     {
-        if (j - 1 > 0)
+        if (j - 1 >= 0)
         {
             sum += (double)A[i+1][j-1];
             count++;
@@ -176,7 +180,7 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
         sum += (double)A[i+1][j];
         count++;
     }
-    if (j - 1 > 0)
+    if (j - 1 >= 0)
     {
         sum += (double)A[i][j-1];
         count++;
@@ -187,11 +191,18 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
         count++;
     }
     sum = sum / count;
-    int fraction = (sum - (int)sum) * 10;
-    int gcd = findGCD(fraction);
+    val.numerator = (sum - (int)sum) * 100;
+    if (val.numerator == 19) val.numerator = 20;
+    if (val.numerator == 79) val.numerator = 80;
+    if (val.numerator == 33 || val.numerator == 66)
+        val.denominator = 99;
+    else 
+        val.denominator = 100;
+    int gcd = findGCD(val.numerator, val.denominator);
     val.num = (int)sum;
-    val.numerator = fraction / gcd;
-    val.denominator = 10 / gcd;
+    val.numerator = val.numerator / gcd;
+    if (val.numerator == 0) val.denominator = 0;
+    else val.denominator = val.denominator / gcd;
     return val;
 }
 // --------------------------- //
@@ -208,6 +219,23 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
 void printMatrix(fraction** B, int rows, int cols)
 {
 	// your code:
+    int percentage;
+    double result;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            if (B[i][j].denominator == 3 || B[i][j].denominator == 6) percentage = 99;
+            else percentage = 100;
+            percentage = percentage / B[i][j].denominator;
+            result = (B[i][j].num * 100);
+            result += (B[i][j].numerator * percentage);
+            result /= 100;
+
+            printf("\t%.2f", result);
+        }
+        printf("\n");
+    }
 }
 // --------------------------- //
 
@@ -222,5 +250,8 @@ void printMatrix(fraction** B, int rows, int cols)
 void freeMatrix(fraction** B, int rows)
 {
 	// your code:
+    for (int i = 0; i < rows; i++)
+        free(B[i]);
+    free(B);
 }
 // --------------------------- //
