@@ -68,6 +68,7 @@ int main()
 	printArray(arr, n);
 	printf("\nOutput:\n");
 	printList(lst);
+	printf("new test");
 	// free dynamic:
 	freeDynamic(&lst, &arr);
 
@@ -200,9 +201,11 @@ void printList(list* lst)
 {
 	// your code:
 	list *tmp = lst;
-	while (tmp)
+	printf("test?");
+	while (tmp != NULL)
 	{
-		printf("%d", tmp->data->value);
+		printf("test");
+		printf("%d ->",tmp->data.value);
 		tmp = tmp->next;
 	}
 }
@@ -218,13 +221,12 @@ void freeDynamic(list** lst, four** arr)
 {
 	// your code:
 	free(*arr);
-	list *cur_node = *lst;
 	list *next_node = *lst;
-	while (cur_node != NULL)
+	while ((*lst) != NULL)
 	{
-		next_node = next_node->next;
-		free(*cur_node);
-		cur_node = next_node;
+		next_node = (*lst)->next;
+		free(*lst);
+		(*lst) = next_node;
 	}
 }
 // --------------------------- //
