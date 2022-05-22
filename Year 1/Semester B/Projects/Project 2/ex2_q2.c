@@ -66,10 +66,10 @@ int main()
 	// write output:
 	printf("Output:\n");
 	printArray(arr, n);
+	printf("\nOutput:\n");
 	printList(lst);
-
 	// free dynamic:
-//	freeDynamic(&lst, &arr);
+	freeDynamic(&lst, &arr);
 
 	return 0;
 }
@@ -104,17 +104,32 @@ int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols
 {
 	// your code:
 	int d, count = 0;
+	four val;
+	list *tmp;
 	(*arr) = malloc(rows * cols * sizeof(four));
 	for (int i = 0; i < rows; i++)
 	{
-		
 		for (int j = 0; j < cols; j++)
 		{
 			d = j - i;
 			if (A[i][j] - j == d) 
-				(*arr)[count++] = createFour(i,j,d,A[i][j]);			
+			{
+				val = createFour(i,j,d,A[i][j]);
+				(*arr)[count++] = val;
+				if(!(*lst))
+				{
+					*lst = createElement(val);
+					tmp = *lst;
+				}
+				else
+				{
+					tmp->next = createElement(val);
+					tmp = tmp->next;
+				}
+			}
 		}
 	}
+	tmp->next = NULL;
 	(*arr) = realloc((*arr), count * sizeof(four));
 	return count;
 }
@@ -151,10 +166,10 @@ four createFour(int i, int j, int d, int value)
 list* createElement(four data)
 {
 	// your code:
-	list *lst = (four*)malloc(sizeof(four));
-	lst->data = data;
-	lst->next = NULL;
-	return lst;
+	list *tmp = (list*)malloc(sizeof(list));
+	tmp->data = data;
+	tmp->next = NULL;
+	return tmp;
 }
 // --------------------------- //
 
@@ -184,11 +199,11 @@ void printArray(four* arr, int n)
 void printList(list* lst)
 {
 	// your code:
-	list *pos = lst;
-	while (pos)
+	list *tmp = lst;
+	while (tmp)
 	{
-		printf("%d ->", pos->data);
-		pos = pos->next;
+		printf("%d", tmp->data->value);
+		tmp = tmp->next;
 	}
 }
 // --------------------------- //
@@ -202,6 +217,14 @@ void printList(list* lst)
 void freeDynamic(list** lst, four** arr)
 {
 	// your code:
-	free(arr);
+	free(*arr);
+	list *cur_node = *lst;
+	list *next_node = *lst;
+	while (cur_node != NULL)
+	{
+		next_node = next_node->next;
+		free(*cur_node);
+		cur_node = next_node;
+	}
 }
 // --------------------------- //
