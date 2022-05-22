@@ -66,7 +66,7 @@ int main()
 	// write output:
 	printf("Output:\n");
 	printArray(arr, n);
-//	printList(lst);
+	printList(lst);
 
 	// free dynamic:
 //	freeDynamic(&lst, &arr);
@@ -112,9 +112,7 @@ int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols
 		{
 			d = j - i;
 			if (A[i][j] - j == d) 
-			{
-				(*arr)[count++] = createFour(i,j,d,A[i][j]);
-			}				
+				(*arr)[count++] = createFour(i,j,d,A[i][j]);			
 		}
 	}
 	(*arr) = realloc((*arr), count * sizeof(four));
@@ -153,6 +151,10 @@ four createFour(int i, int j, int d, int value)
 list* createElement(four data)
 {
 	// your code:
+	list *lst = (four*)malloc(sizeof(four));
+	lst->data = data;
+	lst->next = NULL;
+	return lst;
 }
 // --------------------------- //
 
@@ -182,6 +184,12 @@ void printArray(four* arr, int n)
 void printList(list* lst)
 {
 	// your code:
+	list *pos = lst;
+	while (pos)
+	{
+		printf("%d ->", pos->data);
+		pos = pos->next;
+	}
 }
 // --------------------------- //
 
@@ -194,5 +202,6 @@ void printList(list* lst)
 void freeDynamic(list** lst, four** arr)
 {
 	// your code:
+	free(arr);
 }
 // --------------------------- //
