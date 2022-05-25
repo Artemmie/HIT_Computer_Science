@@ -75,7 +75,7 @@ unsigned long student_id()
 	// for example if your id is 595207432
 	// return 595207432;
 	// your code:
-
+	return 326856432;
 }
 // --------------------------- //
 
@@ -137,6 +137,11 @@ void printList(list* lst)
 int deleteFirst(list** lst)
 {
 	// your code:
+	if (lst == NULL || *lst == NULL) return 0;
+	list *tmp = *lst;
+	*lst = (*lst)->next;
+	free(tmp);
+	return 1;
 }
 // --------------------------- //
 
@@ -150,6 +155,11 @@ int deleteFirst(list** lst)
 int deleteAfter(list* curr)
 {
 	// your code:
+	if (curr == NULL) return 0;
+	list *tmp = curr;
+	curr = curr->next;
+	free(tmp);
+	return 1;
 }
 // --------------------------- //
 
@@ -164,6 +174,32 @@ int deleteAfter(list* curr)
 int splitList(list** lst, list** new)
 {
 	// your code:
+	int counter = 0;
+	int headFlag = 1;
+
+	list *item = NULL;
+	while (*lst)
+	{
+		if ((*lst)->next->data)
+		{
+			if ((*lst)->data > (*lst)->next->data)
+			{
+				item = createElement((*lst)->data, (*lst)->next);
+				if (headFlag)
+				{
+					if (deleteFirst == 1) *new = item;
+				}
+				else
+				{
+
+				}
+			}
+		}
+		else
+		{
+
+		}
+	}
 }
 // --------------------------- //
 
