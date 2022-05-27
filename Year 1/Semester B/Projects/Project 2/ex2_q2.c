@@ -91,8 +91,8 @@ unsigned long student_id()
 
 
 /// <summary>
-/// This function allocate a dynamic array and list, 
-/// from elements found at matrix A 
+/// This function allocate a dynamic array and list,
+/// from elements found at matrix A
 /// </summary>
 /// <param>int A[][] - The static matrix</param>
 /// <param>list** lst - Pointer to the pointer of the head of the list</param>
@@ -112,7 +112,7 @@ int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols
 		for (int j = 0; j < cols; j++)
 		{
 			d = j - i;
-			if (A[i][j] - j == d) 
+			if (A[i][j] - j == d)
 			{
 				val = createFour(i,j,d,A[i][j]);
 				(*arr)[count++] = val;
@@ -136,7 +136,7 @@ int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols
 // --------------------------- //
 
 /// <summary>
-/// The function receives 4 integer values 
+/// The function receives 4 integer values
 /// and returns a value from type four.
 /// </summary>
 /// <param>int i - The cell row number in matrix</param>
@@ -159,7 +159,7 @@ four createFour(int i, int j, int d, int value)
 
 /// <summary>
 /// The function receives a value from type four
-/// and returns a dynamic element from type list  
+/// and returns a dynamic element from type list
 /// </summary>
 /// <param>four data - value from type four</param>
 /// <returns>dynamic value from type list</returns>
@@ -176,7 +176,7 @@ list* createElement(four data)
 
 /// <summary>
 /// The function receives an array from type four,
-/// and print its values.  
+/// and print its values.
 /// </summary>
 /// <param>four* arr - the array</param>
 /// <param>int n - number of elements</param>
@@ -192,7 +192,7 @@ void printArray(four* arr, int n)
 
 /// <summary>
 /// The function receives a list,
-/// and print its values.  
+/// and print its values.
 /// </summary>
 /// <param>list* lst - the list</param>
 /// <returns>None</returns>
@@ -209,7 +209,7 @@ void printList(list* lst)
 // --------------------------- //
 
 /// <summary>
-/// The function free all allocated memory of the program. 
+/// The function free all allocated memory of the program.
 /// </summary>
 /// <param>list** lst - Pointer to the pointer of the head of the list</param>
 /// <param>four** arr - Pointer to the pointer of the head of the array</param>
