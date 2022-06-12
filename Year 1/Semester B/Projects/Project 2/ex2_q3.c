@@ -145,7 +145,7 @@ void printList(list* lst)
 int deleteFirst(list** lst)
 {
     // your code:
-    if (lst == NULL || *lst == NULL) return 0;
+    if (*lst == NULL) return 0;
     list *tmp = *lst;
     (*lst) = (*lst)->next;
     free(tmp);
@@ -182,48 +182,64 @@ int deleteAfter(list* curr)
 int splitList(list** lst, list** new)
 {
     // your code:
+    if (!(*lst)) return 0;
+    list* tmp = (*lst);
+    list* prev = (*lst);
+    list* tmpnew = NULL;
     int counter = 0;
-    int skip = 0;
-    list* lstTmp = (*lst);
-    list* prevTmp = (*lst);
-    list* newTmp = NULL;
-    if (lstTmp->next == NULL || lstTmp->data > lstTmp->next->data)
+    if (tmp->next == NULL || tmp->data>tmp->next->data)
     {
-        (*new) = createElement(lstTmp->data, NULL);
-        skip = 1;
-        counter += deleteFirst(lst);
-
+        (*new) = createElement((*lst)->data, NULL);
+        tmpnew = (*new);
+        tmp = tmp->next;
+        deleteFirst(lst);
+        counter++;
     }
-    lstTmp = lstTmp->next;
-    while (lstTmp)
+    else tmp = tmp->next;
+    while (tmp)
     {
-        if (skip) skip = 0;
-        else if (lstTmp->next != NULL && lstTmp->data > lstTmp->next->data)
+        if(tmp->next)
         {
-            if(*new == NULL) (*new) = createElement(lstTmp->data, NULL);
-            else
+            if (tmp->data > tmp->next->data && tmp->data > prev->data)
             {
-                newTmp = (*new);
-                while (newTmp ->next != NULL) newTmp = newTmp->next;
-                newTmp->next = createElement(lstTmp->data, NULL);
+                if ((*new) == NULL)
+                {
+                    (*new) = createElement(tmp->data, NULL);
+                    tmp = tmp->next;
+                    deleteAfter(prev);
+                    tmpnew = (*new);
+                }
+                else
+                {
+                    tmpnew->next = createElement(tmp->data, NULL);
+                    tmpnew = tmpnew->next;
+                    tmp = tmp->next;
+                    deleteAfter(prev);
+                }
+                counter++;
             }
-            skip = 1;
-            counter += deleteAfter(prevTmp);
         }
-        else if (lstTmp->next == NULL)
+        else if (tmp->next == NULL)
         {
-            if(*new == NULL) (*new) = createElement(lstTmp->data, NULL);
-            else
+            if (tmp->data > prev->data)
             {
-                newTmp = (*new);
-                while (newTmp ->next != NULL) newTmp = newTmp->next;
-                newTmp->next = createElement(lstTmp->data, NULL);
+                if ((*new) == NULL)
+                {
+                    (*new) = createElement(tmp->data, NULL);
+                    deleteAfter(prev);
+                    tmpnew = (*new);
+                }
+                else
+                {
+                    tmpnew->next = createElement(tmp->data, NULL);
+                    tmpnew = tmpnew->next;
+                    deleteAfter(prev);
+                }
+                counter++;
             }
-            counter += deleteAfter(prevTmp);
         }
-        prevTmp = lstTmp;
-        lstTmp = lstTmp->next;
-
+        prev = tmp;
+        tmp = tmp->next;
     }
     return counter;
 }

@@ -49,7 +49,6 @@ int main()
     printf("[id: %lu] start main\n", id_num);
     lst1 = createCircleListFromString(str1);
     lst2 = createCircleListFromString(str2);
-
     // write output:
     printf("Output:\n");
     result = compareCircleLists(&lst1, &lst2);
@@ -135,9 +134,10 @@ void printList(list* lst)
     list *tmp = lst;
     while (tmp)
     {
-        printf("%c", tmp->data);
+        printf("%c->", tmp->data);
         tmp = tmp->next;
     }
+    printf("\n");
 }
 // --------------------------- //
 
@@ -152,14 +152,14 @@ void printList(list* lst)
 int compareCircleLists(list** lst1, list** lst2)
 {
     // your code:
+    if (!(*lst1) && !(*lst2)) return 1;
     int sizeL1 = circleListLength((*lst1));
     int sizeL2 = circleListLength((*lst2));
     if (sizeL1 != sizeL2) return 0;
     int counter = 0;
-    char ch = 'z';
     list *tmpL1 = (*lst1);
     list *tmpL2 = (*lst2);
-    list *newHead;
+    list *newHead, *newHeadL2;
     while (tmpL1->data != tmpL2->data)
     {
         counter++;
@@ -167,12 +167,14 @@ int compareCircleLists(list** lst1, list** lst2)
         tmpL1 = tmpL1->next;
     }
     counter = 0;
+    newHead = tmpL1;
+    newHeadL2 = tmpL2;
     while (tmpL1->data == tmpL2->data && counter < sizeL2)
     {
-        if (tmpL1->data <= ch)
+        if (tmpL1->data < newHead->data)
         {
             newHead = tmpL1;
-            ch = tmpL1->data;
+            newHeadL2 = tmpL2;
         }
         tmpL1 = tmpL1->next;
         tmpL2 = tmpL2->next;
@@ -180,14 +182,15 @@ int compareCircleLists(list** lst1, list** lst2)
     }
     if (counter < sizeL2) return 0;
     (*lst1) = newHead;
-    (*lst2) = newHead;
+    (*lst2) = newHeadL2;
     counter = 1;
     while (counter < sizeL1)
     {
         newHead = newHead->next;
-        counter++;
-    }
+        newHeadL2 = newHeadL2->next;
+        counter++;    }
     newHead->next = NULL;
+    newHeadL2->next = NULL;
     return 1;
 }
 // --------------------------- //
@@ -202,6 +205,7 @@ int compareCircleLists(list** lst1, list** lst2)
 int circleListLength(list* lst)
 {
     // your code:
+    if (!lst) return 0;
     list *tmp = lst;
     int counter = 1;
     char ch = lst->data;

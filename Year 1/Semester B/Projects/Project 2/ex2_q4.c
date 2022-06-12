@@ -145,8 +145,8 @@ void partition(list** lst, list** pivot, list** small, list** big)
     // your code:
     (*pivot) = (*lst);
     list *tmp = (*pivot)->next;
-    list *smallTail = (*big);
-    list *bigTail = (*small);
+    list *smallTail = (*small);
+    list *bigTail = (*big);
     while (tmp)
     {
         if (tmp->data <= (*pivot)->data)
@@ -177,17 +177,7 @@ void partition(list** lst, list** pivot, list** small, list** big)
         }
         tmp = tmp->next;
     }
-    if ((*small) == NULL)
-    {
-        (*small) = tmp;
-        smallTail = tmp;
-    }
     if ((*small) != NULL) smallTail->next = NULL;
-    if ((*big) == NULL)
-    {
-        (*big) = tmp;
-        bigTail = tmp;
-    }
     if ((*big) != NULL) bigTail->next = NULL;
     (*pivot)->next = NULL;
     (*lst) = NULL;
@@ -209,18 +199,30 @@ void quickSortList(list** lst)
     list *small= NULL;
     list *big = NULL;
     list *pivot = NULL;
-    list *tmp;
     partition(lst, &pivot, &small, &big);
     quickSortList(&small);
-    if ((*lst) == NULL) (*lst) = pivot;
+    quickSortList(&big);
+    list *prev = NULL;
+    if (small)
+    {
+        list *tmp = small;
+        while (tmp)
+        {
+            prev = tmp;
+            tmp = tmp->next;
+        }
+    }
+    if (prev)
+    {
+        prev->next = pivot;
+        pivot->next = big;
+        *lst = small;
+    }
     else
     {
-        tmp = (*lst);
-        while (tmp) tmp = tmp->next;
-        tmp = pivot;
+        pivot->next = big;
+        *lst = pivot;
     }
-    quickSortList(&big);
-    pivot->next = big;
 }
 
 // --------------------------- //

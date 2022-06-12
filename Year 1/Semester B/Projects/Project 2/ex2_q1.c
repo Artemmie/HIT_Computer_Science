@@ -22,7 +22,7 @@
 // --------------------------------------- //
 typedef struct fraction
 {
-	int num, numerator, denominator;
+    int num, numerator, denominator;
 } fraction;
 // --------------------------------------- //
 // Functions declration section:
@@ -40,29 +40,27 @@ int findGCD(int numerator, int denominator);
 // --------------------------------------- //
 int main()
 {
-	unsigned long id_num;
-	fraction** B;
-	int A[ROWS][COLS] = {
-		{5, 12, 6, 8},
-		{4, 7, 0, 9},
-		{13, 20, 8, 2},
-		{18, 0, 2, 6}
-	};
-	
-	// call functions:
-	id_num = student_id();
-	printf("[id: %lu] start main\n", id_num);
+    unsigned long id_num;
+    fraction** B;
+    int A[ROWS][COLS] = {
+        {5, 12, 6, 8},
+        {4, 7, 0, 9},
+        {13, 20, 8, 2},
+        {18, 0, 2, 6}
+    };
+    // call functions:
+    id_num = student_id();
+    printf("[id: %lu] start main\n", id_num);
 
-	B = matrixAverageNeighbor(A, ROWS, COLS);
+    B = matrixAverageNeighbor(A, ROWS, COLS);
 
-	// write output:
-	printf("Output:\n");
-	printMatrix(B, ROWS, COLS);
+    // write output:
+    printf("Output:\n");
+    printMatrix(B, ROWS, COLS);
+    // free matrix:
+    freeMatrix(B, ROWS);
 
-	// free matrix:
-	//freeMatrix(B, ROWS);
-
-	return 0;
+    return 0;
 }
 #endif
 // --------------------------- //
@@ -72,10 +70,10 @@ int main()
 // function implementation section:
 unsigned long student_id()
 {
-	// return your id number,
-	// for example if your id is 595207432
-	// return 595207432;
-	// your code:
+    // return your id number,
+    // for example if your id is 595207432
+    // return 595207432;
+    // your code:
     return 326856432;
 }
 // --------------------------- //
@@ -90,7 +88,7 @@ unsigned long student_id()
 // your code:
 int findGCD(int numerator, int denominator)
 {
-    int result;
+    int result = 1;
     for (int i = 1; i <= numerator; ++i)
         if (numerator % i == 0 && denominator % i == 0) result = i;
     return result;
@@ -105,7 +103,7 @@ int findGCD(int numerator, int denominator)
 /// <returns>allocated empty matrix B from type fraction</returns>
 fraction** createMatrix(int rows, int cols)
 {
-	// your code:
+    // your code:
     fraction ** B = (fraction **)calloc(rows, sizeof(fraction*));
     if (!B) return NULL;
     for (int i = 0; i < rows; i++)
@@ -115,9 +113,9 @@ fraction** createMatrix(int rows, int cols)
 // --------------------------- //
 
 /// <summary>
-/// The function receives a static matrix 
-/// and for each cell in the matrix calculates 
-/// the average of its neighbors.  
+/// The function receives a static matrix
+/// and for each cell in the matrix calculates
+/// the average of its neighbors.
 /// </summary>
 /// <param>int A[][COLS] - the static matrix</param>
 /// <param>int rows - the number of rows in the matrix</param>
@@ -125,18 +123,18 @@ fraction** createMatrix(int rows, int cols)
 /// <returns>matrix B from type fraction</returns>
 fraction** matrixAverageNeighbor(int A[][COLS], int rows, int cols)
 {
-	// your code:
+    // your code:
     fraction **B = createMatrix(rows,cols);
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            (B)[i][j] = neighborFractionAverage(A, i, j, rows, cols);
+            B[i][j] = neighborFractionAverage(A, i, j, rows, cols);
     return B;
 }
 // --------------------------- //
 
 /// <summary>
 /// The function receives a static matrix, and a cell value,
-/// and calculates the average of its neighbors.  
+/// and calculates the average of its neighbors.
 /// </summary>
 /// <param>int A[][COLS] - the static matrix</param>
 /// <param>int i - the cell row number in matrix</param>
@@ -146,7 +144,7 @@ fraction** matrixAverageNeighbor(int A[][COLS], int rows, int cols)
 /// <returns>value from type fraction</returns>
 fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols)
 {
-	// your code:
+    // your code:
     fraction val;
     double sum = 0.0;
     int count = 0;
@@ -191,13 +189,12 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
         count++;
     }
     sum = sum / count;
-    val.numerator = (sum - (int)sum) * 100;
-    if (val.numerator == 19) val.numerator = 20;
-    if (val.numerator == 79) val.numerator = 80;
-    if (val.numerator == 33 || val.numerator == 66)
-        val.denominator = 99;
-    else 
-        val.denominator = 100;
+    val.numerator = (sum - (int)sum) * 1000;
+    if (val.numerator == 199) val.numerator = 200;
+    else if (val.numerator == 599) val.numerator = 600;
+    else if (val.numerator == 799) val.numerator = 800;
+    if (val.numerator == 333 || val.numerator == 666) val.denominator = 999;
+    else val.denominator = 1000;
     int gcd = findGCD(val.numerator, val.denominator);
     val.num = (int)sum;
     val.numerator = val.numerator / gcd;
@@ -210,7 +207,7 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
 
 /// <summary>
 /// The function receives a dynamic matrix from type fraction,
-/// and print the matrix as double varibles.  
+/// and print the matrix as double varibles.
 /// </summary>
 /// <param>fraction** B - the dynamic matrix</param>
 /// <param>int rows - the number of rows in the matrix</param>
@@ -218,20 +215,17 @@ fraction neighborFractionAverage(int A[][COLS], int i, int j, int rows, int cols
 /// <returns>None</returns>
 void printMatrix(fraction** B, int rows, int cols)
 {
-	// your code:
-    int percentage;
+    // your code:
+    double values;
     double result;
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-            if (B[i][j].denominator == 3 || B[i][j].denominator == 6) percentage = 99;
-            else percentage = 100;
-            percentage = percentage / B[i][j].denominator;
-            result = (B[i][j].num * 100);
-            result += (B[i][j].numerator * percentage);
-            result /= 100;
-
+            result = B[i][j].num;
+            values = 0.0;
+            if (B[i][j].numerator != 0) values = (double)B[i][j].numerator / (double)B[i][j].denominator;
+            result += values;
             printf("\t%.2f", result);
         }
         printf("\n");
@@ -242,14 +236,14 @@ void printMatrix(fraction** B, int rows, int cols)
 
 /// <summary>
 /// The function receives a dynamic matrix from type fraction,
-/// and free all allocated memory.  
+/// and free all allocated memory.
 /// </summary>
 /// <param>fraction** B - the dynamic matrix</param>
 /// <param>int rows - the number of rows in the matrix</param>
 /// <returns>None</returns>
 void freeMatrix(fraction** B, int rows)
 {
-	// your code:
+    // your code:
     for (int i = 0; i < rows; i++)
         free(B[i]);
     free(B);

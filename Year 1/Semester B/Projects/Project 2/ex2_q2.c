@@ -22,13 +22,13 @@
 // --------------------------------------- //
 typedef struct four
 {
-	int i, j, d, value;
+    int i, j, d, value;
 } four;
 
 typedef struct list
 {
-	four data;
-	struct list* next;
+    four data;
+    struct list* next;
 } list;
 // --------------------------------------- //
 // Functions declration section:
@@ -46,32 +46,31 @@ void freeDynamic(list** lst, four **arr);
 // --------------------------------------- //
 int main()
 {
-	unsigned long id_num;
-	int n;
-	list* lst = NULL;
-	four* arr = NULL;
-	int A[ROWS][COLS] = {
-		{0, 6, 5, 6, 6},
-		{8, 9, 5, 6, 7},
-		{7, 6, 5, 4, 7},
-		{9, 8, 1, 6, 7},
-	};
+    unsigned long id_num;
+    int n;
+    list* lst = NULL;
+    four* arr = NULL;
+    int A[ROWS][COLS] = {
+        {0, 6, 5, 6, 6},
+        {8, 9, 5, 6, 7},
+        {7, 6, 5, 4, 7},
+        {9, 8, 1, 6, 7},
+    };
 
-	// call functions:
-	id_num = student_id();
-	printf("[id: %lu] start main\n", id_num);
+    // call functions:
+    id_num = student_id();
+    printf("[id: %lu] start main\n", id_num);
 
-	n = createArrayAndList(A, &lst, &arr, ROWS, COLS);
+    n = createArrayAndList(A, &lst, &arr, ROWS, COLS);
 
-	// write output:
-	printf("Output:\n");
-	printArray(arr, n);
-	printf("\nOutput:\n");
-	printList(lst);
-	// free dynamic:
-	freeDynamic(&lst, &arr);
+    // write output:
+    printf("Output:\n");
+    printArray(arr, n);
+    printList(lst);
+    // free dynamic:
+    freeDynamic(&lst, &arr);
 
-	return 0;
+    return 0;
 }
 #endif
 // --------------------------- //
@@ -81,11 +80,11 @@ int main()
 // function implementation section:
 unsigned long student_id()
 {
-	// return your id number,
-	// for example if your id is 595207432
-	// return 595207432;
-	// your code:
-	return 326856432;
+    // return your id number,
+    // for example if your id is 595207432
+    // return 595207432;
+    // your code:
+    return 326856432;
 }
 // --------------------------- //
 
@@ -102,36 +101,36 @@ unsigned long student_id()
 /// <returns>Number of requested elements in found in A</returns>
 int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols)
 {
-	// your code:
-	int d, count = 0;
-	four val;
-	list *tmp;
-	(*arr) = malloc(rows * cols * sizeof(four));
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			d = j - i;
-			if (A[i][j] - j == d)
-			{
-				val = createFour(i,j,d,A[i][j]);
-				(*arr)[count++] = val;
-				if(!(*lst))
-				{
-					*lst = createElement(val);
-					tmp = *lst;
-				}
-				else
-				{
-					tmp->next = createElement(val);
-					tmp = tmp->next;
-				}
-			}
-		}
-	}
-	tmp->next = NULL;
-	(*arr) = realloc((*arr), count * sizeof(four));
-	return count;
+    // your code:
+    int d, count = 0;
+    four val;
+    list *tmp;
+    (*arr) = malloc(rows * cols * sizeof(four));
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            d = j - i;
+            if (A[i][j] - j == d)
+            {
+                val = createFour(i,j,d,A[i][j]);
+                (*arr)[count++] = val;
+                if(!(*lst))
+                {
+                    *lst = createElement(val);
+                    tmp = *lst;
+                }
+                else
+                {
+                    tmp->next = createElement(val);
+                    tmp = tmp->next;
+                }
+            }
+        }
+    }
+    tmp->next = NULL;
+    (*arr) = realloc((*arr), count * sizeof(four));
+    return count;
 }
 // --------------------------- //
 
@@ -146,13 +145,13 @@ int createArrayAndList(int A[][COLS], list** lst, four** arr, int rows, int cols
 /// <returns>value from type four</returns>
 four createFour(int i, int j, int d, int value)
 {
-	// your code:
-	four result;
-	result.i = i;
-	result.j = j;
-	result.d = d;
-	result.value = value;
-	return result;
+    // your code:
+    four result;
+    result.i = i;
+    result.j = j;
+    result.d = d;
+    result.value = value;
+    return result;
 
 }
 // --------------------------- //
@@ -165,11 +164,11 @@ four createFour(int i, int j, int d, int value)
 /// <returns>dynamic value from type list</returns>
 list* createElement(four data)
 {
-	// your code:
-	list *tmp = (list*)malloc(sizeof(list));
-	tmp->data = data;
-	tmp->next = NULL;
-	return tmp;
+    // your code:
+    list *tmp = (list*)malloc(sizeof(list));
+    tmp->data = data;
+    tmp->next = NULL;
+    return tmp;
 }
 // --------------------------- //
 
@@ -183,9 +182,9 @@ list* createElement(four data)
 /// <returns>None</returns>
 void printArray(four* arr, int n)
 {
-	// your code:
-	for (int i = 0; i < n; i++)
-		printf("%d", arr[i].value);
+    // your code:
+    for (int i = 0; i < n; i++)
+        printf("%d", arr[i].value);
 }
 // --------------------------- //
 
@@ -198,13 +197,13 @@ void printArray(four* arr, int n)
 /// <returns>None</returns>
 void printList(list* lst)
 {
-	// your code:
-	list *tmp = lst;
-	while (tmp != NULL)
-	{
-		printf("%d",tmp->data.value);
-		tmp = tmp->next;
-	}
+    // your code:
+    list *tmp = lst;
+    while (tmp != NULL)
+    {
+        printf("%d",tmp->data.value);
+        tmp = tmp->next;
+    }
 }
 // --------------------------- //
 
@@ -216,14 +215,14 @@ void printList(list* lst)
 /// <returns>None</returns>
 void freeDynamic(list** lst, four** arr)
 {
-	// your code:
-	free(*arr);
-	list *next_node = *lst;
-	while ((*lst) != NULL)
-	{
-		next_node = (*lst)->next;
-		free(*lst);
-		(*lst) = next_node;
-	}
+    // your code:
+    free(*arr);
+    list *next_node = *lst;
+    while ((*lst) != NULL)
+    {
+        next_node = (*lst)->next;
+        free(*lst);
+        (*lst) = next_node;
+    }
 }
 // --------------------------- //
