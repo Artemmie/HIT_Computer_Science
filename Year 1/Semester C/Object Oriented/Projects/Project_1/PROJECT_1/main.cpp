@@ -35,6 +35,7 @@ void testPolynomial()
 	cout << "test6 :maxDegree = " << Polynomial::getMaxDegree() << endl;
 	cout << "______________" << endl;
 }
+/*
 void testRational() {
 	cout << "----- start testRational ---------" << endl;
 	cout << "test7" << endl;
@@ -61,8 +62,9 @@ void testRational() {
 	cout << "test10 :maxDegree = " << Polynomial::getMaxDegree() << endl;
 	cout << "__________________________" << endl;
 }
+ */
 int main()
 {
 	testPolynomial();
-	testRational();
+	//testRational();
 }
