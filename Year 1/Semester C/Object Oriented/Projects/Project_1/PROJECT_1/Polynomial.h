@@ -7,6 +7,7 @@
 
 #ifndef Polynomial_h
 #define Polynomial_h
+#include <cassert>
 
 using namespace std;
 
