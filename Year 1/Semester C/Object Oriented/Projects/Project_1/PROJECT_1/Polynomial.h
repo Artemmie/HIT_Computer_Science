@@ -24,12 +24,14 @@ public:
     
     //SET
     void setCoeff(int, double);
+    int setDegree(double *, int);
     
     //functions
     void print() const;
 private:
     double *arr;
     int degree;
+    int trueDegree;
     static unsigned int maxDegree;
 };
 
