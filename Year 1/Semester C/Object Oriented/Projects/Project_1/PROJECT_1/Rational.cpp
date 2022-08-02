@@ -14,7 +14,18 @@ Rational::Rational(Polynomial p1, Polynomial p2)
     this->p1 = p1;
     this->p2 = p2;
 }
+
+Polynomial Rational::getNom() const //To implement
+{
+    return this->p1;
+}
+Polynomial Rational::getDenom() const //To implement
+{
+    return this->p1;
+}
 void Rational::print() // To implement
 {
-    cout << "to be implemented" <<endl;
+    this->p1.print();
+    cout << "---------------" << endl;
+    this->p2.print();
 }

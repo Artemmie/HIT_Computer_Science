@@ -11,8 +11,13 @@
 
 class Rational{
 public:
-    Rational(Polynomial = 0, Polynomial = 0);
+    //Constructor
+    Rational(Polynomial = 0, Polynomial = 1);
     
+    //GET
+    Polynomial getNom() const;
+    Polynomial getDenom() const;
+    //Functions
     void print();
 private:
     Polynomial p1;
