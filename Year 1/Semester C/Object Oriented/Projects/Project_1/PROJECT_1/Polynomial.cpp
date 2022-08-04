@@ -14,18 +14,18 @@ Polynomial::Polynomial(int degree)
 {
     this->degree = degree;
     this->trueDegree = 0;
-    this->arr = new double[degree];
-    assert(arr != 0);
-    for (int i = 0; i < degree; i++)
+    this->arr = new double[degree + 1];
+    assert(this->arr != 0);
+    for (int i = 0; i <= degree; i++)
         this->arr[i] = 0;
 }
 Polynomial::Polynomial(double *arr, int degree)
 {
     this->degree = degree;
-    this->arr = new double[degree];
-    assert(arr != 0);
+    this->arr = new double[this->degree];
+    assert(this->arr != 0);
     this->arr = arr;
-    this->trueDegree = setDegree(this->arr, degree);
+    this->trueDegree = setDegree(this->arr, this->degree);
 }
 
 void Polynomial::setCoeff(int degree, double value)
@@ -41,7 +41,8 @@ void Polynomial::setCoeff(int degree, double value)
 
 double Polynomial::getCoeff(int index) const
 {
-    return this->arr[index];
+    if (index >= 0 && index < this->degree) return this->arr[index];
+    else return -1;
 }
 
 double Polynomial::getDegree(bool flag) const
@@ -52,23 +53,24 @@ double Polynomial::getDegree(bool flag) const
 void Polynomial::print() const
 {
     cout << "Polynomial = ";
-    if (this->degree == 0) cout << "0" << endl;
-    else
+    for (int i = 0; i <= this->trueDegree; i++)
     {
-        for (int i = 0; i <= this->trueDegree; i++)
-        {
-            cout << this->arr[i];
-            if (i != 0) cout << "X^" << i;
-            cout << (i == this->trueDegree ? "" : "+");
-        }
-        cout << endl;
+        cout << this->arr[i];
+        if (i != 0) cout << "X^" << i;
+        cout << (i == this->trueDegree ? "" : "+");
     }
+    cout << endl;
 }
 int Polynomial::setDegree(double *arr, int degree)
 {
     int trueDegree = 0;
-    for (int i = 0; i < degree; i++)
-        if (arr[i] != 0) trueDegree = i;
-    if (maxDegree < trueDegree) maxDegree = trueDegree;
+    for (int i = degree; i >= 0; i--)
+    {
+        if (arr[i] != 0)
+        {
+            if (maxDegree < i) maxDegree = i;
+            return i;
+        }
+    }
     return trueDegree;
 }

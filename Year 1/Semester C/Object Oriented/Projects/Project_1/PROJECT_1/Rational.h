@@ -12,7 +12,7 @@
 class Rational{
 public:
     //Constructor
-    Rational(Polynomial = 0, Polynomial = 1);
+    Rational(Polynomial = 0, Polynomial = 0);
     
     //GET
     Polynomial getNom() const;

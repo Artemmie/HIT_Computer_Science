@@ -13,6 +13,10 @@ Rational::Rational(Polynomial p1, Polynomial p2)
 {
     this->p1 = p1;
     this->p2 = p2;
+    if (this->p2.getDegree(false) == 0)
+        this->p2.setCoeff(0,1);
+        
+    
 }
 
 Polynomial Rational::getNom() const //To implement
@@ -21,7 +25,7 @@ Polynomial Rational::getNom() const //To implement
 }
 Polynomial Rational::getDenom() const //To implement
 {
-    return this->p1;
+    return this->p2;
 }
 void Rational::print() // To implement
 {
