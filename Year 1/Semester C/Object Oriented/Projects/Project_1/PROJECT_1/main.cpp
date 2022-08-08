@@ -59,6 +59,8 @@ void testRational() {
 	val[2] = getCoeff(r2.getDenom(),0);
 	val[3] = getCoeff(r2.getDenom(), 15);
 	val[4] = getCoeff(r2.getDenom(), -1);
+    for (int i = 0; i < 5; i++)
+        cout << i << " is:" << val[i] << endl;
 	cout << "test10 :maxDegree = " << Polynomial::getMaxDegree() << endl;
 	cout << "__________________________" << endl;
 }

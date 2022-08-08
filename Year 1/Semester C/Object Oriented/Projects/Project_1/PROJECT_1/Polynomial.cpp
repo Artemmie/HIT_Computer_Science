@@ -41,8 +41,8 @@ void Polynomial::setCoeff(int degree, double value)
 
 double Polynomial::getCoeff(int index) const
 {
-    if (index >= 0 && index < this->degree) return this->arr[index];
-    else return -1;
+    if (index >= 0 && index <= this->degree) return this->arr[index];
+    else return 0;
 }
 
 double Polynomial::getDegree(bool flag) const
