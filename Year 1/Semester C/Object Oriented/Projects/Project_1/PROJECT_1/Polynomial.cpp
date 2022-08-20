@@ -24,7 +24,8 @@ Polynomial::Polynomial(double *arr, int degree)
     this->degree = degree;
     this->arr = new double[this->degree];
     assert(this->arr != 0);
-    this->arr = arr;
+    for (int i = 0; i <= degree; i++)
+        this->arr[i] = arr[i];
     this->trueDegree = setDegree(this->arr, this->degree);
 }
 
