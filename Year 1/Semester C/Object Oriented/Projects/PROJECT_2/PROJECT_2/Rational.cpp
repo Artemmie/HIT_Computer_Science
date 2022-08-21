@@ -42,8 +42,8 @@ Rational Rational::operator*(const Rational & r) const
 Rational Rational::operator+(const Rational & r) const
 {
     Rational temp;
-    temp.p1 = this->p1 * r.p2;
-    temp.p2 = this->p2 * r.p1;
+    temp.p1 = this->p1 * r.p2 + this->p2 * r.p1;
+    temp.p2 = this->p2 * r.p2;
     return  temp;
 }
 Rational& Rational::operator=(const Rational & r)

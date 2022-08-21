@@ -54,7 +54,7 @@ double Polynomial::getDegree(bool flag) const
 Polynomial operator*(double val, const Polynomial& p)
 {
     Polynomial temp(p.degree);
-    for (int i = 0; i <= p.degree; i++)
+    for (int i = 0; i <= p.trueDegree; i++)
         temp.arr[i] = p.arr[i] * val;
     temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
     return temp;
@@ -79,19 +79,19 @@ Polynomial Polynomial::operator+(const Polynomial & p) const
     Polynomial temp(maxDeg);
     for (i = 0; i <= minDegree; i++)
         temp.arr[i] = this->arr[i] + p.arr[i];
-    if (i <= this->degree)
-        for (; i <= this->degree;i++)
+    if (i <= this->trueDegree)
+        for (; i <= this->trueDegree;i++)
             temp.arr[i] = this->arr[i];
-    else if (i <= p.degree)
-        for (; i <= p.degree;i++)
+    else if (i <= p.trueDegree)
+        for (; i <= p.trueDegree;i++)
             temp.arr[i] = p.arr[i];
     temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
     return temp;
 }
 Polynomial Polynomial::operator-(const Polynomial & p) const
 {
-    int maxDeg = this->degree <= p.trueDegree ? p.trueDegree : this->trueDegree;
-    int minDegree = this->degree <= p.trueDegree ? this->trueDegree : p.trueDegree;
+    int maxDeg = this->trueDegree <= p.trueDegree ? p.trueDegree : this->trueDegree;
+    int minDegree = this->trueDegree <= p.trueDegree ? this->trueDegree : p.trueDegree;
     int i;
     Polynomial temp(maxDeg);
     for (i = 0; i <= minDegree; i++)
@@ -142,8 +142,8 @@ void Polynomial::print() const
     cout << "Polynomial = ";
     for (int i = 0; i <= this->trueDegree; i++)
     {
-        cout << this->arr[i];
-        if (i != 0) cout << "X^" << i;
+        if (i == 0) cout << this->arr[i];
+        else cout << "(" << this->arr[i] << ")*X^" << i;
         cout << (i == this->trueDegree ? "" : "+");
     }
     cout << endl;
