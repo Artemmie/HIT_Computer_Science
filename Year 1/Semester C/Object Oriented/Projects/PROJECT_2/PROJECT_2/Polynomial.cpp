@@ -14,15 +14,15 @@ Polynomial::Polynomial(int degree)
 {
     this->degree = degree;
     this->trueDegree = 0;
-    this->arr = new double[degree + 1];
+    this->arr = new double[this->degree + 1];
     assert(this->arr != 0);
-    for (int i = 0; i <= degree; i++)
+    for (int i = 0; i <= this->degree; i++)
         this->arr[i] = 0;
 }
 Polynomial::Polynomial(double *arr, int degree)
 {
     this->degree = degree;
-    this->arr = new double[this->degree];
+    this->arr = new double[this->degree + 1];
     assert(this->arr != 0);
     for (int i = 0; i <= degree; i++)
         this->arr[i] = arr[i];
@@ -65,7 +65,7 @@ Polynomial Polynomial::operator*(const Polynomial & p) const
     for (int i = 0; i <= this->degree; i++)
     {
         if (this->arr[i] == 0) continue;
-        for (int j = 0; j <= p.degree; j++)
+        for (int j = 0; j <= p.trueDegree; j++)
             temp.arr[i + j] += p.arr[j] * this->arr[i];
     }
     temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
@@ -73,8 +73,8 @@ Polynomial Polynomial::operator*(const Polynomial & p) const
 }
 Polynomial Polynomial::operator+(const Polynomial & p) const
 {
-    int maxDeg = this->degree <= p.degree ? p.degree : this->degree;
-    int minDegree = this->degree <= p.degree ? this->degree : p.degree;
+    int maxDeg = this->trueDegree <= p.trueDegree ? p.trueDegree : this->trueDegree;
+    int minDegree = this->trueDegree <= p.trueDegree ? this->trueDegree : p.trueDegree;
     int i;
     Polynomial temp(maxDeg);
     for (i = 0; i <= minDegree; i++)
@@ -90,17 +90,17 @@ Polynomial Polynomial::operator+(const Polynomial & p) const
 }
 Polynomial Polynomial::operator-(const Polynomial & p) const
 {
-    int maxDeg = this->degree <= p.degree ? p.degree : this->degree;
-    int minDegree = this->degree <= p.degree ? this->degree : p.degree;
+    int maxDeg = this->degree <= p.trueDegree ? p.trueDegree : this->trueDegree;
+    int minDegree = this->degree <= p.trueDegree ? this->trueDegree : p.trueDegree;
     int i;
     Polynomial temp(maxDeg);
     for (i = 0; i <= minDegree; i++)
         temp.arr[i] = this->arr[i] - p.arr[i];
-    if (i <= this->degree)
-        for (; i <= this->degree;i++)
+    if (i <= this->trueDegree)
+        for (; i <= this->trueDegree;i++)
             temp.arr[i] = this->arr[i];
-    else if (i <= p.degree)
-        for (; i <= p.degree;i++)
+    else if (i <= p.trueDegree)
+        for (; i <= p.trueDegree;i++)
             temp.arr[i] = (-1 * p.arr[i]);
     temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
     return temp;
@@ -113,7 +113,8 @@ Polynomial& Polynomial::operator=(const Polynomial & p)
         {
             delete [] this->arr;
             this->degree = p.degree;
-            this->arr = new double [this->degree];
+            this->trueDegree = p.trueDegree;
+            this->arr = new double [this->degree + 1];
             assert(this->arr != 0);
         }
         for (int i = 0; i <= this->degree;i++)

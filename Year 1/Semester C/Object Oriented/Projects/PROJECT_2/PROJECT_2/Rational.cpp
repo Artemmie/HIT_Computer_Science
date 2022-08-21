@@ -31,3 +31,34 @@ void Rational::print()
     cout << "---------------" << endl;
     this->p2.print();
 }
+
+Rational Rational::operator*(const Rational & r) const
+{
+    Rational temp;
+    temp.p1 = this->p1 * r.p1;
+    temp.p2 = this->p2 * r.p2;
+    return temp;
+}
+Rational Rational::operator+(const Rational & r) const
+{
+    Rational temp;
+    temp.p1 = this->p1 * r.p2;
+    temp.p2 = this->p2 * r.p1;
+    return  temp;
+}
+Rational& Rational::operator=(const Rational & r)
+{
+    if (&r != this)
+    {
+        this->p1 = r.p1;
+        this->p2 = r.p2;
+    }
+    return *this;
+}
+ostream &operator<<(ostream &output, const Rational &r)
+{
+    output << "numerator=" << r.p1;
+    output << "---------------" << endl;
+    output << "denominator=" << r.p2;
+    return output;
+}

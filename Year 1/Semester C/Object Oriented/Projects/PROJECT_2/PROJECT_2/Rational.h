@@ -8,12 +8,18 @@
 #ifndef Rational_h
 #define Rational_h
 #include "Polynomial.h"
+using std::ostream;
 
 class Rational{
+    friend ostream &operator<<(ostream &, const Rational &);
 public:
     //Constructor
     Rational(Polynomial = 0, Polynomial = 0);
     
+    //Operatorts
+    Rational operator*(const Rational &) const;
+    Rational operator+(const Rational &) const;
+    Rational& operator=(const Rational &);
     //GET
     Polynomial getNom() const;
     Polynomial getDenom() const;

@@ -11,9 +11,8 @@
 
 using namespace std;
 using std::ostream;
-using std::istream;
+
 class Polynomial{
-    friend istream &operator>>(istream &, Polynomial &);
     friend ostream &operator<<(ostream &, const Polynomial &);
     friend Polynomial operator*(double, const Polynomial &);
     
