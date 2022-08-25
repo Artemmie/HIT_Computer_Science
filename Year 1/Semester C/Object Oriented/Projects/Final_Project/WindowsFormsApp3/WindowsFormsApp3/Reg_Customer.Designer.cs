@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reg_Customer));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.Add_butt = new System.Windows.Forms.ToolStripButton();
+            this.Save_butt = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,8 +44,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,34 +52,35 @@
             // 
             this.toolStrip2.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.Add_butt,
+            this.Save_butt});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(369, 39);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton1
+            // Add_butt
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(126, 36);
-            this.toolStripButton1.Text = "Add Data";
+            this.Add_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Add_butt.Image = global::WindowsFormsApp3.Properties.Resources.Add;
+            this.Add_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Add_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Add_butt.Name = "Add_butt";
+            this.Add_butt.Size = new System.Drawing.Size(126, 36);
+            this.Add_butt.Text = "Add Data";
+            this.Add_butt.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripButton2
+            // Save_butt
             // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(87, 36);
-            this.toolStripButton2.Text = "Save";
+            this.Save_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Save_butt.Image = global::WindowsFormsApp3.Properties.Resources.Save;
+            this.Save_butt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Save_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Save_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Save_butt.Name = "Save_butt";
+            this.Save_butt.Size = new System.Drawing.Size(87, 36);
+            this.Save_butt.Text = "Save";
             // 
             // groupBox1
             // 
@@ -102,6 +102,25 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Location = new System.Drawing.Point(14, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 24);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Birth Month:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(152, 215);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(72, 20);
+            this.textBox6.TabIndex = 12;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label5
             // 
@@ -190,25 +209,6 @@
             this.textBox1.Size = new System.Drawing.Size(160, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.Location = new System.Drawing.Point(14, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 24);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Birth Month:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(152, 215);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(72, 20);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
             // Reg_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,7 +219,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Customer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Customer";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
@@ -233,8 +233,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton Save_butt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
@@ -248,5 +247,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripButton Add_butt;
     }
 }

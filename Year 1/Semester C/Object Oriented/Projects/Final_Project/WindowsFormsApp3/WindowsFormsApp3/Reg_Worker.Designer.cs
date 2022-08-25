@@ -192,6 +192,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Worker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Worker";
             this.Load += new System.EventHandler(this.Reg_Worker_Load);
             this.toolStrip2.ResumeLayout(false);
