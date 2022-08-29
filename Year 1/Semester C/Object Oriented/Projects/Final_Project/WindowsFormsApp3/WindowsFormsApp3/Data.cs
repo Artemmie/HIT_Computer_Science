@@ -15,12 +15,12 @@ namespace Data
         string cellPhone;
         int month;
         int year;
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string CellPhone { get; set; }
-        public int Month { get; set; }
-        public int Year { get; set; }
+        public int Id { private get; set; }
+        public string FirstName { private get; set; }
+        public string LastName { private get; set; }
+        public string CellPhone { private get; set; }
+        public int Month { private get; set; }
+        public int Year { private get; set; }
 
     }
 }
