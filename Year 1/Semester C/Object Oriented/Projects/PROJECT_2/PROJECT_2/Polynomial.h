@@ -26,6 +26,8 @@ public:
     Polynomial operator+(const Polynomial &) const;
     Polynomial operator-(const Polynomial &) const;
     Polynomial &operator=(const Polynomial &);
+    double operator[](int) const;
+
     
     // GET
     static unsigned int getMaxDegree();
