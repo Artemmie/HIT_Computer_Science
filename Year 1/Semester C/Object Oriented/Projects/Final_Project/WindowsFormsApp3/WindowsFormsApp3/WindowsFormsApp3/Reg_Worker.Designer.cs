@@ -30,72 +30,77 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reg_Worker));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.New_butt = new System.Windows.Forms.ToolStripButton();
+            this.Save_butt = new System.Windows.Forms.ToolStripButton();
+            this.info_gbox = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.W_year_text = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.W_cell_text = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.W_last_text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.W_first_text = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.W_id_text = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.info_gbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip2
             // 
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3,
-            this.toolStripButton4});
+            this.New_butt,
+            this.Save_butt});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(384, 39);
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton3
+            // New_butt
             // 
-            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(126, 36);
-            this.toolStripButton3.Text = "Add Data";
+            this.New_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.New_butt.Image = ((System.Drawing.Image)(resources.GetObject("New_butt.Image")));
+            this.New_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.New_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.New_butt.Name = "New_butt";
+            this.New_butt.Size = new System.Drawing.Size(126, 36);
+            this.New_butt.Text = "Add Data";
+            this.New_butt.Click += new System.EventHandler(this.New_butt_Click);
             // 
-            // toolStripButton4
+            // Save_butt
             // 
-            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(87, 36);
-            this.toolStripButton4.Text = "Save";
+            this.Save_butt.Enabled = false;
+            this.Save_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Save_butt.Image = ((System.Drawing.Image)(resources.GetObject("Save_butt.Image")));
+            this.Save_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Save_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Save_butt.Name = "Save_butt";
+            this.Save_butt.Size = new System.Drawing.Size(87, 36);
+            this.Save_butt.Text = "Save";
+            this.Save_butt.Click += new System.EventHandler(this.Save_butt_Click);
             // 
-            // groupBox1
+            // info_gbox
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 222);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Information";
+            this.info_gbox.Controls.Add(this.label5);
+            this.info_gbox.Controls.Add(this.W_year_text);
+            this.info_gbox.Controls.Add(this.label3);
+            this.info_gbox.Controls.Add(this.W_cell_text);
+            this.info_gbox.Controls.Add(this.label4);
+            this.info_gbox.Controls.Add(this.W_last_text);
+            this.info_gbox.Controls.Add(this.label2);
+            this.info_gbox.Controls.Add(this.W_first_text);
+            this.info_gbox.Controls.Add(this.label1);
+            this.info_gbox.Controls.Add(this.W_id_text);
+            this.info_gbox.Enabled = false;
+            this.info_gbox.Location = new System.Drawing.Point(12, 42);
+            this.info_gbox.Name = "info_gbox";
+            this.info_gbox.Size = new System.Drawing.Size(359, 222);
+            this.info_gbox.TabIndex = 1;
+            this.info_gbox.TabStop = false;
+            this.info_gbox.Text = "Information";
             // 
             // label5
             // 
@@ -107,12 +112,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Birth Year:";
             // 
-            // textBox5
+            // W_year_text
             // 
-            this.textBox5.Location = new System.Drawing.Point(152, 181);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(56, 20);
-            this.textBox5.TabIndex = 10;
+            this.W_year_text.Location = new System.Drawing.Point(152, 181);
+            this.W_year_text.Name = "W_year_text";
+            this.W_year_text.Size = new System.Drawing.Size(56, 20);
+            this.W_year_text.TabIndex = 10;
             // 
             // label3
             // 
@@ -124,12 +129,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Cellphone:";
             // 
-            // textBox3
+            // W_cell_text
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 6;
+            this.W_cell_text.Location = new System.Drawing.Point(152, 141);
+            this.W_cell_text.Name = "W_cell_text";
+            this.W_cell_text.Size = new System.Drawing.Size(158, 20);
+            this.W_cell_text.TabIndex = 6;
             // 
             // label4
             // 
@@ -141,12 +146,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Last Name:";
             // 
-            // textBox4
+            // W_last_text
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 106);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 20);
-            this.textBox4.TabIndex = 4;
+            this.W_last_text.Location = new System.Drawing.Point(152, 106);
+            this.W_last_text.Name = "W_last_text";
+            this.W_last_text.Size = new System.Drawing.Size(175, 20);
+            this.W_last_text.TabIndex = 4;
             // 
             // label2
             // 
@@ -158,12 +163,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "First Name:";
             // 
-            // textBox2
+            // W_first_text
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 20);
-            this.textBox2.TabIndex = 2;
+            this.W_first_text.Location = new System.Drawing.Point(152, 69);
+            this.W_first_text.Name = "W_first_text";
+            this.W_first_text.Size = new System.Drawing.Size(175, 20);
+            this.W_first_text.TabIndex = 2;
             // 
             // label1
             // 
@@ -176,29 +181,28 @@
             this.label1.Text = "ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // W_id_text
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.W_id_text.Location = new System.Drawing.Point(152, 30);
+            this.W_id_text.Name = "W_id_text";
+            this.W_id_text.Size = new System.Drawing.Size(175, 20);
+            this.W_id_text.TabIndex = 0;
+            this.W_id_text.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Reg_Worker
             // 
             this.ClientSize = new System.Drawing.Size(384, 276);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.info_gbox);
             this.Controls.Add(this.toolStrip2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Worker";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "New Worker";
             this.Load += new System.EventHandler(this.Reg_Worker_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.info_gbox.ResumeLayout(false);
+            this.info_gbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,18 +214,18 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripButton New_butt;
+        private System.Windows.Forms.ToolStripButton Save_butt;
+        private System.Windows.Forms.GroupBox info_gbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox W_id_text;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox W_first_text;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox W_year_text;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox W_cell_text;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox W_last_text;
     }
 }

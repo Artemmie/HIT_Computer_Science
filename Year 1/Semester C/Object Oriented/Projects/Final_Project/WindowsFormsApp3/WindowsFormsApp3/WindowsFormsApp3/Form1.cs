@@ -17,11 +17,12 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void New_worker_butt_Click(object sender, EventArgs e)
         {
             Reg_Worker rg = new Reg_Worker();
             rg.MdiParent = this;
             rg.Show();
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -34,6 +35,11 @@ namespace WindowsFormsApp3
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
