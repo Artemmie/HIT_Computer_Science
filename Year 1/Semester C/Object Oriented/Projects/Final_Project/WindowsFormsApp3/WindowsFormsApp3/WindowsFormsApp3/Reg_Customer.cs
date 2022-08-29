@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Data;
 
 namespace WindowsFormsApp3
 {
@@ -15,26 +16,6 @@ namespace WindowsFormsApp3
         public Reg_Customer()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Reg_Customer_Load(object sender, EventArgs e)
@@ -63,6 +44,17 @@ namespace WindowsFormsApp3
             this.New_customer_butt.Enabled = true;
             this.Save_customer_butt.Enabled = false;
             this.Info_gbox.Enabled = false;
+        }
+
+        private void Reg_Customer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.New_customer_butt.Enabled = true;
+                this.Save_customer_butt.Enabled = false;
+                this.Info_gbox.Enabled = false;
+            }
+
         }
     }
 }

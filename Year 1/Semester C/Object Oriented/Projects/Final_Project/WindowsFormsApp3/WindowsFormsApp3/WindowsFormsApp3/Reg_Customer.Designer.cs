@@ -33,18 +33,19 @@
             this.New_customer_butt = new System.Windows.Forms.ToolStripButton();
             this.Save_customer_butt = new System.Windows.Forms.ToolStripButton();
             this.Info_gbox = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.C_month_text = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.C_year_text = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.C_cell_text = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.C_last_text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.C_first_text = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.C_id_text = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.C_month_text = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.Info_gbox.SuspendLayout();
             this.SuspendLayout();
@@ -89,17 +90,18 @@
             // 
             // Info_gbox
             // 
-            this.Info_gbox.Controls.Add(this.label6);
             this.Info_gbox.Controls.Add(this.C_month_text);
+            this.Info_gbox.Controls.Add(this.label7);
+            this.Info_gbox.Controls.Add(this.label6);
+            this.Info_gbox.Controls.Add(this.label3);
+            this.Info_gbox.Controls.Add(this.label1);
             this.Info_gbox.Controls.Add(this.label5);
             this.Info_gbox.Controls.Add(this.C_year_text);
-            this.Info_gbox.Controls.Add(this.label3);
             this.Info_gbox.Controls.Add(this.C_cell_text);
             this.Info_gbox.Controls.Add(this.label4);
             this.Info_gbox.Controls.Add(this.C_last_text);
             this.Info_gbox.Controls.Add(this.label2);
             this.Info_gbox.Controls.Add(this.C_first_text);
-            this.Info_gbox.Controls.Add(this.label1);
             this.Info_gbox.Controls.Add(this.C_id_text);
             this.Info_gbox.Enabled = false;
             this.Info_gbox.Location = new System.Drawing.Point(4, 42);
@@ -109,24 +111,12 @@
             this.Info_gbox.TabStop = false;
             this.Info_gbox.Text = "Information";
             // 
-            // label6
+            // label1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.Location = new System.Drawing.Point(14, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 24);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Birth Month:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // C_month_text
-            // 
-            this.C_month_text.Location = new System.Drawing.Point(152, 215);
-            this.C_month_text.Name = "C_month_text";
-            this.C_month_text.Size = new System.Drawing.Size(72, 20);
-            this.C_month_text.TabIndex = 12;
-            this.C_month_text.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
             // 
             // label5
             // 
@@ -144,17 +134,6 @@
             this.C_year_text.Name = "C_year_text";
             this.C_year_text.Size = new System.Drawing.Size(72, 20);
             this.C_year_text.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(12, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 24);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Cellphone:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // C_cell_text
             // 
@@ -197,23 +176,49 @@
             this.C_first_text.Size = new System.Drawing.Size(179, 20);
             this.C_first_text.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(12, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // C_id_text
             // 
             this.C_id_text.Location = new System.Drawing.Point(152, 30);
             this.C_id_text.Name = "C_id_text";
             this.C_id_text.Size = new System.Drawing.Size(160, 20);
             this.C_id_text.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.Location = new System.Drawing.Point(14, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 24);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "ID:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Location = new System.Drawing.Point(14, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 24);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Cellphone";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label7.Location = new System.Drawing.Point(12, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 24);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Birth Month";
+            // 
+            // C_month_text
+            // 
+            this.C_month_text.Location = new System.Drawing.Point(152, 208);
+            this.C_month_text.Name = "C_month_text";
+            this.C_month_text.Size = new System.Drawing.Size(72, 20);
+            this.C_month_text.TabIndex = 15;
             // 
             // Reg_Customer
             // 
@@ -222,12 +227,14 @@
             this.ClientSize = new System.Drawing.Size(369, 296);
             this.Controls.Add(this.Info_gbox);
             this.Controls.Add(this.toolStrip2);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Customer";
             this.Load += new System.EventHandler(this.Reg_Customer_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Reg_Customer_KeyDown);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.Info_gbox.ResumeLayout(false);
@@ -243,17 +250,18 @@
         private System.Windows.Forms.ToolStripButton New_customer_butt;
         private System.Windows.Forms.ToolStripButton Save_customer_butt;
         private System.Windows.Forms.GroupBox Info_gbox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox C_month_text;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox C_year_text;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox C_cell_text;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox C_last_text;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox C_first_text;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox C_id_text;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox C_month_text;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -135,6 +135,11 @@ namespace my1st
                 pictureBox1.Invalidate();
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
         //!8e
     }
 }

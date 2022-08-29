@@ -84,6 +84,8 @@
             // 
             // info_gbox
             // 
+            this.info_gbox.Controls.Add(this.W_id_text);
+            this.info_gbox.Controls.Add(this.label1);
             this.info_gbox.Controls.Add(this.label5);
             this.info_gbox.Controls.Add(this.W_year_text);
             this.info_gbox.Controls.Add(this.label3);
@@ -92,8 +94,6 @@
             this.info_gbox.Controls.Add(this.W_last_text);
             this.info_gbox.Controls.Add(this.label2);
             this.info_gbox.Controls.Add(this.W_first_text);
-            this.info_gbox.Controls.Add(this.label1);
-            this.info_gbox.Controls.Add(this.W_id_text);
             this.info_gbox.Enabled = false;
             this.info_gbox.Location = new System.Drawing.Point(12, 42);
             this.info_gbox.Name = "info_gbox";
@@ -174,31 +174,32 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(9, 30);
+            this.label1.Location = new System.Drawing.Point(9, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 24);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 12;
             this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // W_id_text
             // 
-            this.W_id_text.Location = new System.Drawing.Point(152, 30);
+            this.W_id_text.Location = new System.Drawing.Point(152, 35);
             this.W_id_text.Name = "W_id_text";
             this.W_id_text.Size = new System.Drawing.Size(175, 20);
-            this.W_id_text.TabIndex = 0;
-            this.W_id_text.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.W_id_text.TabIndex = 13;
             // 
             // Reg_Worker
             // 
             this.ClientSize = new System.Drawing.Size(384, 276);
             this.Controls.Add(this.info_gbox);
             this.Controls.Add(this.toolStrip2);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reg_Worker";
+            this.ShowInTaskbar = false;
             this.Text = "New Worker";
             this.Load += new System.EventHandler(this.Reg_Worker_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Reg_Worker_KeyDown);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.info_gbox.ResumeLayout(false);
@@ -217,8 +218,6 @@
         private System.Windows.Forms.ToolStripButton New_butt;
         private System.Windows.Forms.ToolStripButton Save_butt;
         private System.Windows.Forms.GroupBox info_gbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox W_id_text;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox W_first_text;
         private System.Windows.Forms.Label label5;
@@ -227,5 +226,7 @@
         private System.Windows.Forms.TextBox W_cell_text;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox W_last_text;
+        private System.Windows.Forms.TextBox W_id_text;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -17,31 +17,6 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Reg_Worker_Load(object sender, EventArgs e)
         {
 
@@ -67,5 +42,17 @@ namespace WindowsFormsApp3
             this.New_butt.Enabled = true;
             this.info_gbox.Enabled = false;
         }
+
+        private void Reg_Worker_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Save_butt.Enabled = false;
+                this.New_butt.Enabled = true;
+                this.info_gbox.Enabled = false;
+                
+            }
+        }
+
     }
 }
