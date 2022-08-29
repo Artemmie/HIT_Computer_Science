@@ -43,7 +43,8 @@ void Polynomial::setCoeff(int degree, double value)
 double Polynomial::getCoeff(int index) const
 {
     if (index >= 0 && index <= this->degree) return this->arr[index];
-    else return 0;
+    else cout << "Index not in the range!";
+    return 0.0;
 }
 
 double Polynomial::getDegree(bool flag) const
@@ -122,6 +123,10 @@ Polynomial& Polynomial::operator=(const Polynomial & p)
         this->trueDegree = this->setDegree(this->arr, this->degree);
     }
     return *this;
+}
+double Polynomial::operator[](int val) const
+{
+    return this->getCoeff(val);
 }
 ostream &operator<<(ostream &output, const Polynomial &p)
 {
