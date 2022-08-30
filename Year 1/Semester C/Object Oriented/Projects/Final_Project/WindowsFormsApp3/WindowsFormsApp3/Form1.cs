@@ -15,35 +15,52 @@ namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
     {
+        public static Form1 instance;
+        PersonList personList = new PersonList();
+        DataTable dt = new DataTable();
         public Form1()
         {
             InitializeComponent();
+            instance = this;
+            ShowingDataGridView(GetPersonList());
         }
-        PersonList personList = new PersonList();
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        //WORKER BUTTON
+        private void Register_Worker_Click(object sender, EventArgs e)
         {
             Reg_Worker rg = new Reg_Worker();
             rg.MdiParent = this;
             rg.Show();
         }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        //CUSTOMER BUTTON
+        private void Register_Customer_Click(object sender, EventArgs e)
         {
             Reg_Customer rg = new Reg_Customer();
             rg.MdiParent = this;
             rg.Show();
         }
-
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        //UPDATE TABLE
+        public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, int month, int year)
         {
-            this.Close();
+            personList[personList.NextIndex] = new Customer(personList.NextIndex, customerID, firstN, lastN, cellphone, month, year);
+         //   dt.Rows.Add(personList.NextIndex - 1, customerID, firstN, lastN, cellphone);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public PersonList GetPersonList()
         {
-
+            return personList;
         }
-        private void toolStripButton3_Click(object sender, EventArgs e)
+
+        public void ShowingDataGridView(PersonList personList)
+        {
+            dt.Columns.Add("Index", typeof(int));
+            dt.Columns.Add("Id", typeof(long));
+            dt.Columns.Add("First Name", typeof(string));
+            dt.Columns.Add("Last Name", typeof(string));
+            dt.Columns.Add("Cellphone", typeof(string));
+            dataGridView1.DataSource = dt;
+        }
+        // SAVE BUTTON
+        private void Save_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
@@ -57,7 +74,8 @@ namespace WindowsFormsApp3
                     formatter.Serialize(stream, personList);
             }
         }
-        private void toolStripButton4_Click(object sender, EventArgs e) //NOT WORKING
+        // LOAD BUTTON
+        private void Load_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
@@ -71,10 +89,10 @@ namespace WindowsFormsApp3
                 personList = (PersonList)binaryFormatter.Deserialize(stream);
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        //EXIT BUTTON
+        private void Exit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

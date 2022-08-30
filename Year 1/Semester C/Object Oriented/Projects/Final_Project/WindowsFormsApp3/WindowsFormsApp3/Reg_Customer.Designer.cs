@@ -233,7 +233,6 @@
             this.Name = "Reg_Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Customer";
-            this.Load += new System.EventHandler(this.Reg_Customer_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Reg_Customer_KeyDown);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();

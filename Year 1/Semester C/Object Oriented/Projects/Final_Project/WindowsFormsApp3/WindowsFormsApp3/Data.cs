@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections;
+    using System.Collections.Generic;
+
     [Serializable]
     public abstract class Person
     {
@@ -26,7 +28,7 @@
     public class Worker : Person
     {
         long workerID;
-        public Worker() : this(326856432, 1, "Artem", "Gerasimov", "0526453011", 7) { }
+        public Worker() : this(1, 326856432, "Artem", "Gerasimov", "0526453011", 7) { }
         public Worker(long workerIdVal, long idVal, string firstNameVal, string lastNameVal, string cellPhoneVal, int monthVal)
         {
             workerID = workerIdVal;
@@ -43,7 +45,7 @@
     public class Customer : Person
     {
         long customerID;
-        public Customer() : this(2, 2, "Liel", "Cohen", "", 99,99) { } // To update
+        public Customer() : this(1, 999999999, "Liel", "Cohen", "0512512512", 99,99) { } // To update
         public Customer(long customerIdVal, long idVal, string firstNameVal, string lastNameVal, string cellPhoneVal, int monthVal, int yearVal)
         {
             customerID = customerIdVal;
@@ -60,15 +62,15 @@
     [Serializable] 
     public class PersonList
     {
-        protected SortedList people;
-        public PersonList() { people = new SortedList(); }
+        protected List<Person> people;
+        public PersonList() { people = new List<Person>(); }
         public int NextIndex{ get { return people.Count; }}
         public Person this[int index]
         {
             get
             {
-                if (index >= people.Count) return (Person)null;
-                return (Person)people.GetByIndex(index);
+                if (index >= people.Count) return null;
+                return people[index];
             }
             set
             {

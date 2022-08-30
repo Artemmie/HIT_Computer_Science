@@ -17,12 +17,6 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
-
-        private void Reg_Customer_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void New_customer_butt_Click(object sender, EventArgs e)
         {
             this.New_customer_butt.Enabled = false;
@@ -41,20 +35,26 @@ namespace WindowsFormsApp3
 
         private void Save_customer_butt_Click(object sender, EventArgs e)
         {
-            this.New_customer_butt.Enabled = true;
-            this.Save_customer_butt.Enabled = false;
-            this.Info_gbox.Enabled = false;
+            Save_Values();
         }
 
         private void Reg_Customer_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) Save_Values();
+        }
+        private void Save_Values()
+        {
+            long customerID;
+            int customerMonth;
+            int customerYear;
+            if (long.TryParse(C_id_text.Text, out customerID) && int.TryParse(C_month_text.Text, out customerMonth) && int.TryParse(C_year_text.Text, out customerYear))
             {
                 this.New_customer_butt.Enabled = true;
                 this.Save_customer_butt.Enabled = false;
                 this.Info_gbox.Enabled = false;
+                Form1.instance.UpdateTable(customerID, C_first_text.Text, C_last_text.Text, C_cell_text.Text, customerMonth, customerYear);
             }
-
+            else MessageBox.Show("One of the values are incorrect!");
         }
     }
 }
