@@ -74,10 +74,10 @@
             }
             set
             {
-                if (index <= people.Count)
-                    people[index] = value;
+                people.Add(value);
             }
         }
+        public List<Person> GetList() { return people; }
         public void Remove(int element)
         {
             if (element >= 0 && element < people.Count)

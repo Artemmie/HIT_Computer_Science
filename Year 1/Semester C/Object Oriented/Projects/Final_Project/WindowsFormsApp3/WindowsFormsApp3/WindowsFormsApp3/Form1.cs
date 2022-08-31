@@ -17,12 +17,15 @@ namespace WindowsFormsApp3
     {
         public static Form1 instance;
         PersonList personList = new PersonList();
-        DataTable dt = new DataTable();
+        BindingSource source = new BindingSource();
+        List<Person> users;
         public Form1()
         {
             InitializeComponent();
             instance = this;
-            ShowingDataGridView(GetPersonList());
+            users = personList.GetList();
+            source.DataSource = users;
+            dataGridView1.DataSource = source;
         }
         //WORKER BUTTON
         private void Register_Worker_Click(object sender, EventArgs e)
@@ -42,22 +45,8 @@ namespace WindowsFormsApp3
         public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, int month, int year)
         {
             personList[personList.NextIndex] = new Customer(personList.NextIndex, customerID, firstN, lastN, cellphone, month, year);
-         //   dt.Rows.Add(personList.NextIndex - 1, customerID, firstN, lastN, cellphone);
-        }
-
-        public PersonList GetPersonList()
-        {
-            return personList;
-        }
-
-        public void ShowingDataGridView(PersonList personList)
-        {
-            dt.Columns.Add("Index", typeof(int));
-            dt.Columns.Add("Id", typeof(long));
-            dt.Columns.Add("First Name", typeof(string));
-            dt.Columns.Add("Last Name", typeof(string));
-            dt.Columns.Add("Cellphone", typeof(string));
-            dataGridView1.DataSource = dt;
+            users = personList.GetList();
+            source.ResetBindings(false);
         }
         // SAVE BUTTON
         private void Save_Click(object sender, EventArgs e)
@@ -87,12 +76,21 @@ namespace WindowsFormsApp3
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 personList = (PersonList)binaryFormatter.Deserialize(stream);
+                users = personList.GetList();
+                source.DataSource = users;
+                dataGridView1.DataSource = source;
             }
+
         }
         //EXIT BUTTON
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = personList.GetList();
         }
     }
 }
