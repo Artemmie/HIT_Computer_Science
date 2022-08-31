@@ -23,9 +23,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             instance = this;
-            users = personList.GetList();
-            source.DataSource = users;
-            dataGridView1.DataSource = source;
+            LinkTable();
         }
         //WORKER BUTTON
         private void Register_Worker_Click(object sender, EventArgs e)
@@ -76,11 +74,15 @@ namespace WindowsFormsApp3
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 personList = (PersonList)binaryFormatter.Deserialize(stream);
-                users = personList.GetList();
-                source.DataSource = users;
-                dataGridView1.DataSource = source;
+                LinkTable();
             }
 
+        }
+        public void LinkTable()
+        {
+            users = personList.GetList();
+            source.DataSource = users;
+            dataGridView1.DataSource = source;
         }
         //EXIT BUTTON
         private void Exit_Click(object sender, EventArgs e)
@@ -88,9 +90,28 @@ namespace WindowsFormsApp3
             this.Close();
         }
 
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    personList.Remove(row.Index);
+                }
+                users = personList.GetList();
+                source.ResetBindings(false);
+            }
+
+        }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = personList.GetList();
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                personList.Remove(row.Index);
+            }
+            users = personList.GetList();
+            source.ResetBindings(false);
         }
     }
 }

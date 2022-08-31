@@ -31,37 +31,31 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.personListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.personListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Register_Worker = new System.Windows.Forms.ToolStripButton();
             this.Register_Customer = new System.Windows.Forms.ToolStripButton();
             this.Save = new System.Windows.Forms.ToolStripButton();
             this.Load = new System.Windows.Forms.ToolStripButton();
             this.Exit = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.personListBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.personListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(864, 137);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(1578, 1112);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // personListBindingSource1
-            // 
-            this.personListBindingSource1.DataSource = typeof(Data.PersonList);
-            // 
-            // personListBindingSource
-            // 
-            this.personListBindingSource.DataSource = typeof(Data.PersonList);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // Register_Worker
             // 
@@ -129,32 +123,51 @@
             this.Register_Customer,
             this.Save,
             this.Load,
-            this.Exit});
+            this.Exit,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(2442, 131);
+            this.toolStrip1.Size = new System.Drawing.Size(2448, 131);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(167, 125);
+            this.toolStripButton1.Text = "Delete";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // personListBindingSource1
+            // 
+            this.personListBindingSource1.DataSource = typeof(Data.PersonList);
+            // 
+            // personListBindingSource
+            // 
+            this.personListBindingSource.DataSource = typeof(Data.PersonList);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(2442, 1321);
+            this.ClientSize = new System.Drawing.Size(2448, 1179);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,6 +182,7 @@
         private System.Windows.Forms.ToolStripButton Load;
         private System.Windows.Forms.ToolStripButton Exit;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 
