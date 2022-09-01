@@ -1,8 +1,7 @@
 ﻿using System;
-using WindowsFormsApp3.Classes;
 using WindowsFormsApp3.Company_Worker;
 
-namespace WindowsFormsApp3.Chef
+namespace WindowsFormsApp3.Classes.Company_Worker
 {
     [Serializable]
     public class Chef : CompanyWorker

@@ -5,6 +5,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 using WindowsFormsApp3.Classes;
+using WindowsFormsApp3.Classes.Company_Worker;
+
 namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
@@ -36,7 +38,7 @@ namespace WindowsFormsApp3
         //UPDATE TABLE
         public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, int month, int year)
         {
-            workerList[workerList.NextIndex] = new Chef(workerList.NextIndex, customerID, firstN, lastN, cellphone, DateTime(1996,07,15));
+            workerList[workerList.NextIndex] = new Chef(customerID, firstN, lastN, cellphone, new DateTime(1996, 07, 15), workerList.NextIndex, 50);
             users = workerList.GetList();
             source.ResetBindings(false);
         }
