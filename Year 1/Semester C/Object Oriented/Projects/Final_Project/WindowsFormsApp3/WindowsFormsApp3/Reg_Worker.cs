@@ -13,48 +13,60 @@ namespace WindowsFormsApp3
 {
     public partial class Reg_Worker : Form
     {
+        string[] internalJobs = new string[] { "Chef", "Shift Manager", "Waiter" };
+        string[] externalJobs = new string[] { "Delivery" };
         public Reg_Worker()
         {
             InitializeComponent();
         }
         private void New_customer_butt_Click(object sender, EventArgs e)
         {
-            this.New_customer_butt.Enabled = false;
-            this.Save_customer_butt.Enabled = true;
+            this.New_worker_butt.Enabled = false;
+            this.Save_worker_butt.Enabled = true;
 
             // Information
             this.Info_gbox.Enabled = true;
             //Text boxes
-            this.C_id_text.ResetText();
-            this.C_first_text.ResetText();
-            this.C_last_text.ResetText();
-            this.C_cell_text.ResetText();
+            this.Job_Decision.Checked = false;
+            this.Worker_Job.Items.Clear();
+            if (Job_Decision.Checked) this.Worker_Job.Items.AddRange(externalJobs);
+            else this.Worker_Job.Items.AddRange(internalJobs);
+            this.Worker_ID.ResetText();
+            this.Worker_First.ResetText();
+            this.Worker_Last.ResetText();
+            this.Worker_Cell.ResetText();
+            this.Worker_Birthday.ResetText();
+            this.Worker_Job.ResetText();
         }
 
         private void Save_customer_butt_Click(object sender, EventArgs e)
         {
-            //Save_Values();
+            Save_Values();
         }
 
         private void Reg_Customer_KeyDown(object sender, KeyEventArgs e)
         {
-           // if (e.KeyCode == Keys.Enter) Save_Values();
+            if (e.KeyCode == Keys.Enter) Save_Values();
         }
-        /*
+
+        private void Job_Decision_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Worker_Job.Items.Clear();
+            if (Job_Decision.Checked) this.Worker_Job.Items.AddRange(externalJobs);
+            else this.Worker_Job.Items.AddRange(internalJobs);
+        }
         private void Save_Values()
         {
             long customerID;
-            int customerMonth;
-            int customerYear;
-            if (long.TryParse(C_id_text.Text, out customerID) && int.TryParse(C_month_text.Text, out customerMonth) && int.TryParse(C_year_text.Text, out customerYear))
+            int age = (int)((DateTime.Now - Worker_Birthday.Value).TotalDays / 365.242199);
+            if (long.TryParse(Worker_ID.Text, out customerID) && Worker_Job.SelectedItem != null && age >= 16)
             {
-                this.New_customer_butt.Enabled = true;
-                this.Save_customer_butt.Enabled = false;
-                this.Info_gbox.Enabled = false;
-                Form1.instance.UpdateTable(customerID, C_first_text.Text, C_last_text.Text, C_cell_text.Text, customerMonth, customerYear);
+                this.New_worker_butt.Enabled = true;
+                this.Save_worker_butt.Enabled = false;
+                Form1.instance.UpdateTable(customerID, Worker_First.Text, Worker_Last.Text, Worker_Cell.Text, Worker_Birthday.Value, Worker_Job.SelectedItem.ToString());
+                
             }
             else MessageBox.Show("One of the values are incorrect!");
         }
-        */
     }
 }

@@ -30,27 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reg_Worker));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.New_customer_butt = new System.Windows.Forms.ToolStripButton();
+            this.New_worker_butt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.Save_customer_butt = new System.Windows.Forms.ToolStripButton();
+            this.Save_worker_butt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Info_gbox = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Job_Decision = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Worker_Job = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Worker_Birthday = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.C_cell_text = new System.Windows.Forms.TextBox();
+            this.Worker_Cell = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.C_last_text = new System.Windows.Forms.TextBox();
+            this.Worker_Last = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.C_first_text = new System.Windows.Forms.TextBox();
-            this.C_id_text = new System.Windows.Forms.TextBox();
+            this.Worker_First = new System.Windows.Forms.TextBox();
+            this.Worker_ID = new System.Windows.Forms.TextBox();
             this.toolStrip2.SuspendLayout();
             this.Info_gbox.SuspendLayout();
             this.SuspendLayout();
@@ -60,45 +60,44 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip2.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.New_customer_butt,
+            this.New_worker_butt,
             this.toolStripSeparator1,
-            this.Save_customer_butt,
+            this.Save_worker_butt,
             this.toolStripSeparator2});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip2.Size = new System.Drawing.Size(386, 39);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // New_customer_butt
+            // New_worker_butt
             // 
-            this.New_customer_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.New_customer_butt.Image = ((System.Drawing.Image)(resources.GetObject("New_customer_butt.Image")));
-            this.New_customer_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.New_customer_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.New_customer_butt.Name = "New_customer_butt";
-            this.New_customer_butt.Size = new System.Drawing.Size(126, 36);
-            this.New_customer_butt.Text = "Add Data";
-            this.New_customer_butt.Click += new System.EventHandler(this.New_customer_butt_Click);
+            this.New_worker_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.New_worker_butt.Image = ((System.Drawing.Image)(resources.GetObject("New_worker_butt.Image")));
+            this.New_worker_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.New_worker_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.New_worker_butt.Name = "New_worker_butt";
+            this.New_worker_butt.Size = new System.Drawing.Size(126, 36);
+            this.New_worker_butt.Text = "Add Data";
+            this.New_worker_butt.Click += new System.EventHandler(this.New_customer_butt_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
-            // Save_customer_butt
+            // Save_worker_butt
             // 
-            this.Save_customer_butt.Enabled = false;
-            this.Save_customer_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Save_customer_butt.Image = ((System.Drawing.Image)(resources.GetObject("Save_customer_butt.Image")));
-            this.Save_customer_butt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Save_customer_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.Save_customer_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Save_customer_butt.Name = "Save_customer_butt";
-            this.Save_customer_butt.Size = new System.Drawing.Size(87, 36);
-            this.Save_customer_butt.Text = "Save";
-            this.Save_customer_butt.Click += new System.EventHandler(this.Save_customer_butt_Click);
+            this.Save_worker_butt.Enabled = false;
+            this.Save_worker_butt.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Save_worker_butt.Image = ((System.Drawing.Image)(resources.GetObject("Save_worker_butt.Image")));
+            this.Save_worker_butt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Save_worker_butt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Save_worker_butt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Save_worker_butt.Name = "Save_worker_butt";
+            this.Save_worker_butt.Size = new System.Drawing.Size(87, 36);
+            this.Save_worker_butt.Text = "Save";
+            this.Save_worker_butt.Click += new System.EventHandler(this.Save_customer_butt_Click);
             // 
             // toolStripSeparator2
             // 
@@ -109,20 +108,20 @@
             // 
             this.Info_gbox.Controls.Add(this.label9);
             this.Info_gbox.Controls.Add(this.Job_Decision);
-            this.Info_gbox.Controls.Add(this.comboBox1);
+            this.Info_gbox.Controls.Add(this.Worker_Job);
             this.Info_gbox.Controls.Add(this.label8);
             this.Info_gbox.Controls.Add(this.label7);
             this.Info_gbox.Controls.Add(this.label5);
-            this.Info_gbox.Controls.Add(this.dateTimePicker1);
+            this.Info_gbox.Controls.Add(this.Worker_Birthday);
             this.Info_gbox.Controls.Add(this.label6);
             this.Info_gbox.Controls.Add(this.label3);
             this.Info_gbox.Controls.Add(this.label1);
-            this.Info_gbox.Controls.Add(this.C_cell_text);
+            this.Info_gbox.Controls.Add(this.Worker_Cell);
             this.Info_gbox.Controls.Add(this.label4);
-            this.Info_gbox.Controls.Add(this.C_last_text);
+            this.Info_gbox.Controls.Add(this.Worker_Last);
             this.Info_gbox.Controls.Add(this.label2);
-            this.Info_gbox.Controls.Add(this.C_first_text);
-            this.Info_gbox.Controls.Add(this.C_id_text);
+            this.Info_gbox.Controls.Add(this.Worker_First);
+            this.Info_gbox.Controls.Add(this.Worker_ID);
             this.Info_gbox.Enabled = false;
             this.Info_gbox.Location = new System.Drawing.Point(4, 42);
             this.Info_gbox.Name = "Info_gbox";
@@ -144,19 +143,21 @@
             // Job_Decision
             // 
             this.Job_Decision.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Job_Decision.Location = new System.Drawing.Point(68, 19);
+            this.Job_Decision.Location = new System.Drawing.Point(62, 0);
             this.Job_Decision.Name = "Job_Decision";
-            this.Job_Decision.Size = new System.Drawing.Size(202, 36);
+            this.Job_Decision.Size = new System.Drawing.Size(230, 58);
             this.Job_Decision.TabIndex = 17;
             this.Job_Decision.Text = "External Company";
             this.Job_Decision.UseVisualStyleBackColor = true;
+            this.Job_Decision.CheckedChanged += new System.EventHandler(this.Job_Decision_CheckedChanged);
             // 
-            // comboBox1
+            // Worker_Job
             // 
-            this.comboBox1.Location = new System.Drawing.Point(152, 247);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 21);
-            this.comboBox1.TabIndex = 20;
+            this.Worker_Job.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Worker_Job.Location = new System.Drawing.Point(152, 247);
+            this.Worker_Job.Name = "Worker_Job";
+            this.Worker_Job.Size = new System.Drawing.Size(179, 21);
+            this.Worker_Job.TabIndex = 20;
             // 
             // label8
             // 
@@ -182,12 +183,12 @@
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // Worker_Birthday
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 208);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(179, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.Worker_Birthday.Location = new System.Drawing.Point(152, 208);
+            this.Worker_Birthday.Name = "Worker_Birthday";
+            this.Worker_Birthday.Size = new System.Drawing.Size(179, 20);
+            this.Worker_Birthday.TabIndex = 14;
             // 
             // label6
             // 
@@ -216,12 +217,12 @@
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
             // 
-            // C_cell_text
+            // Worker_Cell
             // 
-            this.C_cell_text.Location = new System.Drawing.Point(152, 172);
-            this.C_cell_text.Name = "C_cell_text";
-            this.C_cell_text.Size = new System.Drawing.Size(179, 20);
-            this.C_cell_text.TabIndex = 6;
+            this.Worker_Cell.Location = new System.Drawing.Point(152, 172);
+            this.Worker_Cell.Name = "Worker_Cell";
+            this.Worker_Cell.Size = new System.Drawing.Size(179, 20);
+            this.Worker_Cell.TabIndex = 6;
             // 
             // label4
             // 
@@ -233,12 +234,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Last Name:";
             // 
-            // C_last_text
+            // Worker_Last
             // 
-            this.C_last_text.Location = new System.Drawing.Point(152, 141);
-            this.C_last_text.Name = "C_last_text";
-            this.C_last_text.Size = new System.Drawing.Size(179, 20);
-            this.C_last_text.TabIndex = 4;
+            this.Worker_Last.Location = new System.Drawing.Point(152, 141);
+            this.Worker_Last.Name = "Worker_Last";
+            this.Worker_Last.Size = new System.Drawing.Size(179, 20);
+            this.Worker_Last.TabIndex = 4;
             // 
             // label2
             // 
@@ -250,19 +251,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "First Name:";
             // 
-            // C_first_text
+            // Worker_First
             // 
-            this.C_first_text.Location = new System.Drawing.Point(152, 105);
-            this.C_first_text.Name = "C_first_text";
-            this.C_first_text.Size = new System.Drawing.Size(179, 20);
-            this.C_first_text.TabIndex = 2;
+            this.Worker_First.Location = new System.Drawing.Point(152, 105);
+            this.Worker_First.Name = "Worker_First";
+            this.Worker_First.Size = new System.Drawing.Size(179, 20);
+            this.Worker_First.TabIndex = 2;
             // 
-            // C_id_text
+            // Worker_ID
             // 
-            this.C_id_text.Location = new System.Drawing.Point(152, 65);
-            this.C_id_text.Name = "C_id_text";
-            this.C_id_text.Size = new System.Drawing.Size(179, 20);
-            this.C_id_text.TabIndex = 0;
+            this.Worker_ID.Location = new System.Drawing.Point(152, 65);
+            this.Worker_ID.Name = "Worker_ID";
+            this.Worker_ID.Size = new System.Drawing.Size(179, 20);
+            this.Worker_ID.TabIndex = 0;
             // 
             // Reg_Worker
             // 
@@ -271,6 +272,7 @@
             this.ClientSize = new System.Drawing.Size(386, 365);
             this.Controls.Add(this.Info_gbox);
             this.Controls.Add(this.toolStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -290,23 +292,23 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton New_customer_butt;
-        private System.Windows.Forms.ToolStripButton Save_customer_butt;
+        private System.Windows.Forms.ToolStripButton New_worker_butt;
+        private System.Windows.Forms.ToolStripButton Save_worker_butt;
         private System.Windows.Forms.GroupBox Info_gbox;
-        private System.Windows.Forms.TextBox C_cell_text;
+        private System.Windows.Forms.TextBox Worker_Cell;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox C_last_text;
+        private System.Windows.Forms.TextBox Worker_Last;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox C_first_text;
-        private System.Windows.Forms.TextBox C_id_text;
+        private System.Windows.Forms.TextBox Worker_First;
+        private System.Windows.Forms.TextBox Worker_ID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Worker_Birthday;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Worker_Job;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox Job_Decision;

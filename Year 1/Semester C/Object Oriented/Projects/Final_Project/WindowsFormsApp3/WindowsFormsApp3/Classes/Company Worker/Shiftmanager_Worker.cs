@@ -4,10 +4,10 @@ using WindowsFormsApp3.Company_Worker;
 namespace WindowsFormsApp3.Classes.Company_Worker
 {
     [Serializable]
-    public class Chef : CompanyWorker
+    public class Shiftmanager : CompanyWorker
     {
-        string chefType;
-        public Chef(long idVal, string firstNameVal, string lastNameVal, string cellPhoneVal, DateTime birthVal, int salary, string title, long workerID) : base(idVal, firstNameVal, lastNameVal, cellPhoneVal, birthVal, salary, title, workerID)
+        string shift;
+        public Shiftmanager(long idVal, string firstNameVal, string lastNameVal, string cellPhoneVal, DateTime birthVal, int salary, string title, long workerID, string shift) : base(idVal, firstNameVal, lastNameVal, cellPhoneVal, birthVal, salary, title, workerID)
         {
             this.Id = idVal;
             this.FirstName = firstNameVal;
@@ -17,14 +17,13 @@ namespace WindowsFormsApp3.Classes.Company_Worker
             this.WorkerID = workerID;
             this.Salary = salary;
             this.Title = title;
-            this.ChefType = chefType;
+            this.shift = shift;
         }
-        public string ChefType { get { return chefType; } set { chefType = value; } }
-
         public override int CalculateSalary()
         {
-            return base.CalculateSalary() + 2000;
+            return base.CalculateSalary() + 4000;
         }
-        ~Chef() { }
+        public string Shift { get { return shift; } set { shift = value; } }
+        ~Shiftmanager() { }
     }
 }

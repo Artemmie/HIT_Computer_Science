@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.Windows.Forms;
 using WindowsFormsApp3.Classes;
 using WindowsFormsApp3.Classes.Company_Worker;
+using WindowsFormsApp3.Classes.External_Worker;
 
 namespace WindowsFormsApp3
 {
@@ -36,11 +37,28 @@ namespace WindowsFormsApp3
             rg.Show();
         }
         //UPDATE TABLE
-        public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, int month, int year)
+        public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, DateTime date, string title)
         {
-            workerList[workerList.NextIndex] = new Chef(customerID, firstN, lastN, cellphone, new DateTime(1996, 07, 15), workerList.NextIndex, 50);
-            users = workerList.GetList();
-            source.ResetBindings(false);
+            //sw case - worker title
+            switch (title)
+            {
+                case "Chef" : workerList[workerList.NextIndex] = new Chef(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex);
+                    users = workerList.GetList();
+                    source.ResetBindings(false); 
+                    break;
+                case "Waiter" : workerList[workerList.NextIndex] = new Waiter(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, 5); // TO CHANGE
+                    users = workerList.GetList();
+                    source.ResetBindings(false); 
+                    break;
+                case "Shift Manager": workerList[workerList.NextIndex] = new Shiftmanager(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, "Night"); // TO CHANGE
+                    users = workerList.GetList();
+                    source.ResetBindings(false); 
+                    break;
+                case "Delivery": workerList[workerList.NextIndex] = new Delivery(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, 50); // TO CHANGE
+                    users = workerList.GetList();
+                    source.ResetBindings(false); 
+                    break;
+            }
         }
         // SAVE BUTTON
         private void Save_Click(object sender, EventArgs e)
@@ -53,8 +71,15 @@ namespace WindowsFormsApp3
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 IFormatter formatter = new BinaryFormatter();
-                using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
-                    formatter.Serialize(stream, workerList);
+                try
+                {
+                    using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+                        formatter.Serialize(stream, workerList);
+                }
+                catch
+                {
+                    MessageBox.Show("Save has failed");
+                }
             }
         }
         // LOAD BUTTON
@@ -69,7 +94,14 @@ namespace WindowsFormsApp3
             {
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                workerList = (WorkerList)binaryFormatter.Deserialize(stream);
+                try
+                {
+                    workerList = (WorkerList)binaryFormatter.Deserialize(stream);
+                }
+                catch
+                {
+                    MessageBox.Show("Load has failed");
+                }  
                 LinkTable();
             }
 
@@ -79,6 +111,13 @@ namespace WindowsFormsApp3
             users = workerList.GetList();
             source.DataSource = users;
             dataGridView1.DataSource = source;
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                if (column.Name == "Title")
+                {
+                    column.ReadOnly = true;
+                }
+            }
         }
         //EXIT BUTTON
         private void Exit_Click(object sender, EventArgs e)
