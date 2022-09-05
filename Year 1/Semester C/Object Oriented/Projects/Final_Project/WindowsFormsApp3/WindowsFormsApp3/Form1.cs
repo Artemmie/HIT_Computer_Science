@@ -37,28 +37,30 @@ namespace WindowsFormsApp3
             rg.Show();
         }
         //UPDATE TABLE
-        public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, DateTime date, string title)
+        public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, DateTime date, string title, string second_title)
         {
             //sw case - worker title
             switch (title)
             {
-                case "Chef" : workerList[workerList.NextIndex] = new Chef(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex);
+                case "Chef" : workerList[workerList.NextIndex] = new Chef(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, second_title);
                     users = workerList.GetList();
                     source.ResetBindings(false); 
                     break;
-                case "Waiter" : workerList[workerList.NextIndex] = new Waiter(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, 5); // TO CHANGE
+                case "Shift Manager": workerList[workerList.NextIndex] = new Shiftmanager(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, second_title);
                     users = workerList.GetList();
                     source.ResetBindings(false); 
                     break;
-                case "Shift Manager": workerList[workerList.NextIndex] = new Shiftmanager(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, "Night"); // TO CHANGE
-                    users = workerList.GetList();
-                    source.ResetBindings(false); 
-                    break;
-                case "Delivery": workerList[workerList.NextIndex] = new Delivery(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, 50); // TO CHANGE
+                case "Delivery": workerList[workerList.NextIndex] = new Delivery(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, second_title);
                     users = workerList.GetList();
                     source.ResetBindings(false); 
                     break;
             }
+        }
+        public void UpdateTable(long customerID, string firstN, string lastN, string cellphone, DateTime date, string title)
+        {
+            workerList[workerList.NextIndex] = new Waiter(customerID, firstN, lastN, cellphone, date.Date, 0, title, workerList.NextIndex, 0);
+            users = workerList.GetList();
+            source.ResetBindings(false);
         }
         // SAVE BUTTON
         private void Save_Click(object sender, EventArgs e)
@@ -114,12 +116,16 @@ namespace WindowsFormsApp3
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 if (column.Name == "Title")
-                {
                     column.ReadOnly = true;
-                }
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
-
+        public bool TableValidation(long customerID)
+        {
+            foreach (Worker worker in users)
+                if (worker.Id == customerID) return false;
+            return true;
+        }
         //EXIT BUTTON
         private void toolStripButton2_Click(object sender, EventArgs e)
         {

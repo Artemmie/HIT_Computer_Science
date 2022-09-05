@@ -16,12 +16,15 @@ namespace WindowsFormsApp3
         string[] internalJobs = new string[] { "Chef", "Shift Manager", "Waiter" };
         string[] externalJobs = new string[] { "Delivery" };
         string[] chefTypes = new string[] { "Executive chef", "Head chef", "Sous chef", "Butcher chef", "Pastry chef", "Fish chef" };
+        string[] shiftTypes = new string[] { "Day", "Night" };
+        string[] vehicleTypes = new string[] { "Bicycle", "Electric Bicycle", "Bike", "Car" };
         public Reg_Worker()
         {
             InitializeComponent();
         }
         private void New_customer_butt_Click(object sender, EventArgs e)
         {
+            HideAll();
             this.New_worker_butt.Enabled = false;
             this.Save_worker_butt.Enabled = true;
 
@@ -55,38 +58,67 @@ namespace WindowsFormsApp3
             this.Worker_Job.Items.Clear();
             if (Job_Decision.Checked) this.Worker_Job.Items.AddRange(externalJobs);
             else this.Worker_Job.Items.AddRange(internalJobs);
+            HideAll();
         }
         private void Save_Values()
         {
             long customerID;
             int age = (int)((DateTime.Now - Worker_Birthday.Value).TotalDays / 365.242199);
-            if (long.TryParse(Worker_ID.Text, out customerID) && Worker_Job.SelectedItem != null && age >= 16)
+            if (long.TryParse(Worker_ID.Text, out customerID) && Worker_Job.SelectedItem != null && age >= 16 && age <= 65)
             {
+                if (!Form1.instance.TableValidation(customerID))
+                {
+                    MessageBox.Show("ID already exists!");
+                    return;
+                }
                 this.New_worker_butt.Enabled = true;
                 this.Save_worker_butt.Enabled = false;
-                Form1.instance.UpdateTable(customerID, Worker_First.Text, Worker_Last.Text, Worker_Cell.Text, Worker_Birthday.Value, Worker_Job.SelectedItem.ToString());
-                
+                if (Worker_Job.SelectedItem.ToString() != "Waiter")
+                    Form1.instance.UpdateTable(customerID, Worker_First.Text, Worker_Last.Text, Worker_Cell.Text, Worker_Birthday.Value, Worker_Job.SelectedItem.ToString(), Secondary_type_dropbox.SelectedItem.ToString());
+                else
+                    Form1.instance.UpdateTable(customerID, Worker_First.Text, Worker_Last.Text, Worker_Cell.Text, Worker_Birthday.Value, Worker_Job.SelectedItem.ToString());
             }
             else MessageBox.Show("One of the values are incorrect!");
         }
 
         private void Worker_Job_SelectedIndexChanged(object sender, EventArgs e)
         {
+            HideAll();
             switch (this.Worker_Job.SelectedItem.ToString())
             {
                 case "Chef":
-                    this.Chef_type_dropbox.Visible = true;
-                    this.Chef_type.Visible = true;
-                    this.Chef_type_dropbox.Items.Clear();
-                    this.Chef_type_dropbox.Items.AddRange(chefTypes);
-                    this.Chef_type_dropbox.SelectedIndex = 1;
+                    this.Secondary_type.Text = "Chef Type:";
+                    this.Secondary_type_dropbox.Visible = true;
+                    this.Secondary_type.Visible = true;
+                    this.Secondary_type_dropbox.Items.Clear();
+                    this.Secondary_type_dropbox.Items.AddRange(chefTypes);
+                    this.Secondary_type_dropbox.SelectedIndex = 0;
+                    break;
+                case "Shift Manager":
+                    this.Secondary_type.Text = "Shift:";
+                    this.Secondary_type.Visible = true;
+                    this.Secondary_type_dropbox.Visible = true;
+                    this.Secondary_type_dropbox.Items.Clear();
+                    this.Secondary_type_dropbox.Items.AddRange(shiftTypes);
+                    this.Secondary_type_dropbox.SelectedIndex = 0;
+                    break;
+                case "Delivery":
+                    this.Secondary_type.Text = "Vehicle:";
+                    this.Secondary_type.Visible = true;
+                    this.Secondary_type_dropbox.Visible = true;
+                    this.Secondary_type_dropbox.Items.Clear();
+                    this.Secondary_type_dropbox.Items.AddRange(vehicleTypes);
+                    this.Secondary_type_dropbox.SelectedIndex = 0;
                     break;
                 default:
-                    this.Chef_type_dropbox.Visible = false;
-                    this.Chef_type.Visible = false;
+                    HideAll();
                     break;
             }
-                
+        }   
+        public void HideAll()
+        {
+            this.Secondary_type_dropbox.Visible = false;
+            this.Secondary_type.Visible = false;
         }
     }
 }

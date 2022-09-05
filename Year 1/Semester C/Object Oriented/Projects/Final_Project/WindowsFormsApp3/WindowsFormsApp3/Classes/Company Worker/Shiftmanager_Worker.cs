@@ -21,7 +21,9 @@ namespace WindowsFormsApp3.Classes.Company_Worker
         }
         public override int CalculateSalary()
         {
-            return base.CalculateSalary() + 4000;
+            int calculated = 2000;
+            if (shift == "Night") calculated += 500;
+            return base.CalculateSalary() + calculated;
         }
         public string Shift { get { return shift; } set { shift = value; } }
         ~Shiftmanager() { }

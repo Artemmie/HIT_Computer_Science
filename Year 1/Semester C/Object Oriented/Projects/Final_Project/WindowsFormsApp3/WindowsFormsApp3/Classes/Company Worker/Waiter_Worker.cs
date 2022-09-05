@@ -17,7 +17,7 @@ namespace WindowsFormsApp3.Classes.Company_Worker
             this.WorkerID = workerID;
             this.Salary = salary;
             this.Title = title;
-            this.tip = tip + rand.Next(200);
+            this.tip = tip + rand.Next(500);
         }
         public int Tip { get { return tip; } set { tip = value; } }
         public override int CalculateSalary()

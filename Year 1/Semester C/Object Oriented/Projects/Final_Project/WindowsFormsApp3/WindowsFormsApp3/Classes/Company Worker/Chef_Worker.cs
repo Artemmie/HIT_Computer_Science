@@ -7,7 +7,7 @@ namespace WindowsFormsApp3.Classes.Company_Worker
     public class Chef : CompanyWorker
     {
         string chefType;
-        public Chef(long idVal, string firstNameVal, string lastNameVal, string cellPhoneVal, DateTime birthVal, int salary, string title, long workerID) : base(idVal, firstNameVal, lastNameVal, cellPhoneVal, birthVal, salary, title, workerID)
+        public Chef(long idVal, string firstNameVal, string lastNameVal, string cellPhoneVal, DateTime birthVal, int salary, string title, long workerID, string chefType) : base(idVal, firstNameVal, lastNameVal, cellPhoneVal, birthVal, salary, title, workerID)
         {
             this.Id = idVal;
             this.FirstName = firstNameVal;
@@ -23,7 +23,31 @@ namespace WindowsFormsApp3.Classes.Company_Worker
 
         public override int CalculateSalary()
         {
-            return base.CalculateSalary() + 2000;
+            int calculated = 2000;
+            switch (chefType)
+            {
+                case "Executive chef":
+                    calculated += 1000;
+                    break;
+                case "Head chef":
+                    calculated += 700;
+                    break;
+                case "Sous chef":
+                    calculated += 650;
+                    break;
+                case "Butcher chef":
+                    calculated += 520;
+                    break;
+                case "Pastry chef":
+                    calculated += 280;
+                    break;
+                case "Fish chef":
+                    calculated += 200;
+                    break;
+                default:
+                    break;
+            }
+            return base.CalculateSalary() + calculated;
         }
         ~Chef() { }
     }
