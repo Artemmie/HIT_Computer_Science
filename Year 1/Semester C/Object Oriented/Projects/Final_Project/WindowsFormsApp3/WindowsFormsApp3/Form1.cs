@@ -117,6 +117,8 @@ namespace WindowsFormsApp3
             {
                 if (column.Name == "Title")
                     column.ReadOnly = true;
+                if (column.Name == "Id")
+                    column.ReadOnly = true;
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }

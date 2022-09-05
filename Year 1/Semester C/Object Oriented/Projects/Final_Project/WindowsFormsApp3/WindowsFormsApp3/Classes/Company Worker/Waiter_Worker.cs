@@ -3,6 +3,7 @@ using WindowsFormsApp3.Company_Worker;
 
 namespace WindowsFormsApp3.Classes.Company_Worker
 {
+    [Serializable]
     public class Waiter : CompanyWorker
     {
         Random rand = new Random();

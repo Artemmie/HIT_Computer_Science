@@ -87,7 +87,7 @@ namespace WindowsFormsApp3
             switch (this.Worker_Job.SelectedItem.ToString())
             {
                 case "Chef":
-                    this.Secondary_type.Text = "Chef Type:";
+                    this.Secondary_type.Text = "Type:";
                     this.Secondary_type_dropbox.Visible = true;
                     this.Secondary_type.Visible = true;
                     this.Secondary_type_dropbox.Items.Clear();
