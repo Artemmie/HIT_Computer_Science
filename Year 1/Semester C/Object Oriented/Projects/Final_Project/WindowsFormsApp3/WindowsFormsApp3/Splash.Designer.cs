@@ -34,6 +34,8 @@ namespace WindowsFormsApp3
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -41,9 +43,9 @@ namespace WindowsFormsApp3
             this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.progressBar1.Location = new System.Drawing.Point(0, 388);
+            this.progressBar1.Location = new System.Drawing.Point(0, 393);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(771, 19);
+            this.progressBar1.Size = new System.Drawing.Size(515, 19);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             // 
@@ -65,7 +67,18 @@ namespace WindowsFormsApp3
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(58)))), ((int)(((byte)(160)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::WindowsFormsApp3.Properties.Resources.תמונה6;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(515, 393);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Splash
             // 
@@ -73,7 +86,8 @@ namespace WindowsFormsApp3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.teamwork;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(771, 407);
+            this.ClientSize = new System.Drawing.Size(515, 412);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.DoubleBuffered = true;
@@ -82,6 +96,7 @@ namespace WindowsFormsApp3
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Happy Month";
             this.Load += new System.EventHandler(this.Splash_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,5 +107,6 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

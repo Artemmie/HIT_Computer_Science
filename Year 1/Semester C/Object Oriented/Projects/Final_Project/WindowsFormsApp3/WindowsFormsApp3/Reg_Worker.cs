@@ -15,6 +15,7 @@ namespace WindowsFormsApp3
     {
         string[] internalJobs = new string[] { "Chef", "Shift Manager", "Waiter" };
         string[] externalJobs = new string[] { "Delivery" };
+        string[] chefTypes = new string[] { "Executive chef", "Head chef", "Sous chef", "Butcher chef", "Pastry chef", "Fish chef" };
         public Reg_Worker()
         {
             InitializeComponent();
@@ -67,6 +68,25 @@ namespace WindowsFormsApp3
                 
             }
             else MessageBox.Show("One of the values are incorrect!");
+        }
+
+        private void Worker_Job_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (this.Worker_Job.SelectedItem.ToString())
+            {
+                case "Chef":
+                    this.Chef_type_dropbox.Visible = true;
+                    this.Chef_type.Visible = true;
+                    this.Chef_type_dropbox.Items.Clear();
+                    this.Chef_type_dropbox.Items.AddRange(chefTypes);
+                    this.Chef_type_dropbox.SelectedIndex = 1;
+                    break;
+                default:
+                    this.Chef_type_dropbox.Visible = false;
+                    this.Chef_type.Visible = false;
+                    break;
+            }
+                
         }
     }
 }

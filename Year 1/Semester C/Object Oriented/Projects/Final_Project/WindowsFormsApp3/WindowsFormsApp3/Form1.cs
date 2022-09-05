@@ -119,8 +119,9 @@ namespace WindowsFormsApp3
                 }
             }
         }
+
         //EXIT BUTTON
-        private void Exit_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -144,6 +145,13 @@ namespace WindowsFormsApp3
                 workerList.Remove(row.Index);
             users = workerList.GetList();
             source.ResetBindings(false);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Aboutus a = new Aboutus();
+            a.MdiParent = this;
+            a.Show();
         }
     }
 }
